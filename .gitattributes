@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+data/cifar-10-python.tar.gz filter=lfs diff=lfs merge=lfs -text
+venvlib/python3.9/site-packages/torch/lib/libtorch_cpu.dylib filter=lfs diff=lfs merge=lfs -text
