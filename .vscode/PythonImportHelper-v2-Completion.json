@@ -1,0 +1,409 @@
+[
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision.transforms",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision.transforms",
+        "description": "torchvision.transforms",
+        "detail": "torchvision.transforms",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "random_split",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "torch.optim",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.optim",
+        "description": "torch.optim",
+        "detail": "torch.optim",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "classification_report",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "NeuralNetwork",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeuralNetwork",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_activation",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeuralNetwork",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_activation",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10DataLoader",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10DataLoader",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "Visualizer",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "GELU",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class GELU(nn.Module):\n    def __init__(self):\n        super(GELU, self).__init__()\n    def forward(self, x):\n        return 0.5 * x * (1 + torch.tanh(math.sqrt(2 / math.pi) * (x + 0.044715 * torch.pow(x, 3))))\nclass ReLU(nn.Module):\n    def __init__(self):\n        super(ReLU, self).__init__()\n    def forward(self, x):\n        return torch.maximum(torch.zeros_like(x), x)",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "ReLU",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class ReLU(nn.Module):\n    def __init__(self):\n        super(ReLU, self).__init__()\n    def forward(self, x):\n        return torch.maximum(torch.zeros_like(x), x)\nclass Tanh(nn.Module):\n    def __init__(self):\n        super(Tanh, self).__init__()\n    def forward(self, x):\n        return torch.tanh(x)",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Tanh",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class Tanh(nn.Module):\n    def __init__(self):\n        super(Tanh, self).__init__()\n    def forward(self, x):\n        return torch.tanh(x)\ndef get_activation(activation_name):\n    \"\"\"\n    Factory function to get activation function by name.\n    Args:\n        activation_name (str): Name of the activation function ('gelu', 'relu', 'tanh')",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "get_activation",
+        "kind": 2,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "def get_activation(activation_name):\n    \"\"\"\n    Factory function to get activation function by name.\n    Args:\n        activation_name (str): Name of the activation function ('gelu', 'relu', 'tanh')\n    Returns:\n        nn.Module: The corresponding activation function\n    \"\"\"\n    activation_map = {\n        'gelu': GELU(),",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "NeuralNetwork",
+        "kind": 6,
+        "importPath": "models.network",
+        "description": "models.network",
+        "peekOfCode": "class NeuralNetwork(nn.Module):\n    def __init__(self, input_size, hidden_sizes, output_size, activation='relu', dropout_rate=0.2):\n        \"\"\"\n        A flexible neural network implementation.\n        Args:\n            input_size (int): Size of input features\n            hidden_sizes (list): List of hidden layer sizes\n            output_size (int): Size of output layer\n            activation (str): Activation function name ('gelu', 'relu', 'tanh')\n            dropout_rate (float): Dropout rate for regularization",
+        "detail": "models.network",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeuralNetwork",
+        "kind": 6,
+        "importPath": "models.network",
+        "description": "models.network",
+        "peekOfCode": "class ConvNeuralNetwork(nn.Module):\n    def __init__(self, input_channels=3, num_classes=10, activation='relu', dropout_rate=0.2):\n        \"\"\"\n        Convolutional Neural Network for image classification (e.g., CIFAR-10).\n        Args:\n            input_channels (int): Number of input channels (3 for RGB)\n            num_classes (int): Number of output classes\n            activation (str): Activation function name\n            dropout_rate (float): Dropout rate\n        \"\"\"",
+        "detail": "models.network",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10DataLoader",
+        "kind": 6,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "class CIFAR10DataLoader:\n    def __init__(self, batch_size=32, validation_split=0.1, data_dir='./data',\n                 normalize=True, augment_train=True):\n        \"\"\"\n        CIFAR-10 data loader with train/validation/test splits.\n        Args:\n            batch_size (int): Batch size for data loading\n            validation_split (float): Fraction of training data to use for validation\n            data_dir (str): Directory to store/load CIFAR-10 data\n            normalize (bool): Whether to normalize the data",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "create_cifar10_loader",
+        "kind": 2,
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "peekOfCode": "def create_cifar10_loader(batch_size=32, validation_split=0.1, data_dir='./data'):\n    \"\"\"\n    Convenience function to create CIFAR-10 data loader.\n    Args:\n        batch_size (int): Batch size\n        validation_split (float): Validation split ratio\n        data_dir (str): Data directory\n    Returns:\n        CIFAR10DataLoader: Configured data loader\n    \"\"\"",
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "kind": 6,
+        "importPath": "utils.trainer",
+        "description": "utils.trainer",
+        "peekOfCode": "class Trainer:\n    def __init__(self, model, train_loader, val_loader=None, test_loader=None,\n                 device=None, save_dir='./checkpoints'):\n        \"\"\"\n        Neural network trainer with comprehensive training utilities.\n        Args:\n            model (nn.Module): The neural network model to train\n            train_loader (DataLoader): Training data loader\n            val_loader (DataLoader, optional): Validation data loader\n            test_loader (DataLoader, optional): Test data loader",
+        "detail": "utils.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "Visualizer",
+        "kind": 6,
+        "importPath": "utils.visualization",
+        "description": "utils.visualization",
+        "peekOfCode": "class Visualizer:\n    def __init__(self, class_names=None):\n        \"\"\"\n        Visualization utilities for neural network training and evaluation.\n        Args:\n            class_names (list, optional): List of class names for labeling\n        \"\"\"\n        self.class_names = class_names\n        plt.style.use('default')\n    def plot_training_history(self, history, save_path=None):",
+        "detail": "utils.visualization",
+        "documentation": {}
+    },
+    {
+        "label": "create_visualizer",
+        "kind": 2,
+        "importPath": "utils.visualization",
+        "description": "utils.visualization",
+        "peekOfCode": "def create_visualizer(class_names=None):\n    \"\"\"\n    Convenience function to create a visualizer.\n    Args:\n        class_names (list, optional): List of class names\n    Returns:\n        Visualizer: Configured visualizer instance\n    \"\"\"\n    return Visualizer(class_names=class_names)",
+        "detail": "utils.visualization",
+        "documentation": {}
+    },
+    {
+        "label": "demo_activation_functions",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def demo_activation_functions():\n    \"\"\"Demonstrate different activation functions.\"\"\"\n    print(\"=== Activation Functions Demo ===\")\n    # Create test input\n    x = torch.randn(5, 10)\n    print(f\"Input tensor shape: {x.shape}\")\n    print(f\"Input sample: {x[0, :5].detach().numpy()}\")\n    activations = ['relu', 'gelu', 'tanh']\n    for act_name in activations:\n        activation = get_activation(act_name)",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_neural_networks",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def demo_neural_networks():\n    \"\"\"Demonstrate neural network architectures.\"\"\"\n    print(\"\\n=== Neural Network Architectures Demo ===\")\n    # Fully connected network\n    print(\"\\n1. Fully Connected Network:\")\n    fc_net = NeuralNetwork(\n        input_size=784,  # 28x28 flattened\n        hidden_sizes=[512, 256, 128],\n        output_size=10,\n        activation='relu'",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_data_loader",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def demo_data_loader():\n    \"\"\"Demonstrate CIFAR-10 data loader.\"\"\"\n    print(\"\\n=== CIFAR-10 Data Loader Demo ===\")\n    try:\n        # Create data loader\n        data_loader = CIFAR10DataLoader(batch_size=8, validation_split=0.1)\n        # Get dataset info\n        info = data_loader.get_dataset_info()\n        print(\"Dataset Information:\")\n        for key, value in info.items():",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "demo_model_comparison",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def demo_model_comparison():\n    \"\"\"Compare models with different activation functions.\"\"\"\n    print(\"\\n=== Model Comparison Demo ===\")\n    activations = ['relu', 'gelu', 'tanh']\n    for activation in activations:\n        model = ConvNeuralNetwork(activation=activation)\n        num_params = model.get_num_parameters()\n        # Test inference speed (rough estimate)\n        test_input = torch.randn(32, 3, 32, 32)\n        # Warm up",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def main():\n    print(\"Neural Network Implementation Demo\")\n    print(\"=\" * 50)\n    # Set device\n    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\n    print(f\"Using device: {device}\")\n    print(f\"PyTorch version: {torch.__version__}\")\n    # Run demos\n    demo_activation_functions()\n    demo_neural_networks()",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def train_model(activation, epochs=10, batch_size=32, lr=0.001):\n    \"\"\"\n    Train a model with specified activation function.\n    Args:\n        activation (str): Activation function name\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n    Returns:\n        dict: Training results",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "compare_activations",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def compare_activations(activations, epochs=10, batch_size=32, lr=0.001):\n    \"\"\"\n    Compare different activation functions.\n    Args:\n        activations (list): List of activation function names\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n    \"\"\"\n    results = []",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description='Train neural networks with different activation functions')\n    parser.add_argument('--activation', type=str, default='relu',\n                       choices=['relu', 'gelu', 'tanh', 'all'],\n                       help='Activation function to use (default: relu)')\n    parser.add_argument('--epochs', type=int, default=10,\n                       help='Number of training epochs (default: 10)')\n    parser.add_argument('--batch-size', type=int, default=32,\n                       help='Batch size (default: 32)')\n    parser.add_argument('--lr', type=float, default=0.001,",
+        "detail": "main",
+        "documentation": {}
+    }
+]
