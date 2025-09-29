@@ -1,0 +1,26 @@
+# Virtual Environment
+venv/
+venvlib/
+env/
+.env
+
+# Data files
+data/*.tar.gz
+data/*.zip
+*.tar.gz
+
+# PyTorch models
+*.pth
+*.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
