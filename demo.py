@@ -5,7 +5,7 @@ Demo script to showcase the neural network components without full training.
 
 import torch
 import numpy as np
-from models import NeuralNetwork, ConvNeuralNetwork, get_activation
+from models import NeuralNetwork, ConvNeuralNetwork, get_activation, get_available_activations
 from utils import CIFAR10DataLoader
 
 
@@ -18,12 +18,19 @@ def demo_activation_functions():
     print(f"Input tensor shape: {x.shape}")
     print(f"Input sample: {x[0, :5].detach().numpy()}")
 
-    activations = ['relu', 'gelu', 'tanh']
+    # Demo a subset of activations for clarity
+    demo_activations = ['relu', 'gelu', 'tanh', 'sigmoid', 'swish', 'mish']
 
-    for act_name in activations:
-        activation = get_activation(act_name)
-        output = activation(x)
-        print(f"\n{act_name.upper()} output sample: {output[0, :5].detach().numpy()}")
+    print(f"\nTesting {len(demo_activations)} activation functions:")
+    print(f"Available: {', '.join(get_available_activations())}")
+
+    for act_name in demo_activations:
+        try:
+            activation = get_activation(act_name)
+            output = activation(x)
+            print(f"\n{act_name.upper()} output sample: {output[0, :5].detach().numpy()}")
+        except Exception as e:
+            print(f"\n{act_name.upper()} failed: {e}")
 
 
 def demo_neural_networks():
@@ -101,29 +108,33 @@ def demo_model_comparison():
     """Compare models with different activation functions."""
     print("\n=== Model Comparison Demo ===")
 
-    activations = ['relu', 'gelu', 'tanh']
+    # Test a subset of activations for speed
+    test_activations = ['relu', 'gelu', 'swish', 'mish', 'sigmoid']
 
-    for activation in activations:
-        model = ConvNeuralNetwork(activation=activation)
-        num_params = model.get_num_parameters()
+    for activation in test_activations:
+        try:
+            model = ConvNeuralNetwork(activation=activation)
+            num_params = model.get_num_parameters()
 
-        # Test inference speed (rough estimate)
-        test_input = torch.randn(32, 3, 32, 32)
+            # Test inference speed (rough estimate)
+            test_input = torch.randn(32, 3, 32, 32)
 
-        # Warm up
-        with torch.no_grad():
-            _ = model(test_input)
-
-        # Time inference
-        import time
-        start_time = time.time()
-        with torch.no_grad():
-            for _ in range(100):
+            # Warm up
+            with torch.no_grad():
                 _ = model(test_input)
-        inference_time = (time.time() - start_time) / 100 * 1000  # ms per inference
 
-        print(f"{activation.upper()}: {num_params:,} parameters, "
-              f"~{inference_time:.2f}ms per batch inference")
+            # Time inference
+            import time
+            start_time = time.time()
+            with torch.no_grad():
+                for _ in range(100):
+                    _ = model(test_input)
+            inference_time = (time.time() - start_time) / 100 * 1000  # ms per inference
+
+            print(f"{activation.upper()}: {num_params:,} parameters, "
+                  f"~{inference_time:.2f}ms per batch inference")
+        except Exception as e:
+            print(f"{activation.upper()}: Error - {e}")
 
 
 def main():

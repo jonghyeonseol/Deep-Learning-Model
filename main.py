@@ -7,7 +7,7 @@ Usage: python main.py --activation all
 import argparse
 import torch
 import os
-from models import ConvNeuralNetwork, get_activation
+from models import ConvNeuralNetwork, get_activation, get_available_activations
 from utils import CIFAR10DataLoader, Trainer, Visualizer
 
 
@@ -149,10 +149,14 @@ def compare_activations(activations, epochs=10, batch_size=32, lr=0.001):
 
 
 def main():
+    # Get available activations dynamically
+    available_activations = get_available_activations()
+    activation_choices = available_activations + ['all', 'modern', 'classic']
+
     parser = argparse.ArgumentParser(description='Train neural networks with different activation functions')
     parser.add_argument('--activation', type=str, default='relu',
-                       choices=['relu', 'gelu', 'tanh', 'all'],
-                       help='Activation function to use (default: relu)')
+                       choices=activation_choices,
+                       help='Activation function to use (default: relu). Use "all" for all functions, "modern" for recent ones, "classic" for traditional ones.')
     parser.add_argument('--epochs', type=int, default=10,
                        help='Number of training epochs (default: 10)')
     parser.add_argument('--batch-size', type=int, default=32,
@@ -161,8 +165,23 @@ def main():
                        help='Learning rate (default: 0.001)')
     parser.add_argument('--quick', action='store_true',
                        help='Quick training with fewer epochs for testing')
+    parser.add_argument('--list-activations', action='store_true',
+                       help='List all available activation functions')
 
     args = parser.parse_args()
+
+    # List activations if requested
+    if args.list_activations:
+        print("Available activation functions:")
+        classic = ['relu', 'tanh', 'sigmoid', 'step', 'softmax']
+        modern = ['gelu', 'swish', 'mish', 'silu', 'hardswish']
+        others = ['leakyrelu', 'elu', 'prelu', 'selu']
+
+        print(f"Classic: {', '.join(classic)}")
+        print(f"Modern: {', '.join(modern)}")
+        print(f"Others: {', '.join(others)}")
+        print(f"All: {', '.join(available_activations)}")
+        return
 
     # Adjust epochs for quick training
     if args.quick:
@@ -176,10 +195,18 @@ def main():
     if torch.cuda.is_available():
         print(f"CUDA device: {torch.cuda.get_device_name()}")
 
+    # Determine which activations to train
     if args.activation == 'all':
-        # Train with all activation functions
-        activations = ['relu', 'gelu', 'tanh']
-        print(f"\nTraining with all activation functions: {activations}")
+        activations = available_activations
+        print(f"\nTraining with ALL activation functions: {activations}")
+        compare_activations(activations, args.epochs, args.batch_size, args.lr)
+    elif args.activation == 'modern':
+        activations = ['gelu', 'swish', 'mish', 'silu', 'hardswish']
+        print(f"\nTraining with MODERN activation functions: {activations}")
+        compare_activations(activations, args.epochs, args.batch_size, args.lr)
+    elif args.activation == 'classic':
+        activations = ['relu', 'tanh', 'sigmoid', 'leakyrelu', 'elu']
+        print(f"\nTraining with CLASSIC activation functions: {activations}")
         compare_activations(activations, args.epochs, args.batch_size, args.lr)
     else:
         # Train with single activation function

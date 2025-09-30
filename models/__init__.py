@@ -1,5 +1,9 @@
 from .network import NeuralNetwork, ConvNeuralNetwork
-from .activations import GELU, ReLU, Tanh, get_activation
+from .activations import (
+    GELU, ReLU, Tanh, Sigmoid, Step, Softmax, Swish, Mish,
+    LeakyReLU, ELU, PReLU, SELU, Hardswish, SiLU,
+    get_activation, get_available_activations
+)
 
 __all__ = [
     'NeuralNetwork',
@@ -7,5 +11,17 @@ __all__ = [
     'GELU',
     'ReLU',
     'Tanh',
-    'get_activation'
+    'Sigmoid',
+    'Step',
+    'Softmax',
+    'Swish',
+    'Mish',
+    'LeakyReLU',
+    'ELU',
+    'PReLU',
+    'SELU',
+    'Hardswish',
+    'SiLU',
+    'get_activation',
+    'get_available_activations'
 ]
