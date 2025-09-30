@@ -8,6 +8,9 @@ from .realtime_monitor import (
     LiveTrainingMonitor, LiveLayerMonitor, LiveNeuralNetworkVisualizer,
     create_comprehensive_monitor
 )
+from .interactive_propagation_panel import (
+    InteractivePropagationPanel, launch_propagation_panel
+)
 
 __all__ = [
     'CIFAR10DataLoader',
@@ -22,5 +25,7 @@ __all__ = [
     'LiveTrainingMonitor',
     'LiveLayerMonitor',
     'LiveNeuralNetworkVisualizer',
-    'create_comprehensive_monitor'
+    'create_comprehensive_monitor',
+    'InteractivePropagationPanel',
+    'launch_propagation_panel'
 ]

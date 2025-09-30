@@ -18,6 +18,15 @@
         "documentation": {}
     },
     {
+        "label": "torch.nn.functional",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn.functional",
+        "description": "torch.nn.functional",
+        "detail": "torch.nn.functional",
+        "documentation": {}
+    },
+    {
         "label": "math",
         "kind": 6,
         "isExtraImport": true,
@@ -70,20 +79,78 @@
         "documentation": {}
     },
     {
-        "label": "torch.optim",
+        "label": "matplotlib.pyplot",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "torch.optim",
-        "description": "torch.optim",
-        "detail": "torch.optim",
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
         "documentation": {}
     },
     {
-        "label": "SummaryWriter",
-        "importPath": "torch.utils.tensorboard",
-        "description": "torch.utils.tensorboard",
+        "label": "matplotlib.animation",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "torch.utils.tensorboard",
+        "importPath": "matplotlib.animation",
+        "description": "matplotlib.animation",
+        "detail": "matplotlib.animation",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.patches",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "FancyArrowPatch",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "FancyBboxPatch",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "ConnectionPatch",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "Rectangle",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
         "documentation": {}
     },
     {
@@ -96,6 +163,97 @@
         "documentation": {}
     },
     {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "queue",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "queue",
+        "description": "queue",
+        "detail": "queue",
+        "documentation": {}
+    },
+    {
+        "label": "torch.optim",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.optim",
+        "description": "torch.optim",
+        "detail": "torch.optim",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -105,28 +263,29 @@
         "documentation": {}
     },
     {
-        "label": "defaultdict",
-        "importPath": "collections",
-        "description": "collections",
-        "isExtraImport": true,
-        "detail": "collections",
-        "documentation": {}
-    },
-    {
-        "label": "defaultdict",
-        "importPath": "collections",
-        "description": "collections",
-        "isExtraImport": true,
-        "detail": "collections",
-        "documentation": {}
-    },
-    {
-        "label": "matplotlib.pyplot",
+        "label": "seaborn",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "matplotlib.pyplot",
-        "description": "matplotlib.pyplot",
-        "detail": "matplotlib.pyplot",
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "warnings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "warnings",
+        "description": "warnings",
+        "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
         "documentation": {}
     },
     {
@@ -146,20 +305,12 @@
         "documentation": {}
     },
     {
-        "label": "seaborn",
+        "label": "argparse",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "seaborn",
-        "description": "seaborn",
-        "detail": "seaborn",
-        "documentation": {}
-    },
-    {
-        "label": "NeuralNetwork",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
         "documentation": {}
     },
     {
@@ -179,27 +330,11 @@
         "documentation": {}
     },
     {
-        "label": "ConvNeuralNetwork",
+        "label": "get_available_activations",
         "importPath": "models",
         "description": "models",
         "isExtraImport": true,
         "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "get_activation",
-        "importPath": "models",
-        "description": "models",
-        "isExtraImport": true,
-        "detail": "models",
-        "documentation": {}
-    },
-    {
-        "label": "CIFAR10DataLoader",
-        "importPath": "utils",
-        "description": "utils",
-        "isExtraImport": true,
-        "detail": "utils",
         "documentation": {}
     },
     {
@@ -227,15 +362,6 @@
         "documentation": {}
     },
     {
-        "label": "argparse",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "argparse",
-        "description": "argparse",
-        "detail": "argparse",
-        "documentation": {}
-    },
-    {
         "label": "GELU",
         "kind": 6,
         "importPath": "models.activations",
@@ -258,7 +384,106 @@
         "kind": 6,
         "importPath": "models.activations",
         "description": "models.activations",
-        "peekOfCode": "class Tanh(nn.Module):\n    def __init__(self):\n        super(Tanh, self).__init__()\n    def forward(self, x):\n        return torch.tanh(x)\ndef get_activation(activation_name):\n    \"\"\"\n    Factory function to get activation function by name.\n    Args:\n        activation_name (str): Name of the activation function ('gelu', 'relu', 'tanh')",
+        "peekOfCode": "class Tanh(nn.Module):\n    def __init__(self):\n        super(Tanh, self).__init__()\n    def forward(self, x):\n        return torch.tanh(x)\nclass Sigmoid(nn.Module):\n    def __init__(self):\n        super(Sigmoid, self).__init__()\n    def forward(self, x):\n        return torch.sigmoid(x)",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Sigmoid",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class Sigmoid(nn.Module):\n    def __init__(self):\n        super(Sigmoid, self).__init__()\n    def forward(self, x):\n        return torch.sigmoid(x)\nclass Step(nn.Module):\n    def __init__(self, threshold=0.0):\n        super(Step, self).__init__()\n        self.threshold = threshold\n    def forward(self, x):",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Step",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class Step(nn.Module):\n    def __init__(self, threshold=0.0):\n        super(Step, self).__init__()\n        self.threshold = threshold\n    def forward(self, x):\n        return (x > self.threshold).float()\nclass Softmax(nn.Module):\n    def __init__(self, dim=-1):\n        super(Softmax, self).__init__()\n        self.dim = dim",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Softmax",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class Softmax(nn.Module):\n    def __init__(self, dim=-1):\n        super(Softmax, self).__init__()\n        self.dim = dim\n    def forward(self, x):\n        return F.softmax(x, dim=self.dim)\nclass Swish(nn.Module):\n    def __init__(self):\n        super(Swish, self).__init__()\n    def forward(self, x):",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Swish",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class Swish(nn.Module):\n    def __init__(self):\n        super(Swish, self).__init__()\n    def forward(self, x):\n        return x * torch.sigmoid(x)\nclass Mish(nn.Module):\n    def __init__(self):\n        super(Mish, self).__init__()\n    def forward(self, x):\n        return x * torch.tanh(F.softplus(x))",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Mish",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class Mish(nn.Module):\n    def __init__(self):\n        super(Mish, self).__init__()\n    def forward(self, x):\n        return x * torch.tanh(F.softplus(x))\nclass LeakyReLU(nn.Module):\n    def __init__(self, negative_slope=0.01):\n        super(LeakyReLU, self).__init__()\n        self.negative_slope = negative_slope\n    def forward(self, x):",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "LeakyReLU",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class LeakyReLU(nn.Module):\n    def __init__(self, negative_slope=0.01):\n        super(LeakyReLU, self).__init__()\n        self.negative_slope = negative_slope\n    def forward(self, x):\n        return F.leaky_relu(x, negative_slope=self.negative_slope)\nclass ELU(nn.Module):\n    def __init__(self, alpha=1.0):\n        super(ELU, self).__init__()\n        self.alpha = alpha",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "ELU",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class ELU(nn.Module):\n    def __init__(self, alpha=1.0):\n        super(ELU, self).__init__()\n        self.alpha = alpha\n    def forward(self, x):\n        return F.elu(x, alpha=self.alpha)\nclass PReLU(nn.Module):\n    def __init__(self, num_parameters=1, init=0.25):\n        super(PReLU, self).__init__()\n        self.num_parameters = num_parameters",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "PReLU",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class PReLU(nn.Module):\n    def __init__(self, num_parameters=1, init=0.25):\n        super(PReLU, self).__init__()\n        self.num_parameters = num_parameters\n        self.weight = nn.Parameter(torch.full((num_parameters,), init))\n    def forward(self, x):\n        return F.prelu(x, self.weight)\nclass SELU(nn.Module):\n    def __init__(self):\n        super(SELU, self).__init__()",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "SELU",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class SELU(nn.Module):\n    def __init__(self):\n        super(SELU, self).__init__()\n    def forward(self, x):\n        return F.selu(x)\nclass Hardswish(nn.Module):\n    def __init__(self):\n        super(Hardswish, self).__init__()\n    def forward(self, x):\n        return x * F.relu6(x + 3) / 6",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Hardswish",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class Hardswish(nn.Module):\n    def __init__(self):\n        super(Hardswish, self).__init__()\n    def forward(self, x):\n        return x * F.relu6(x + 3) / 6\nclass SiLU(nn.Module):\n    def __init__(self):\n        super(SiLU, self).__init__()\n    def forward(self, x):\n        return F.silu(x)",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "SiLU",
+        "kind": 6,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "class SiLU(nn.Module):\n    def __init__(self):\n        super(SiLU, self).__init__()\n    def forward(self, x):\n        return F.silu(x)\ndef get_activation(activation_name):\n    \"\"\"\n    Factory function to get activation function by name.\n    Args:\n        activation_name (str): Name of the activation function",
         "detail": "models.activations",
         "documentation": {}
     },
@@ -267,7 +492,16 @@
         "kind": 2,
         "importPath": "models.activations",
         "description": "models.activations",
-        "peekOfCode": "def get_activation(activation_name):\n    \"\"\"\n    Factory function to get activation function by name.\n    Args:\n        activation_name (str): Name of the activation function ('gelu', 'relu', 'tanh')\n    Returns:\n        nn.Module: The corresponding activation function\n    \"\"\"\n    activation_map = {\n        'gelu': GELU(),",
+        "peekOfCode": "def get_activation(activation_name):\n    \"\"\"\n    Factory function to get activation function by name.\n    Args:\n        activation_name (str): Name of the activation function\n    Returns:\n        nn.Module: The corresponding activation function\n    \"\"\"\n    activation_map = {\n        'gelu': GELU(),",
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_activations",
+        "kind": 2,
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "peekOfCode": "def get_available_activations():\n    \"\"\"\n    Get list of all available activation functions.\n    Returns:\n        list: List of available activation function names\n    \"\"\"\n    return ['gelu', 'relu', 'tanh', 'sigmoid', 'step', 'softmax', 'swish',\n            'mish', 'leakyrelu', 'elu', 'prelu', 'selu', 'hardswish', 'silu']",
         "detail": "models.activations",
         "documentation": {}
     },
@@ -308,6 +542,123 @@
         "documentation": {}
     },
     {
+        "label": "LiveNetworkVisualizer",
+        "kind": 6,
+        "importPath": "utils.live_network_viz",
+        "description": "utils.live_network_viz",
+        "peekOfCode": "class LiveNetworkVisualizer:\n    \"\"\"\n    Real-time visualization of neural network with circles (neurons) and arrows (connections).\n    Shows live neuron activations, weight changes, and data flow during training.\n    \"\"\"\n    def __init__(self, model, max_neurons_per_layer=8, update_frequency=20):\n        \"\"\"\n        Initialize live network visualizer.\n        Args:\n            model: PyTorch model to visualize",
+        "detail": "utils.live_network_viz",
+        "documentation": {}
+    },
+    {
+        "label": "LivePerceptronNetwork",
+        "kind": 6,
+        "importPath": "utils.live_network_viz",
+        "description": "utils.live_network_viz",
+        "peekOfCode": "class LivePerceptronNetwork:\n    \"\"\"\n    Simplified live visualization of perceptron network structure.\n    Shows a clear network diagram with circles and arrows.\n    \"\"\"\n    def __init__(self, network_structure=[3, 4, 4, 2]):\n        \"\"\"\n        Initialize live perceptron network visualization.\n        Args:\n            network_structure: List of neurons per layer [input, hidden1, hidden2, output]",
+        "detail": "utils.live_network_viz",
+        "documentation": {}
+    },
+    {
+        "label": "create_live_network_demo",
+        "kind": 2,
+        "importPath": "utils.live_network_viz",
+        "description": "utils.live_network_viz",
+        "peekOfCode": "def create_live_network_demo():\n    \"\"\"Create a demo of live network visualization.\"\"\"\n    print(\"🎨 Creating live perceptron network visualization...\")\n    # Create a simple network structure\n    network = LivePerceptronNetwork([3, 5, 4, 2])\n    network.start_visualization()\n    print(\"🎬 Starting animation... (Press Ctrl+C to stop)\")\n    try:\n        for i in range(100):  # Run for 100 iterations\n            print(f\"📊 Iteration {i+1}/100 - Watch the network process data!\")",
+        "detail": "utils.live_network_viz",
+        "documentation": {}
+    },
+    {
+        "label": "Brightness",
+        "kind": 5,
+        "importPath": "utils.live_network_viz",
+        "description": "utils.live_network_viz",
+        "peekOfCode": "Brightness = Activation Level    Arrow Thickness = Weight Strength\n\"\"\"\n        self.ax.text(5, 0.5, legend_text, ha='center', va='center', fontsize=10,\n                    bbox=dict(boxstyle=\"round,pad=0.5\", facecolor='lightyellow', alpha=0.8))\n    def update(self):\n        \"\"\"Update the visualization with current network state.\"\"\"\n        if not self.is_running:\n            return\n        self.batch_count += 1\n    def _animate_network(self, frame):",
+        "detail": "utils.live_network_viz",
+        "documentation": {}
+    },
+    {
+        "label": "LiveTrainer",
+        "kind": 6,
+        "importPath": "utils.live_trainer",
+        "description": "utils.live_trainer",
+        "peekOfCode": "class LiveTrainer(Trainer):\n    \"\"\"\n    Enhanced trainer with real-time monitoring capabilities.\n    Shows live training progress, layer activations, and network behavior.\n    \"\"\"\n    def __init__(self, model, train_loader, val_loader=None, test_loader=None,\n                 device=None, save_dir='./checkpoints', enable_live_monitoring=True):\n        \"\"\"\n        Initialize live trainer with real-time monitoring.\n        Args:",
+        "detail": "utils.live_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "PerceptronVisualizer",
+        "kind": 6,
+        "importPath": "utils.monitor",
+        "description": "utils.monitor",
+        "peekOfCode": "class PerceptronVisualizer:\n    \"\"\"Visualizes the structure and operation of perceptrons and neural networks.\"\"\"\n    def __init__(self, save_dir='./visualizations'):\n        self.save_dir = save_dir\n        os.makedirs(save_dir, exist_ok=True)\n    def plot_single_perceptron(self, weights, bias, inputs=None, output=None,\n                              activation_name='linear', save_path=None):\n        \"\"\"\n        Visualize a single perceptron with weights, bias, and data flow.\n        Args:",
+        "detail": "utils.monitor",
+        "documentation": {}
+    },
+    {
+        "label": "LayerMonitor",
+        "kind": 6,
+        "importPath": "utils.monitor",
+        "description": "utils.monitor",
+        "peekOfCode": "class LayerMonitor:\n    \"\"\"Monitor layer-by-layer operations during forward pass.\"\"\"\n    def __init__(self):\n        self.activations = {}\n        self.gradients = {}\n        self.hooks = []\n    def register_hooks(self, model):\n        \"\"\"Register forward and backward hooks to monitor layer operations.\"\"\"\n        def forward_hook(name):\n            def hook(module, input, output):",
+        "detail": "utils.monitor",
+        "documentation": {}
+    },
+    {
+        "label": "ActivationAnalyzer",
+        "kind": 6,
+        "importPath": "utils.monitor",
+        "description": "utils.monitor",
+        "peekOfCode": "class ActivationAnalyzer:\n    \"\"\"Analyze and visualize activation function behaviors.\"\"\"\n    def __init__(self, save_dir='./visualizations'):\n        self.save_dir = save_dir\n        os.makedirs(save_dir, exist_ok=True)\n    def plot_activation_functions(self, activation_names, x_range=(-5, 5), save_path=None):\n        \"\"\"\n        Plot multiple activation functions for comparison.\n        Args:\n            activation_names (list): List of activation function names",
+        "detail": "utils.monitor",
+        "documentation": {}
+    },
+    {
+        "label": "RealTimeMonitor",
+        "kind": 6,
+        "importPath": "utils.monitor",
+        "description": "utils.monitor",
+        "peekOfCode": "class RealTimeMonitor:\n    \"\"\"Monitor training progress in real-time.\"\"\"\n    def __init__(self):\n        self.training_data = defaultdict(list)\n        self.epoch_data = defaultdict(list)\n    def update(self, epoch, batch, loss, accuracy, lr=None):\n        \"\"\"Update monitoring data.\"\"\"\n        self.training_data['epoch'].append(epoch)\n        self.training_data['batch'].append(batch)\n        self.training_data['loss'].append(loss)",
+        "detail": "utils.monitor",
+        "documentation": {}
+    },
+    {
+        "label": "LiveTrainingMonitor",
+        "kind": 6,
+        "importPath": "utils.realtime_monitor",
+        "description": "utils.realtime_monitor",
+        "peekOfCode": "class LiveTrainingMonitor:\n    \"\"\"Real-time training monitor with live updating plots.\"\"\"\n    def __init__(self, update_frequency=10, max_points=1000):\n        \"\"\"\n        Initialize real-time training monitor.\n        Args:\n            update_frequency (int): Update plots every N batches\n            max_points (int): Maximum points to keep in memory\n        \"\"\"\n        self.update_frequency = update_frequency",
+        "detail": "utils.realtime_monitor",
+        "documentation": {}
+    },
+    {
+        "label": "LiveLayerMonitor",
+        "kind": 6,
+        "importPath": "utils.realtime_monitor",
+        "description": "utils.realtime_monitor",
+        "peekOfCode": "class LiveLayerMonitor:\n    \"\"\"Monitor layer activations and weights in real-time.\"\"\"\n    def __init__(self, model, update_frequency=50):\n        \"\"\"\n        Initialize live layer monitor.\n        Args:\n            model: PyTorch model to monitor\n            update_frequency (int): Update every N batches\n        \"\"\"\n        self.model = model",
+        "detail": "utils.realtime_monitor",
+        "documentation": {}
+    },
+    {
+        "label": "LiveNeuralNetworkVisualizer",
+        "kind": 6,
+        "importPath": "utils.realtime_monitor",
+        "description": "utils.realtime_monitor",
+        "peekOfCode": "class LiveNeuralNetworkVisualizer:\n    \"\"\"Real-time visualization of neural network thinking process.\"\"\"\n    def __init__(self, model):\n        \"\"\"\n        Initialize live neural network visualizer.\n        Args:\n            model: PyTorch model to visualize\n        \"\"\"\n        self.model = model\n        self.fig = None",
+        "detail": "utils.realtime_monitor",
+        "documentation": {}
+    },
+    {
+        "label": "create_comprehensive_monitor",
+        "kind": 2,
+        "importPath": "utils.realtime_monitor",
+        "description": "utils.realtime_monitor",
+        "peekOfCode": "def create_comprehensive_monitor(model):\n    \"\"\"Create a comprehensive real-time monitoring system.\"\"\"\n    class ComprehensiveMonitor:\n        def __init__(self, model):\n            self.training_monitor = LiveTrainingMonitor()\n            self.layer_monitor = LiveLayerMonitor(model)\n            self.network_visualizer = LiveNeuralNetworkVisualizer(model)\n        def start_all(self):\n            \"\"\"Start all monitoring components.\"\"\"\n            print(\"🚀 Starting comprehensive real-time monitoring...\")",
+        "detail": "utils.realtime_monitor",
+        "documentation": {}
+    },
+    {
         "label": "Trainer",
         "kind": 6,
         "importPath": "utils.trainer",
@@ -335,48 +686,12 @@
         "documentation": {}
     },
     {
-        "label": "demo_activation_functions",
+        "label": "visualize_network",
         "kind": 2,
-        "importPath": "demo",
-        "description": "demo",
-        "peekOfCode": "def demo_activation_functions():\n    \"\"\"Demonstrate different activation functions.\"\"\"\n    print(\"=== Activation Functions Demo ===\")\n    # Create test input\n    x = torch.randn(5, 10)\n    print(f\"Input tensor shape: {x.shape}\")\n    print(f\"Input sample: {x[0, :5].detach().numpy()}\")\n    activations = ['relu', 'gelu', 'tanh']\n    for act_name in activations:\n        activation = get_activation(act_name)",
-        "detail": "demo",
-        "documentation": {}
-    },
-    {
-        "label": "demo_neural_networks",
-        "kind": 2,
-        "importPath": "demo",
-        "description": "demo",
-        "peekOfCode": "def demo_neural_networks():\n    \"\"\"Demonstrate neural network architectures.\"\"\"\n    print(\"\\n=== Neural Network Architectures Demo ===\")\n    # Fully connected network\n    print(\"\\n1. Fully Connected Network:\")\n    fc_net = NeuralNetwork(\n        input_size=784,  # 28x28 flattened\n        hidden_sizes=[512, 256, 128],\n        output_size=10,\n        activation='relu'",
-        "detail": "demo",
-        "documentation": {}
-    },
-    {
-        "label": "demo_data_loader",
-        "kind": 2,
-        "importPath": "demo",
-        "description": "demo",
-        "peekOfCode": "def demo_data_loader():\n    \"\"\"Demonstrate CIFAR-10 data loader.\"\"\"\n    print(\"\\n=== CIFAR-10 Data Loader Demo ===\")\n    try:\n        # Create data loader\n        data_loader = CIFAR10DataLoader(batch_size=8, validation_split=0.1)\n        # Get dataset info\n        info = data_loader.get_dataset_info()\n        print(\"Dataset Information:\")\n        for key, value in info.items():",
-        "detail": "demo",
-        "documentation": {}
-    },
-    {
-        "label": "demo_model_comparison",
-        "kind": 2,
-        "importPath": "demo",
-        "description": "demo",
-        "peekOfCode": "def demo_model_comparison():\n    \"\"\"Compare models with different activation functions.\"\"\"\n    print(\"\\n=== Model Comparison Demo ===\")\n    activations = ['relu', 'gelu', 'tanh']\n    for activation in activations:\n        model = ConvNeuralNetwork(activation=activation)\n        num_params = model.get_num_parameters()\n        # Test inference speed (rough estimate)\n        test_input = torch.randn(32, 3, 32, 32)\n        # Warm up",
-        "detail": "demo",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 2,
-        "importPath": "demo",
-        "description": "demo",
-        "peekOfCode": "def main():\n    print(\"Neural Network Implementation Demo\")\n    print(\"=\" * 50)\n    # Set device\n    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\n    print(f\"Using device: {device}\")\n    print(f\"PyTorch version: {torch.__version__}\")\n    # Run demos\n    demo_activation_functions()\n    demo_neural_networks()",
-        "detail": "demo",
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def visualize_network(activation='relu'):\n    \"\"\"\n    Visualize neural network structure in real-time.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print(\"    LIVE NEURAL NETWORK VISUALIZATION\")\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print()",
+        "detail": "main",
         "documentation": {}
     },
     {
@@ -384,7 +699,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def train_model(activation, epochs=10, batch_size=32, lr=0.001):\n    \"\"\"\n    Train a model with specified activation function.\n    Args:\n        activation (str): Activation function name\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n    Returns:\n        dict: Training results",
+        "peekOfCode": "def train_model(activation, epochs=10, batch_size=32, lr=0.001, enable_monitoring=False):\n    \"\"\"\n    Train a model with specified activation function.\n    Args:\n        activation (str): Activation function name\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n        enable_monitoring (bool): Enable live training monitoring\n    Returns:",
         "detail": "main",
         "documentation": {}
     },
@@ -393,7 +708,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def compare_activations(activations, epochs=10, batch_size=32, lr=0.001):\n    \"\"\"\n    Compare different activation functions.\n    Args:\n        activations (list): List of activation function names\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n    \"\"\"\n    results = []",
+        "peekOfCode": "def compare_activations(activations, epochs=10, batch_size=32, lr=0.001, enable_monitoring=False):\n    \"\"\"\n    Compare different activation functions.\n    Args:\n        activations (list): List of activation function names\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n        enable_monitoring (bool): Enable live monitoring\n    \"\"\"",
         "detail": "main",
         "documentation": {}
     },
@@ -402,7 +717,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description='Train neural networks with different activation functions')\n    parser.add_argument('--activation', type=str, default='relu',\n                       choices=['relu', 'gelu', 'tanh', 'all'],\n                       help='Activation function to use (default: relu)')\n    parser.add_argument('--epochs', type=int, default=10,\n                       help='Number of training epochs (default: 10)')\n    parser.add_argument('--batch-size', type=int, default=32,\n                       help='Batch size (default: 32)')\n    parser.add_argument('--lr', type=float, default=0.001,",
+        "peekOfCode": "def main():\n    # Get available activations dynamically\n    available_activations = get_available_activations()\n    activation_choices = available_activations + ['all', 'modern', 'classic']\n    parser = argparse.ArgumentParser(description='Train neural networks with different activation functions')\n    parser.add_argument('--activation', type=str, default='relu',\n                       choices=activation_choices,\n                       help='Activation function to use (default: relu). Use \"all\" for all functions, \"modern\" for recent ones, \"classic\" for traditional ones.')\n    parser.add_argument('--epochs', type=int, default=10,\n                       help='Number of training epochs (default: 10)')",
         "detail": "main",
         "documentation": {}
     }

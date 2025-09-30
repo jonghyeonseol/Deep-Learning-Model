@@ -12,6 +12,76 @@ from models import ConvNeuralNetwork, get_activation, get_available_activations
 from utils import CIFAR10DataLoader, Trainer, Visualizer
 
 
+def launch_interactive_propagation(activation='relu'):
+    """
+    Launch interactive propagation panel showing forward and backward passes.
+
+    Args:
+        activation (str): Activation function to use
+    """
+    print("🧠" + "="*60 + "🧠")
+    print("    INTERACTIVE PROPAGATION PANEL")
+    print("    Forward & Backward Pass with Synapses")
+    print("🧠" + "="*60 + "🧠")
+    print()
+    print("📊 What you'll see:")
+    print("   🔵 Neurons (circles) - Process incoming signals")
+    print("   ➡️  Synapses (arrows) - Weighted connections between neurons")
+    print("   📊 Weight values - Numbers displayed on synapses")
+    print("   💡 Forward pass - Data flows left to right through synapses")
+    print("   🎯 Backward pass - Gradients flow right to left through synapses")
+    print("   🎚️  Interactive controls - Pause, step, adjust speed")
+    print()
+
+    try:
+        from utils.interactive_propagation_panel import launch_propagation_panel
+
+        # Create a small model for visualization
+        print("⚙️  Creating neural network model...")
+        model = ConvNeuralNetwork(
+            input_channels=3,
+            num_classes=10,
+            activation=activation,
+            dropout_rate=0.2
+        )
+
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        model = model.to(device)
+        print(f"   ✓ Model created with {activation.upper()} activation")
+        print(f"   ✓ Device: {device}")
+
+        # Load a small batch of data
+        print("\n📦 Loading CIFAR-10 data...")
+        data_loader = CIFAR10DataLoader(batch_size=4, validation_split=0.1)
+        _, _, test_loader = data_loader.get_data_loaders()
+        print("   ✓ Data loaded")
+
+        print("\n" + "="*60)
+        print("🚀 Launching Interactive Propagation Panel...")
+        print("="*60)
+        print()
+        print("💡 TIP: Watch how:")
+        print("   1. Input signals travel through synapses (weighted connections)")
+        print("   2. Each neuron computes: σ(Σ(input × weight) + bias)")
+        print("   3. Gradients flow backward to update synapse weights")
+        print()
+
+        input("Press ENTER to start the interactive panel... ")
+
+        # Launch the panel
+        launch_propagation_panel(model, test_loader, device)
+
+        print("\n✅ Interactive propagation panel completed!")
+
+    except ImportError as e:
+        print(f"❌ Interactive panel not available: {e}")
+        print("   Make sure all dependencies are installed.")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
+
+
 def visualize_network(activation='relu'):
     """
     Visualize neural network structure in real-time.
@@ -287,8 +357,15 @@ def main():
                        help='Show live network visualization (neurons and connections)')
     parser.add_argument('--monitor', action='store_true',
                        help='Enable live training monitoring with real-time plots')
+    parser.add_argument('--propagation', action='store_true',
+                       help='Show interactive propagation panel (forward & backward pass visualization)')
 
     args = parser.parse_args()
+
+    # Show interactive propagation panel if requested
+    if args.propagation:
+        launch_interactive_propagation(args.activation)
+        return
 
     # Show network visualization if requested
     if args.visualize:
