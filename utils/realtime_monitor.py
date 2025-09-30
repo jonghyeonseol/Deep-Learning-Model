@@ -54,60 +54,67 @@ class LiveTrainingMonitor:
 
     def setup_plots(self):
         """Setup the live plotting interface."""
-        self.fig, self.axes = plt.subplots(2, 3, figsize=(18, 10))
-        self.fig.suptitle('🧠 Real-time ANN Training Monitor', fontsize=16, fontweight='bold')
+        self.fig, self.axes = plt.subplots(2, 3, figsize=(20, 11))
+        self.fig.suptitle('🧠 Real-Time Neural Network Training Monitor',
+                         fontsize=18, fontweight='bold', y=0.995)
 
         # Loss plot
         ax = self.axes[0, 0]
-        self.lines['train_loss'], = ax.plot([], [], 'b-', label='Train Loss', linewidth=2)
-        self.lines['val_loss'], = ax.plot([], [], 'r-', label='Val Loss', linewidth=2)
-        ax.set_title('📉 Loss Evolution')
-        ax.set_xlabel('Batch')
-        ax.set_ylabel('Loss')
-        ax.legend()
-        ax.grid(True, alpha=0.3)
+        self.lines['train_loss'], = ax.plot([], [], 'b-', label='Train Loss', linewidth=2.5, alpha=0.8)
+        self.lines['val_loss'], = ax.plot([], [], 'r-', label='Val Loss', linewidth=2.5, alpha=0.8)
+        ax.set_title('📉 Loss Evolution', fontsize=14, fontweight='bold', pad=10)
+        ax.set_xlabel('Batch', fontsize=11)
+        ax.set_ylabel('Loss', fontsize=11)
+        ax.legend(fontsize=10, loc='upper right')
+        ax.grid(True, alpha=0.3, linestyle='--')
+        ax.tick_params(labelsize=10)
 
         # Accuracy plot
         ax = self.axes[0, 1]
-        self.lines['train_acc'], = ax.plot([], [], 'g-', label='Train Acc', linewidth=2)
-        self.lines['val_acc'], = ax.plot([], [], 'orange', label='Val Acc', linewidth=2)
-        ax.set_title('📈 Accuracy Evolution')
-        ax.set_xlabel('Batch')
-        ax.set_ylabel('Accuracy (%)')
-        ax.legend()
-        ax.grid(True, alpha=0.3)
+        self.lines['train_acc'], = ax.plot([], [], 'g-', label='Train Acc', linewidth=2.5, alpha=0.8)
+        self.lines['val_acc'], = ax.plot([], [], 'orange', label='Val Acc', linewidth=2.5, alpha=0.8)
+        ax.set_title('📈 Accuracy Evolution', fontsize=14, fontweight='bold', pad=10)
+        ax.set_xlabel('Batch', fontsize=11)
+        ax.set_ylabel('Accuracy (%)', fontsize=11)
+        ax.legend(fontsize=10, loc='lower right')
+        ax.grid(True, alpha=0.3, linestyle='--')
+        ax.tick_params(labelsize=10)
 
         # Learning rate plot
         ax = self.axes[0, 2]
-        self.lines['learning_rate'], = ax.plot([], [], 'm-', linewidth=2)
-        ax.set_title('⚡ Learning Rate')
-        ax.set_xlabel('Batch')
-        ax.set_ylabel('Learning Rate')
+        self.lines['learning_rate'], = ax.plot([], [], 'm-', linewidth=2.5, alpha=0.8)
+        ax.set_title('⚡ Learning Rate', fontsize=14, fontweight='bold', pad=10)
+        ax.set_xlabel('Batch', fontsize=11)
+        ax.set_ylabel('Learning Rate', fontsize=11)
         ax.set_yscale('log')
-        ax.grid(True, alpha=0.3)
+        ax.grid(True, alpha=0.3, linestyle='--')
+        ax.tick_params(labelsize=10)
 
         # Gradient norm plot
         ax = self.axes[1, 0]
-        self.lines['gradient_norm'], = ax.plot([], [], 'c-', linewidth=2)
-        ax.set_title('🌊 Gradient Flow')
-        ax.set_xlabel('Batch')
-        ax.set_ylabel('Gradient Norm')
+        self.lines['gradient_norm'], = ax.plot([], [], 'c-', linewidth=2.5, alpha=0.8)
+        ax.set_title('🌊 Gradient Flow', fontsize=14, fontweight='bold', pad=10)
+        ax.set_xlabel('Batch', fontsize=11)
+        ax.set_ylabel('Gradient Norm', fontsize=11)
         ax.set_yscale('log')
-        ax.grid(True, alpha=0.3)
+        ax.grid(True, alpha=0.3, linestyle='--')
+        ax.tick_params(labelsize=10)
 
         # Loss distribution
         ax = self.axes[1, 1]
-        ax.set_title('📊 Loss Distribution')
-        ax.set_xlabel('Loss Value')
-        ax.set_ylabel('Frequency')
+        ax.set_title('📊 Loss Distribution', fontsize=14, fontweight='bold', pad=10)
+        ax.set_xlabel('Loss Value', fontsize=11)
+        ax.set_ylabel('Frequency', fontsize=11)
+        ax.grid(True, alpha=0.3, linestyle='--')
+        ax.tick_params(labelsize=10)
 
-        # Training speed
+        # Training progress
         ax = self.axes[1, 2]
-        ax.set_title('🚀 Training Progress')
-        ax.set_xlabel('Time')
-        ax.set_ylabel('Epoch Progress')
+        ax.set_title('🚀 Epoch Progress', fontsize=14, fontweight='bold', pad=10)
+        ax.set_xlabel('Progress', fontsize=11)
+        ax.tick_params(labelsize=10)
 
-        plt.tight_layout()
+        plt.tight_layout(rect=[0, 0, 1, 0.99])
         plt.show(block=False)
         plt.draw()
 
@@ -181,10 +188,13 @@ class LiveTrainingMonitor:
             # Update loss distribution
             self.axes[1, 1].clear()
             if len(self.data['train_loss']) > 10:
-                self.axes[1, 1].hist(list(self.data['train_loss']), bins=20, alpha=0.7, color='blue')
-                self.axes[1, 1].set_title('📊 Loss Distribution')
-                self.axes[1, 1].set_xlabel('Loss Value')
-                self.axes[1, 1].set_ylabel('Frequency')
+                self.axes[1, 1].hist(list(self.data['train_loss']), bins=25,
+                                    alpha=0.7, color='steelblue', edgecolor='black', linewidth=1.2)
+                self.axes[1, 1].set_title('📊 Loss Distribution', fontsize=14, fontweight='bold', pad=10)
+                self.axes[1, 1].set_xlabel('Loss Value', fontsize=11)
+                self.axes[1, 1].set_ylabel('Frequency', fontsize=11)
+                self.axes[1, 1].grid(True, alpha=0.3, linestyle='--')
+                self.axes[1, 1].tick_params(labelsize=10)
 
             # Update training progress
             self.axes[1, 2].clear()
@@ -192,10 +202,21 @@ class LiveTrainingMonitor:
             if epochs:
                 current_epoch = epochs[-1]
                 progress = (self.batch_count % 100) / 100  # Approximate progress
-                self.axes[1, 2].barh(0, progress, color='green', alpha=0.7)
+
+                # Create a nice progress bar
+                self.axes[1, 2].barh(['Progress'], [progress],
+                                    color='#4CAF50', alpha=0.8, height=0.5)
+                self.axes[1, 2].barh(['Progress'], [1-progress],
+                                    left=[progress], color='lightgray', alpha=0.4, height=0.5)
                 self.axes[1, 2].set_xlim(0, 1)
-                self.axes[1, 2].set_title(f'🚀 Epoch {current_epoch} Progress')
-                self.axes[1, 2].set_xlabel('Progress')
+                self.axes[1, 2].set_title(f'🚀 Epoch {current_epoch} Progress',
+                                         fontsize=14, fontweight='bold', pad=10)
+                self.axes[1, 2].set_xlabel('Progress', fontsize=11)
+                self.axes[1, 2].tick_params(labelsize=10)
+
+                # Add percentage text
+                self.axes[1, 2].text(progress/2, 0, f'{progress*100:.1f}%',
+                                    ha='center', va='center', fontsize=12, fontweight='bold', color='white')
 
             # Refresh display
             self.fig.canvas.draw()
@@ -284,9 +305,11 @@ class LiveLayerMonitor:
         if n_layers == 0:
             return
 
-        self.fig, self.axes = plt.subplots(2, 2, figsize=(15, 10))
-        self.fig.suptitle('🧠 Live Layer Activity Monitor', fontsize=16, fontweight='bold')
+        self.fig, self.axes = plt.subplots(2, 2, figsize=(16, 10))
+        self.fig.suptitle('🧠 Live Layer Activity Monitor',
+                         fontsize=18, fontweight='bold', y=0.995)
 
+        plt.tight_layout(rect=[0, 0, 1, 0.99])
         plt.show(block=False)
 
     def update(self):
@@ -306,44 +329,54 @@ class LiveLayerMonitor:
                 return
 
             layer_names = list(self.activations.keys())
+            short_names = [name.split('.')[-1] for name in layer_names]
 
             # Plot 1: Activation means
             ax = self.axes[0, 0]
             ax.clear()
             means = [self.activations[name]['mean'] for name in layer_names]
-            bars = ax.bar(range(len(layer_names)), means, color='skyblue', alpha=0.7)
-            ax.set_title('⚡ Layer Activation Means')
-            ax.set_xlabel('Layer')
-            ax.set_ylabel('Mean Activation')
+            bars = ax.bar(range(len(layer_names)), means, color='skyblue',
+                         alpha=0.7, edgecolor='black', linewidth=1.2)
+            ax.set_title('⚡ Layer Activation Means', fontsize=14, fontweight='bold', pad=10)
+            ax.set_xlabel('Layer', fontsize=11)
+            ax.set_ylabel('Mean Activation', fontsize=11)
             ax.set_xticks(range(len(layer_names)))
-            ax.set_xticklabels([name.split('.')[-1] for name in layer_names], rotation=45)
+            ax.set_xticklabels(short_names, rotation=45, ha='right', fontsize=9)
+            ax.grid(True, alpha=0.3, linestyle='--', axis='y')
+            ax.tick_params(labelsize=10)
 
             # Add value labels
             for bar, mean in zip(bars, means):
                 ax.text(bar.get_x() + bar.get_width()/2, bar.get_height(),
-                       f'{mean:.3f}', ha='center', va='bottom', fontsize=8)
+                       f'{mean:.3f}', ha='center', va='bottom', fontsize=9, fontweight='bold')
 
             # Plot 2: Activation standard deviations
             ax = self.axes[0, 1]
             ax.clear()
             stds = [self.activations[name]['std'] for name in layer_names]
-            bars = ax.bar(range(len(layer_names)), stds, color='lightcoral', alpha=0.7)
-            ax.set_title('📊 Layer Activation Std Dev')
-            ax.set_xlabel('Layer')
-            ax.set_ylabel('Std Dev')
+            bars = ax.bar(range(len(layer_names)), stds, color='lightcoral',
+                         alpha=0.7, edgecolor='black', linewidth=1.2)
+            ax.set_title('📊 Layer Activation Std Dev', fontsize=14, fontweight='bold', pad=10)
+            ax.set_xlabel('Layer', fontsize=11)
+            ax.set_ylabel('Std Dev', fontsize=11)
             ax.set_xticks(range(len(layer_names)))
-            ax.set_xticklabels([name.split('.')[-1] for name in layer_names], rotation=45)
+            ax.set_xticklabels(short_names, rotation=45, ha='right', fontsize=9)
+            ax.grid(True, alpha=0.3, linestyle='--', axis='y')
+            ax.tick_params(labelsize=10)
 
             # Plot 3: Sparsity (for ReLU-like activations)
             ax = self.axes[1, 0]
             ax.clear()
             sparsities = [self.activations[name]['sparsity'] * 100 for name in layer_names]
-            bars = ax.bar(range(len(layer_names)), sparsities, color='lightgreen', alpha=0.7)
-            ax.set_title('🕳️ Activation Sparsity (%)')
-            ax.set_xlabel('Layer')
-            ax.set_ylabel('Sparsity (%)')
+            bars = ax.bar(range(len(layer_names)), sparsities, color='lightgreen',
+                         alpha=0.7, edgecolor='black', linewidth=1.2)
+            ax.set_title('🕳️ Activation Sparsity (%)', fontsize=14, fontweight='bold', pad=10)
+            ax.set_xlabel('Layer', fontsize=11)
+            ax.set_ylabel('Sparsity (%)', fontsize=11)
             ax.set_xticks(range(len(layer_names)))
-            ax.set_xticklabels([name.split('.')[-1] for name in layer_names], rotation=45)
+            ax.set_xticklabels(short_names, rotation=45, ha='right', fontsize=9)
+            ax.grid(True, alpha=0.3, linestyle='--', axis='y')
+            ax.tick_params(labelsize=10)
 
             # Plot 4: Activation ranges
             ax = self.axes[1, 1]
@@ -351,16 +384,20 @@ class LiveLayerMonitor:
             mins = [self.activations[name]['min'] for name in layer_names]
             maxs = [self.activations[name]['max'] for name in layer_names]
             x_pos = range(len(layer_names))
-            ax.bar(x_pos, maxs, color='red', alpha=0.5, label='Max')
-            ax.bar(x_pos, mins, color='blue', alpha=0.5, label='Min')
-            ax.set_title('📏 Activation Ranges')
-            ax.set_xlabel('Layer')
-            ax.set_ylabel('Activation Value')
+            ax.bar(x_pos, maxs, color='#FF6B6B', alpha=0.7, label='Max',
+                  edgecolor='black', linewidth=1.2)
+            ax.bar(x_pos, mins, color='#4ECDC4', alpha=0.7, label='Min',
+                  edgecolor='black', linewidth=1.2)
+            ax.set_title('📏 Activation Ranges', fontsize=14, fontweight='bold', pad=10)
+            ax.set_xlabel('Layer', fontsize=11)
+            ax.set_ylabel('Activation Value', fontsize=11)
             ax.set_xticks(range(len(layer_names)))
-            ax.set_xticklabels([name.split('.')[-1] for name in layer_names], rotation=45)
-            ax.legend()
+            ax.set_xticklabels(short_names, rotation=45, ha='right', fontsize=9)
+            ax.legend(fontsize=10)
+            ax.grid(True, alpha=0.3, linestyle='--', axis='y')
+            ax.tick_params(labelsize=10)
 
-            plt.tight_layout()
+            plt.tight_layout(rect=[0, 0, 1, 0.99])
             self.fig.canvas.draw()
             self.fig.canvas.flush_events()
             plt.pause(0.01)
@@ -404,8 +441,9 @@ class LiveNeuralNetworkVisualizer:
 
     def setup_visualization(self):
         """Setup the neural network visualization."""
-        self.fig, self.ax = plt.subplots(1, 1, figsize=(16, 10))
-        self.ax.set_title('🧠 Live Neural Network Thinking Process', fontsize=16, fontweight='bold')
+        self.fig, self.ax = plt.subplots(1, 1, figsize=(18, 10))
+        self.ax.set_title('🧠 Live Neural Network Thinking Process',
+                         fontsize=18, fontweight='bold', pad=20)
         self.ax.set_xlim(0, 10)
         self.ax.set_ylim(0, 8)
         self.ax.axis('off')
@@ -413,6 +451,7 @@ class LiveNeuralNetworkVisualizer:
         # Draw network structure
         self._draw_network_structure()
 
+        plt.tight_layout()
         plt.show(block=False)
 
     def _draw_network_structure(self):
@@ -420,24 +459,48 @@ class LiveNeuralNetworkVisualizer:
         # This is a simplified representation
         # Input layer
         for i in range(3):
-            circle = plt.Circle((1, 2 + i * 1.5), 0.3, color='lightblue', ec='black')
+            circle = plt.Circle((1, 2 + i * 1.5), 0.35, color='lightblue',
+                              ec='black', linewidth=2.5)
             self.ax.add_patch(circle)
-            self.ax.text(1, 2 + i * 1.5, f'I{i+1}', ha='center', va='center', fontweight='bold')
+            self.ax.text(1, 2 + i * 1.5, f'I{i+1}', ha='center', va='center',
+                        fontweight='bold', fontsize=11)
+
+        # Layer label
+        self.ax.text(1, 0.8, 'INPUT\nLAYER', ha='center', va='center',
+                    fontsize=11, fontweight='bold')
 
         # Hidden layers
         for layer in range(2):
             for i in range(4):
-                circle = plt.Circle((3 + layer * 2, 1.5 + i * 1.2), 0.25,
-                                  color='lightcoral', ec='black')
+                circle = plt.Circle((3.5 + layer * 2.5, 1.5 + i * 1.4), 0.3,
+                                  color='lightcoral', ec='black', linewidth=2.5)
                 self.ax.add_patch(circle)
-                self.ax.text(3 + layer * 2, 1.5 + i * 1.2, f'H{layer+1}.{i+1}',
-                           ha='center', va='center', fontsize=8, fontweight='bold')
+                self.ax.text(3.5 + layer * 2.5, 1.5 + i * 1.4, 'σ',
+                           ha='center', va='center', fontsize=12, fontweight='bold',
+                           style='italic')
+
+            # Layer label
+            self.ax.text(3.5 + layer * 2.5, 0.8, f'HIDDEN\nLAYER {layer+1}',
+                        ha='center', va='center', fontsize=11, fontweight='bold')
 
         # Output layer
         for i in range(2):
-            circle = plt.Circle((8, 3 + i * 1), 0.3, color='lightgreen', ec='black')
+            circle = plt.Circle((8.5, 3 + i * 1.2), 0.35, color='lightgreen',
+                              ec='black', linewidth=2.5)
             self.ax.add_patch(circle)
-            self.ax.text(8, 3 + i * 1, f'O{i+1}', ha='center', va='center', fontweight='bold')
+            self.ax.text(8.5, 3 + i * 1.2, f'Y{i+1}', ha='center', va='center',
+                        fontweight='bold', fontsize=11)
+
+        # Layer label
+        self.ax.text(8.5, 0.8, 'OUTPUT\nLAYER', ha='center', va='center',
+                    fontsize=11, fontweight='bold')
+
+        # Add legend
+        legend_text = '🔵 Input  🔴 Hidden (with activation σ)  🟢 Output'
+        self.ax.text(5, 7.5, legend_text, ha='center', va='center',
+                    fontsize=12, fontweight='bold',
+                    bbox=dict(boxstyle='round,pad=0.5', facecolor='lightyellow',
+                             edgecolor='black', linewidth=2, alpha=0.8))
 
         self.fig.canvas.draw()
 

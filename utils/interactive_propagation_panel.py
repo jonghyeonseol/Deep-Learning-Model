@@ -194,7 +194,8 @@ class InteractivePropagationPanel:
         """Draw the neural network with detailed synapse visualization."""
         # Limit neurons for clarity (show representative connections)
         max_neurons = 4
-        n_layers = min(len(self.layers) + 1, 5)  # +1 for input, max 5 total
+        # Show all layers (input + all model layers)
+        n_layers = len(self.layers) + 1  # +1 for input layer
         layer_x = np.linspace(1.5, 10.5, n_layers)
 
         # Input layer
@@ -230,13 +231,14 @@ class InteractivePropagationPanel:
         # Hidden and output layers
         prev_neurons = self.neurons['input']
 
-        for idx in range(min(len(self.layers), n_layers-1)):
+        # Show ALL layers
+        for idx in range(len(self.layers)):
             layer = self.layers[idx]
             x = layer_x[idx + 1]
             n_neurons = min(max_neurons, self._get_layer_size(layer))
             neuron_y = np.linspace(4, 6, n_neurons)
 
-            # Determine color and label
+            # Determine color and label - check if this is the LAST layer
             if idx == len(self.layers) - 1:
                 color = 'lightgreen'
                 label = 'OUTPUT\nLAYER'
