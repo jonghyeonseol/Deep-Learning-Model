@@ -88,20 +88,43 @@
         "documentation": {}
     },
     {
-        "label": "matplotlib.animation",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "matplotlib.animation",
-        "description": "matplotlib.animation",
-        "detail": "matplotlib.animation",
-        "documentation": {}
-    },
-    {
         "label": "matplotlib.patches",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "matplotlib.patches",
         "description": "matplotlib.patches",
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "FancyArrowPatch",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "Rectangle",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "FancyBboxPatch",
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "isExtraImport": true,
         "detail": "matplotlib.patches",
         "documentation": {}
     },
@@ -154,6 +177,22 @@
         "documentation": {}
     },
     {
+        "label": "Button",
+        "importPath": "matplotlib.widgets",
+        "description": "matplotlib.widgets",
+        "isExtraImport": true,
+        "detail": "matplotlib.widgets",
+        "documentation": {}
+    },
+    {
+        "label": "Slider",
+        "importPath": "matplotlib.widgets",
+        "description": "matplotlib.widgets",
+        "isExtraImport": true,
+        "detail": "matplotlib.widgets",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -163,6 +202,14 @@
         "documentation": {}
     },
     {
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "defaultdict",
         "importPath": "collections",
         "description": "collections",
@@ -224,6 +271,15 @@
         "description": "collections",
         "isExtraImport": true,
         "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.animation",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.animation",
+        "description": "matplotlib.animation",
+        "detail": "matplotlib.animation",
         "documentation": {}
     },
     {
@@ -542,6 +598,24 @@
         "documentation": {}
     },
     {
+        "label": "InteractivePropagationPanel",
+        "kind": 6,
+        "importPath": "utils.interactive_propagation_panel",
+        "description": "utils.interactive_propagation_panel",
+        "peekOfCode": "class InteractivePropagationPanel:\n    \"\"\"\n    Interactive panel showing neuron-synapse interactions during propagation.\n    Features:\n    - Detailed synapse visualization with weight values\n    - Step-by-step signal flow through connections\n    - Weighted sum calculation at each neuron\n    - Activation function visualization\n    - Gradient flow through synapses (backprop)\n    \"\"\"",
+        "detail": "utils.interactive_propagation_panel",
+        "documentation": {}
+    },
+    {
+        "label": "launch_propagation_panel",
+        "kind": 2,
+        "importPath": "utils.interactive_propagation_panel",
+        "description": "utils.interactive_propagation_panel",
+        "peekOfCode": "def launch_propagation_panel(model, data_loader, device):\n    \"\"\"\n    Launch the interactive propagation panel.\n    Args:\n        model: PyTorch model\n        data_loader: DataLoader with samples\n        device: Device to run on\n    \"\"\"\n    print(\"\\n\" + \"=\"*70)\n    print(\"🚀 LAUNCHING INTERACTIVE PROPAGATION PANEL\")",
+        "detail": "utils.interactive_propagation_panel",
+        "documentation": {}
+    },
+    {
         "label": "LiveNetworkVisualizer",
         "kind": 6,
         "importPath": "utils.live_network_viz",
@@ -683,6 +757,15 @@
         "description": "utils.visualization",
         "peekOfCode": "def create_visualizer(class_names=None):\n    \"\"\"\n    Convenience function to create a visualizer.\n    Args:\n        class_names (list, optional): List of class names\n    Returns:\n        Visualizer: Configured visualizer instance\n    \"\"\"\n    return Visualizer(class_names=class_names)",
         "detail": "utils.visualization",
+        "documentation": {}
+    },
+    {
+        "label": "launch_interactive_propagation",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def launch_interactive_propagation(activation='relu'):\n    \"\"\"\n    Launch interactive propagation panel showing forward and backward passes.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print(\"    INTERACTIVE PROPAGATION PANEL\")\n    print(\"    Forward & Backward Pass with Synapses\")\n    print(\"🧠\" + \"=\"*60 + \"🧠\")",
+        "detail": "main",
         "documentation": {}
     },
     {

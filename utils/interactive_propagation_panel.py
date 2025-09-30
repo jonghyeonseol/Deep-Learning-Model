@@ -323,8 +323,21 @@ class InteractivePropagationPanel:
         for i, from_neuron in enumerate(from_neurons):
             for j, to_neuron in enumerate(to_neurons):
                 # Get weight value if available
-                if weights is not None and j < weights.shape[0] and i < weights.shape[1]:
-                    weight = float(weights[j, i])
+                if weights is not None and j < weights.shape[0]:
+                    # Handle different weight tensor shapes
+                    if len(weights.shape) == 4:  # Conv2d: (out_ch, in_ch, h, w)
+                        if i < weights.shape[1]:
+                            # Average over spatial dimensions for conv kernels
+                            weight = float(weights[j, i].mean())
+                        else:
+                            weight = np.random.normal(0, 0.5)
+                    elif len(weights.shape) == 2:  # Linear: (out_features, in_features)
+                        if i < weights.shape[1]:
+                            weight = float(weights[j, i])
+                        else:
+                            weight = np.random.normal(0, 0.5)
+                    else:
+                        weight = np.random.normal(0, 0.5)
                 else:
                     weight = np.random.normal(0, 0.5)  # Random for visualization
 
