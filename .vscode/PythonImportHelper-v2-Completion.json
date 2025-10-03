@@ -36,21 +36,72 @@
         "documentation": {}
     },
     {
-        "label": "torchvision",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "torchvision",
-        "description": "torchvision",
-        "detail": "torchvision",
-        "documentation": {}
-    },
-    {
         "label": "torchvision.transforms",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "torchvision.transforms",
         "description": "torchvision.transforms",
         "detail": "torchvision.transforms",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision.transforms.functional",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision.transforms.functional",
+        "description": "torchvision.transforms.functional",
+        "detail": "torchvision.transforms.functional",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageEnhance",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageOps",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "detail": "torchvision",
         "documentation": {}
     },
     {
@@ -67,15 +118,6 @@
         "description": "torch.utils.data",
         "isExtraImport": true,
         "detail": "torch.utils.data",
-        "documentation": {}
-    },
-    {
-        "label": "numpy",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
         "documentation": {}
     },
     {
@@ -242,7 +284,23 @@
         "documentation": {}
     },
     {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
         "importPath": "collections",
         "description": "collections",
         "isExtraImport": true,
@@ -319,6 +377,47 @@
         "documentation": {}
     },
     {
+        "label": "GradScaler",
+        "importPath": "torch.cuda.amp",
+        "description": "torch.cuda.amp",
+        "isExtraImport": true,
+        "detail": "torch.cuda.amp",
+        "documentation": {}
+    },
+    {
+        "label": "autocast",
+        "importPath": "torch.cuda.amp",
+        "description": "torch.cuda.amp",
+        "isExtraImport": true,
+        "detail": "torch.cuda.amp",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
+        "documentation": {}
+    },
+    {
+        "label": "SummaryWriter",
+        "importPath": "torch.utils.tensorboard",
+        "description": "torch.utils.tensorboard",
+        "isExtraImport": true,
+        "detail": "torch.utils.tensorboard",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
         "label": "seaborn",
         "kind": 6,
         "isExtraImport": true,
@@ -334,14 +433,6 @@
         "importPath": "warnings",
         "description": "warnings",
         "detail": "warnings",
-        "documentation": {}
-    },
-    {
-        "label": "SummaryWriter",
-        "importPath": "torch.utils.tensorboard",
-        "description": "torch.utils.tensorboard",
-        "isExtraImport": true,
-        "detail": "torch.utils.tensorboard",
         "documentation": {}
     },
     {
@@ -367,6 +458,208 @@
         "importPath": "argparse",
         "description": "argparse",
         "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeuralNetwork",
+        "importPath": "models.network",
+        "description": "models.network",
+        "isExtraImport": true,
+        "detail": "models.network",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeuralNetwork",
+        "importPath": "models.network",
+        "description": "models.network",
+        "isExtraImport": true,
+        "detail": "models.network",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet18",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet_Tiny",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet18",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet34",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet50",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet_Tiny",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_Tiny",
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "isExtraImport": true,
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_B0",
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "isExtraImport": true,
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_B1",
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "isExtraImport": true,
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_Tiny",
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "isExtraImport": true,
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "CNNTransformer_Small",
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "isExtraImport": true,
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "CNNTransformer_Small",
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "isExtraImport": true,
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "CNNTransformer_Base",
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "isExtraImport": true,
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "VisionTransformer_Tiny",
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "isExtraImport": true,
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "ModernTrainer",
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
+        "isExtraImport": true,
+        "detail": "utils.modern_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "ModernTrainer",
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
+        "isExtraImport": true,
+        "detail": "utils.modern_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "utils.trainer",
+        "description": "utils.trainer",
+        "isExtraImport": true,
+        "detail": "utils.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "utils.trainer",
+        "description": "utils.trainer",
+        "isExtraImport": true,
+        "detail": "utils.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10DataLoader",
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "isExtraImport": true,
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10DataLoader",
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "isExtraImport": true,
+        "detail": "utils.data_loader",
         "documentation": {}
     },
     {
@@ -415,6 +708,46 @@
         "description": "utils",
         "isExtraImport": true,
         "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "Visualizer",
+        "importPath": "utils.visualization",
+        "description": "utils.visualization",
+        "isExtraImport": true,
+        "detail": "utils.visualization",
+        "documentation": {}
+    },
+    {
+        "label": "get_cifar10_transforms",
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "isExtraImport": true,
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "MixUp",
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "isExtraImport": true,
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "CutMix",
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "isExtraImport": true,
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "mixup_criterion",
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "isExtraImport": true,
+        "detail": "utils.augmentation",
         "documentation": {}
     },
     {
@@ -562,6 +895,141 @@
         "documentation": {}
     },
     {
+        "label": "PatchEmbedding",
+        "kind": 6,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "class PatchEmbedding(nn.Module):\n    \"\"\"\n    Convert image into patches and embed them.\n    Similar to ViT (Vision Transformer) approach.\n    Args:\n        img_size: Input image size (assumed square)\n        patch_size: Size of each patch\n        in_channels: Number of input channels\n        embed_dim: Embedding dimension\n    \"\"\"",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "MultiHeadSelfAttention",
+        "kind": 6,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "class MultiHeadSelfAttention(nn.Module):\n    \"\"\"\n    Multi-Head Self-Attention mechanism.\n    This allows the model to attend to different representation subspaces\n    at different positions.\n    Architecture:\n        Input -> Q, K, V projections -> Split into heads -> Scaled Dot-Product Attention\n              -> Concat heads -> Output projection\n    Args:\n        embed_dim: Embedding dimension",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "TransformerEncoderBlock",
+        "kind": 6,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "class TransformerEncoderBlock(nn.Module):\n    \"\"\"\n    Transformer Encoder Block.\n    Architecture:\n        Input -> LayerNorm -> Multi-Head Attention -> (+) -> LayerNorm -> FFN -> (+) -> Output\n        |                                              ^                            ^\n        |______________________________________________|____________________________|\n                    (residual connection)                    (residual connection)\n    Args:\n        embed_dim: Embedding dimension",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "CNNBackbone",
+        "kind": 6,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "class CNNBackbone(nn.Module):\n    \"\"\"\n    CNN backbone for local feature extraction.\n    Extracts local features before feeding to transformer.\n    Args:\n        in_channels: Number of input channels\n        out_channels: Number of output channels\n        activation: Activation function\n    \"\"\"\n    def __init__(self, in_channels=3, out_channels=256, activation='relu'):",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "CNNTransformer",
+        "kind": 6,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "class CNNTransformer(nn.Module):\n    \"\"\"\n    Hybrid CNN-Transformer architecture.\n    Combines:\n    1. CNN backbone for local feature extraction\n    2. Transformer encoder for global context modeling\n    3. Classification head\n    This hybrid approach:\n    - Uses CNNs to extract local patterns and reduce spatial dimensions\n    - Uses transformers to model long-range dependencies",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "CNNTransformer_Small",
+        "kind": 2,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "def CNNTransformer_Small(num_classes=10, activation='gelu'):\n    \"\"\"Small CNN-Transformer (faster training)\"\"\"\n    return CNNTransformer(num_classes=num_classes, embed_dim=128, depth=4,\n                         num_heads=4, activation=activation, use_cnn_backbone=True)\ndef CNNTransformer_Base(num_classes=10, activation='gelu'):\n    \"\"\"Base CNN-Transformer\"\"\"\n    return CNNTransformer(num_classes=num_classes, embed_dim=256, depth=6,\n                         num_heads=8, activation=activation, use_cnn_backbone=True)\ndef VisionTransformer_Tiny(num_classes=10, activation='gelu'):\n    \"\"\"Pure Vision Transformer (no CNN backbone)\"\"\"",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "CNNTransformer_Base",
+        "kind": 2,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "def CNNTransformer_Base(num_classes=10, activation='gelu'):\n    \"\"\"Base CNN-Transformer\"\"\"\n    return CNNTransformer(num_classes=num_classes, embed_dim=256, depth=6,\n                         num_heads=8, activation=activation, use_cnn_backbone=True)\ndef VisionTransformer_Tiny(num_classes=10, activation='gelu'):\n    \"\"\"Pure Vision Transformer (no CNN backbone)\"\"\"\n    return CNNTransformer(num_classes=num_classes, embed_dim=192, depth=12,\n                         num_heads=3, activation=activation, use_cnn_backbone=False)",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "VisionTransformer_Tiny",
+        "kind": 2,
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
+        "peekOfCode": "def VisionTransformer_Tiny(num_classes=10, activation='gelu'):\n    \"\"\"Pure Vision Transformer (no CNN backbone)\"\"\"\n    return CNNTransformer(num_classes=num_classes, embed_dim=192, depth=12,\n                         num_heads=3, activation=activation, use_cnn_backbone=False)",
+        "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "SqueezeExcitation",
+        "kind": 6,
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "peekOfCode": "class SqueezeExcitation(nn.Module):\n    \"\"\"\n    Squeeze-and-Excitation (SE) block for channel attention.\n    The SE block adaptively recalibrates channel-wise feature responses.\n    Architecture:\n        Input -> Global Avg Pool -> FC (reduce) -> Activation -> FC (expand) -> Sigmoid -> Scale Input\n    Args:\n        channels: Number of input channels\n        reduction: Reduction ratio for bottleneck (default 4)\n    \"\"\"",
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "DepthwiseSeparableConv",
+        "kind": 6,
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "peekOfCode": "class DepthwiseSeparableConv(nn.Module):\n    \"\"\"\n    Depthwise Separable Convolution (MobileNet-style).\n    Splits standard convolution into:\n    1. Depthwise convolution: Applies a single filter per input channel\n    2. Pointwise convolution: 1x1 conv to combine channels\n    This reduces parameters and computation significantly:\n    - Standard conv: H * W * C_in * C_out\n    - Depthwise separable: H * W * C_in + C_in * C_out\n    Args:",
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "MBConvBlock",
+        "kind": 6,
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "peekOfCode": "class MBConvBlock(nn.Module):\n    \"\"\"\n    Mobile Inverted Residual Bottleneck Block (MBConv).\n    Used in MobileNetV2 and EfficientNet.\n    Architecture:\n        Input -> Expand (1x1) -> Depthwise (3x3/5x5) -> SE -> Project (1x1) -> (+) -> Output\n        |                                                                        ^\n        |________________________________________________________________________|\n                                    (skip connection if applicable)\n    Key features:",
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet",
+        "kind": 6,
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "peekOfCode": "class EfficientNet(nn.Module):\n    \"\"\"\n    EfficientNet-style architecture for CIFAR-10.\n    EfficientNet uses compound scaling to balance network depth, width, and resolution.\n    Features:\n    - MBConv blocks with inverted residuals\n    - Depthwise separable convolutions\n    - Squeeze-and-Excitation attention\n    - Efficient parameter usage\n    Args:",
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_B0",
+        "kind": 2,
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "peekOfCode": "def EfficientNet_B0(num_classes=10, activation='swish', dropout_rate=0.2):\n    \"\"\"EfficientNet-B0: Baseline model\"\"\"\n    return EfficientNet(width_multiplier=1.0, depth_multiplier=1.0,\n                       num_classes=num_classes, activation=activation, dropout_rate=dropout_rate)\ndef EfficientNet_B1(num_classes=10, activation='swish', dropout_rate=0.2):\n    \"\"\"EfficientNet-B1: Wider and deeper\"\"\"\n    return EfficientNet(width_multiplier=1.0, depth_multiplier=1.1,\n                       num_classes=num_classes, activation=activation, dropout_rate=dropout_rate)\ndef EfficientNet_Tiny(num_classes=10, activation='swish', dropout_rate=0.2):\n    \"\"\"Tiny EfficientNet for quick experiments\"\"\"",
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_B1",
+        "kind": 2,
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "peekOfCode": "def EfficientNet_B1(num_classes=10, activation='swish', dropout_rate=0.2):\n    \"\"\"EfficientNet-B1: Wider and deeper\"\"\"\n    return EfficientNet(width_multiplier=1.0, depth_multiplier=1.1,\n                       num_classes=num_classes, activation=activation, dropout_rate=dropout_rate)\ndef EfficientNet_Tiny(num_classes=10, activation='swish', dropout_rate=0.2):\n    \"\"\"Tiny EfficientNet for quick experiments\"\"\"\n    return EfficientNet(width_multiplier=0.5, depth_multiplier=0.5,\n                       num_classes=num_classes, activation=activation, dropout_rate=dropout_rate)",
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_Tiny",
+        "kind": 2,
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "peekOfCode": "def EfficientNet_Tiny(num_classes=10, activation='swish', dropout_rate=0.2):\n    \"\"\"Tiny EfficientNet for quick experiments\"\"\"\n    return EfficientNet(width_multiplier=0.5, depth_multiplier=0.5,\n                       num_classes=num_classes, activation=activation, dropout_rate=dropout_rate)",
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
         "label": "NeuralNetwork",
         "kind": 6,
         "importPath": "models.network",
@@ -577,6 +1045,159 @@
         "description": "models.network",
         "peekOfCode": "class ConvNeuralNetwork(nn.Module):\n    def __init__(self, input_channels=3, num_classes=10, activation='relu', dropout_rate=0.2):\n        \"\"\"\n        Convolutional Neural Network for image classification (e.g., CIFAR-10).\n        Args:\n            input_channels (int): Number of input channels (3 for RGB)\n            num_classes (int): Number of output classes\n            activation (str): Activation function name\n            dropout_rate (float): Dropout rate\n        \"\"\"",
         "detail": "models.network",
+        "documentation": {}
+    },
+    {
+        "label": "BasicBlock",
+        "kind": 6,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "class BasicBlock(nn.Module):\n    \"\"\"\n    Basic residual block with two 3x3 convolutions.\n    Architecture:\n        x -> Conv3x3 -> BN -> Activation -> Conv3x3 -> BN -> (+) -> Activation\n        |                                                      ^\n        |______________________________________________________|\n                            (skip connection)\n    \"\"\"\n    expansion = 1",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "BottleneckBlock",
+        "kind": 6,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "class BottleneckBlock(nn.Module):\n    \"\"\"\n    Bottleneck residual block with 1x1 -> 3x3 -> 1x1 convolutions.\n    More efficient than BasicBlock for deeper networks.\n    Uses 1x1 convolutions to reduce/expand channels (bottleneck design).\n    Architecture:\n        x -> Conv1x1 -> BN -> Act -> Conv3x3 -> BN -> Act -> Conv1x1 -> BN -> (+) -> Act\n        |                                                                        ^\n        |________________________________________________________________________|\n    \"\"\"",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ModernResNet",
+        "kind": 6,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "class ModernResNet(nn.Module):\n    \"\"\"\n    Modern ResNet architecture for CIFAR-10.\n    Features:\n    - Residual blocks with skip connections\n    - Batch normalization for stable training\n    - Global average pooling instead of FC layers (reduces parameters)\n    - Flexible depth and width\n    Args:\n        block: Block type (BasicBlock or BottleneckBlock)",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet18",
+        "kind": 2,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "def ResNet18(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-18 (11M parameters)\"\"\"\n    return ModernResNet(BasicBlock, [2, 2, 2, 2], num_classes, activation, dropout_rate)\ndef ResNet34(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-34 (21M parameters)\"\"\"\n    return ModernResNet(BasicBlock, [3, 4, 6, 3], num_classes, activation, dropout_rate)\ndef ResNet50(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-50 with bottleneck blocks (23M parameters)\"\"\"\n    return ModernResNet(BottleneckBlock, [3, 4, 6, 3], num_classes, activation, dropout_rate)\ndef ResNet101(num_classes=10, activation='relu', dropout_rate=0.2):",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet34",
+        "kind": 2,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "def ResNet34(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-34 (21M parameters)\"\"\"\n    return ModernResNet(BasicBlock, [3, 4, 6, 3], num_classes, activation, dropout_rate)\ndef ResNet50(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-50 with bottleneck blocks (23M parameters)\"\"\"\n    return ModernResNet(BottleneckBlock, [3, 4, 6, 3], num_classes, activation, dropout_rate)\ndef ResNet101(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-101 with bottleneck blocks (42M parameters)\"\"\"\n    return ModernResNet(BottleneckBlock, [3, 4, 23, 3], num_classes, activation, dropout_rate)\ndef ResNet_Tiny(num_classes=10, activation='relu', dropout_rate=0.2):",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet50",
+        "kind": 2,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "def ResNet50(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-50 with bottleneck blocks (23M parameters)\"\"\"\n    return ModernResNet(BottleneckBlock, [3, 4, 6, 3], num_classes, activation, dropout_rate)\ndef ResNet101(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-101 with bottleneck blocks (42M parameters)\"\"\"\n    return ModernResNet(BottleneckBlock, [3, 4, 23, 3], num_classes, activation, dropout_rate)\ndef ResNet_Tiny(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"Tiny ResNet for quick experiments (fewer parameters)\"\"\"\n    return ModernResNet(BasicBlock, [1, 1, 1, 1], num_classes, activation,\n                       dropout_rate, width_multiplier=0.5)",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet101",
+        "kind": 2,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "def ResNet101(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"ResNet-101 with bottleneck blocks (42M parameters)\"\"\"\n    return ModernResNet(BottleneckBlock, [3, 4, 23, 3], num_classes, activation, dropout_rate)\ndef ResNet_Tiny(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"Tiny ResNet for quick experiments (fewer parameters)\"\"\"\n    return ModernResNet(BasicBlock, [1, 1, 1, 1], num_classes, activation,\n                       dropout_rate, width_multiplier=0.5)",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet_Tiny",
+        "kind": 2,
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "peekOfCode": "def ResNet_Tiny(num_classes=10, activation='relu', dropout_rate=0.2):\n    \"\"\"Tiny ResNet for quick experiments (fewer parameters)\"\"\"\n    return ModernResNet(BasicBlock, [1, 1, 1, 1], num_classes, activation,\n                       dropout_rate, width_multiplier=0.5)",
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "RandAugment",
+        "kind": 6,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "class RandAugment:\n    \"\"\"\n    RandAugment: Practical automated data augmentation.\n    Paper: \"RandAugment: Practical automated data augmentation with a reduced search space\"\n    https://arxiv.org/abs/1909.13719\n    Randomly selects N augmentation operations from a pool and applies them\n    with magnitude M.\n    Args:\n        n: Number of augmentation operations to apply (typically 1-3)\n        m: Magnitude of augmentation (0-30, typically 9-15)",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "Cutout",
+        "kind": 6,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "class Cutout:\n    \"\"\"\n    Cutout: Randomly mask out square regions of input.\n    Paper: \"Improved Regularization of Convolutional Neural Networks with Cutout\"\n    https://arxiv.org/abs/1708.04552\n    Randomly masks out one or more square regions in the input image.\n    This forces the model to use more diverse features.\n    Args:\n        n_holes: Number of patches to cut out (default 1)\n        length: Length of the square patch (default 16 for CIFAR-10)",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "RandomErasing",
+        "kind": 6,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "class RandomErasing:\n    \"\"\"\n    Random Erasing: Randomly erase rectangular regions.\n    Paper: \"Random Erasing Data Augmentation\"\n    https://arxiv.org/abs/1708.04896\n    Similar to Cutout but with variable size and aspect ratio.\n    Args:\n        p: Probability of performing random erasing (default 0.5)\n        scale: Range of proportion of erased area (default (0.02, 0.33))\n        ratio: Range of aspect ratio of erased area (default (0.3, 3.3))",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "MixUp",
+        "kind": 6,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "class MixUp:\n    \"\"\"\n    MixUp: Beyond Empirical Risk Minimization.\n    Paper: \"mixup: Beyond Empirical Risk Minimization\"\n    https://arxiv.org/abs/1710.09412\n    Creates virtual training examples by linearly interpolating between\n    random pairs of training examples and their labels.\n    mixed_x = lambda * x_i + (1 - lambda) * x_j\n    mixed_y = lambda * y_i + (1 - lambda) * y_j\n    where lambda ~ Beta(alpha, alpha)",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "CutMix",
+        "kind": 6,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "class CutMix:\n    \"\"\"\n    CutMix: Regularization Strategy to Train Strong Classifiers.\n    Paper: \"CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features\"\n    https://arxiv.org/abs/1905.04899\n    Cuts and pastes patches among training images.\n    Mixes both images and labels proportionally to the area of patches.\n    Usage:\n        Apply during training inside the training loop.\n    Args:",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10Augmentation",
+        "kind": 6,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "class CIFAR10Augmentation:\n    \"\"\"\n    Comprehensive augmentation pipeline for CIFAR-10.\n    Args:\n        mode: 'basic', 'standard', 'autoaugment', 'randaugment'\n        cutout: Whether to apply cutout (default False)\n        random_erasing: Whether to apply random erasing (default False)\n    \"\"\"\n    def __init__(self, mode='standard', cutout=False, random_erasing=False):\n        self.mode = mode",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "TestAugmentation",
+        "kind": 6,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "class TestAugmentation:\n    \"\"\"\n    Test-time augmentation (TTA).\n    Applies multiple augmentations at test time and averages predictions.\n    Args:\n        n_augmentations: Number of augmented versions (default 5)\n    \"\"\"\n    def __init__(self, n_augmentations=5):\n        self.n_augmentations = n_augmentations\n        normalize = transforms.Normalize(",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "mixup_criterion",
+        "kind": 2,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "def mixup_criterion(criterion, pred, y_a, y_b, lam):\n    \"\"\"\n    Compute loss for MixUp/CutMix.\n    Args:\n        criterion: Loss function\n        pred: Model predictions\n        y_a: First target\n        y_b: Second target\n        lam: Mixing coefficient\n    Returns:",
+        "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "get_cifar10_transforms",
+        "kind": 2,
+        "importPath": "utils.augmentation",
+        "description": "utils.augmentation",
+        "peekOfCode": "def get_cifar10_transforms(train=True, augmentation_mode='standard',\n                          cutout=False, random_erasing=False):\n    \"\"\"\n    Get CIFAR-10 data transforms.\n    Args:\n        train: Whether for training (True) or testing (False)\n        augmentation_mode: 'basic', 'standard', 'autoaugment', 'randaugment'\n        cutout: Apply cutout\n        random_erasing: Apply random erasing\n    Returns:",
+        "detail": "utils.augmentation",
         "documentation": {}
     },
     {
@@ -661,6 +1282,42 @@
         "documentation": {}
     },
     {
+        "label": "LabelSmoothingCrossEntropy",
+        "kind": 6,
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
+        "peekOfCode": "class LabelSmoothingCrossEntropy(nn.Module):\n    \"\"\"\n    Label Smoothing Cross Entropy Loss.\n    Prevents the model from becoming over-confident by distributing\n    some probability mass to incorrect classes.\n    Instead of targets [0, 0, 1, 0] (one-hot),\n    use smoothed targets [0.03, 0.03, 0.91, 0.03] (with smoothing=0.1)\n    Args:\n        smoothing: Label smoothing factor (0.0 to 1.0, typically 0.1)\n    \"\"\"",
+        "detail": "utils.modern_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "CosineAnnealingWarmupRestarts",
+        "kind": 6,
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
+        "peekOfCode": "class CosineAnnealingWarmupRestarts(optim.lr_scheduler._LRScheduler):\n    \"\"\"\n    Cosine Annealing with Warm Restarts and Linear Warmup.\n    Combines:\n    1. Linear warmup: Gradually increases LR from 0 to max_lr\n    2. Cosine annealing: Smoothly decreases LR following cosine curve\n    3. Warm restarts: Periodically resets LR to restart training\n    Args:\n        optimizer: Wrapped optimizer\n        first_cycle_steps: Number of steps in first cycle",
+        "detail": "utils.modern_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "EMA",
+        "kind": 6,
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
+        "peekOfCode": "class EMA:\n    \"\"\"\n    Exponential Moving Average for model parameters.\n    Maintains a moving average of model weights for better generalization.\n    Often improves test performance by 0.2-0.5%.\n    Args:\n        model: The model to track\n        decay: Decay rate (typically 0.999 or 0.9999)\n    \"\"\"\n    def __init__(self, model, decay=0.999):",
+        "detail": "utils.modern_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "ModernTrainer",
+        "kind": 6,
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
+        "peekOfCode": "class ModernTrainer:\n    \"\"\"\n    Modern trainer with state-of-the-art training techniques.\n    Features:\n    - AdamW optimizer with decoupled weight decay\n    - Cosine annealing with warmup\n    - Automatic Mixed Precision (AMP) for 2-3x speedup\n    - Gradient clipping for stability\n    - Gradient accumulation for large batch simulation\n    - Label smoothing for better calibration",
+        "detail": "utils.modern_trainer",
+        "documentation": {}
+    },
+    {
         "label": "PerceptronVisualizer",
         "kind": 6,
         "importPath": "utils.monitor",
@@ -733,6 +1390,96 @@
         "documentation": {}
     },
     {
+        "label": "DropBlock2D",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class DropBlock2D(nn.Module):\n    \"\"\"\n    DropBlock: A regularization method for convolutional networks.\n    Paper: \"DropBlock: A regularization method for convolutional networks\"\n    https://arxiv.org/abs/1810.12890\n    Unlike standard dropout which drops individual values independently,\n    DropBlock drops contiguous regions. This is more effective for CNNs\n    because nearby activations are highly correlated.\n    Key differences from Dropout:\n    - Drops spatial blocks instead of individual pixels",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "StochasticDepth",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class StochasticDepth(nn.Module):\n    \"\"\"\n    Stochastic Depth: Deep Networks with Stochastic Depth.\n    Paper: \"Deep Networks with Stochastic Depth\"\n    https://arxiv.org/abs/1603.09382\n    Randomly drops entire residual blocks during training.\n    This reduces training time and improves generalization.\n    During inference, all layers are used with scaling.\n    Usage:\n        Wrap residual blocks with StochasticDepth:",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "DropPath",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class DropPath(nn.Module):\n    \"\"\"\n    Drop Path (Stochastic Depth per sample).\n    Used in modern architectures like EfficientNet and Vision Transformers.\n    Randomly drops paths (samples) in a batch during training.\n    Different from DropBlock which drops spatial regions.\n    Args:\n        drop_prob: Probability of dropping a path\n    \"\"\"\n    def __init__(self, drop_prob=0.0):",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "LinearScheduler",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class LinearScheduler:\n    \"\"\"\n    Linear scheduler for DropBlock/StochasticDepth probabilities.\n    Gradually increases drop probability during training.\n    Args:\n        dropblock_module: DropBlock module to schedule\n        start_value: Initial drop probability\n        stop_value: Final drop probability\n        nr_steps: Number of steps to reach stop_value\n    \"\"\"",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "ShakeShake",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class ShakeShake(nn.Module):\n    \"\"\"\n    Shake-Shake regularization for residual networks.\n    Paper: \"Shake-Shake regularization\"\n    https://arxiv.org/abs/1705.07485\n    Applies random interpolation between two residual branches\n    during training, with different weights for forward and backward passes.\n    Args:\n        None\n    \"\"\"",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "WeightDecayScheduler",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class WeightDecayScheduler:\n    \"\"\"\n    Scheduler for weight decay (L2 regularization).\n    Gradually changes weight decay during training.\n    Args:\n        optimizer: PyTorch optimizer\n        start_value: Initial weight decay\n        stop_value: Final weight decay\n        nr_steps: Number of steps\n    \"\"\"",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "AdaptiveDropout",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class AdaptiveDropout(nn.Module):\n    \"\"\"\n    Adaptive Dropout: Adjusts dropout rate based on activation statistics.\n    Higher dropout for neurons with higher activation.\n    Args:\n        p: Base dropout probability\n        adaptive: Whether to use adaptive dropout\n    \"\"\"\n    def __init__(self, p=0.5, adaptive=True):\n        super(AdaptiveDropout, self).__init__()",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "GradualWarmup",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class GradualWarmup:\n    \"\"\"\n    Gradual warmup for regularization techniques.\n    Slowly increases regularization strength during training.\n    Args:\n        module: Module with regularization (must have set_strength method)\n        warmup_epochs: Number of epochs for warmup\n        target_strength: Target regularization strength\n    \"\"\"\n    def __init__(self, module, warmup_epochs=5, target_strength=1.0):",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "MixedPrecisionWrapper",
+        "kind": 6,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "class MixedPrecisionWrapper:\n    \"\"\"\n    Wrapper for automatic mixed precision training.\n    Handles gradient scaling and overflow detection.\n    Args:\n        model: PyTorch model\n        optimizer: PyTorch optimizer\n        enabled: Whether to enable mixed precision\n    \"\"\"\n    def __init__(self, model, optimizer, enabled=True):",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
+        "label": "apply_weight_decay_exemptions",
+        "kind": 2,
+        "importPath": "utils.regularization",
+        "description": "utils.regularization",
+        "peekOfCode": "def apply_weight_decay_exemptions(model, weight_decay, skip_list=('bias', 'bn', 'ln')):\n    \"\"\"\n    Apply weight decay exemptions for specific parameters.\n    Modern best practice: Don't apply weight decay to bias and normalization layers.\n    Args:\n        model: PyTorch model\n        weight_decay: Weight decay value\n        skip_list: Parameter names to skip (default: bias, batch norm, layer norm)\n    Returns:\n        List of parameter groups for optimizer",
+        "detail": "utils.regularization",
+        "documentation": {}
+    },
+    {
         "label": "Trainer",
         "kind": 6,
         "importPath": "utils.trainer",
@@ -757,6 +1504,60 @@
         "description": "utils.visualization",
         "peekOfCode": "def create_visualizer(class_names=None):\n    \"\"\"\n    Convenience function to create a visualizer.\n    Args:\n        class_names (list, optional): List of class names\n    Returns:\n        Visualizer: Configured visualizer instance\n    \"\"\"\n    return Visualizer(class_names=class_names)",
         "detail": "utils.visualization",
+        "documentation": {}
+    },
+    {
+        "label": "run_experiment",
+        "kind": 2,
+        "importPath": "benchmark_all",
+        "description": "benchmark_all",
+        "peekOfCode": "def run_experiment(experiment_name, model, train_loader, val_loader, test_loader,\n                   use_modern=True, epochs=10, lr=0.001):\n    \"\"\"\n    Run a single experiment.\n    Args:\n        experiment_name: Name of experiment\n        model: PyTorch model\n        train_loader: Training data loader\n        val_loader: Validation data loader\n        test_loader: Test data loader",
+        "detail": "benchmark_all",
+        "documentation": {}
+    },
+    {
+        "label": "benchmark_architectures",
+        "kind": 2,
+        "importPath": "benchmark_all",
+        "description": "benchmark_all",
+        "peekOfCode": "def benchmark_architectures(epochs=10, batch_size=128):\n    \"\"\"\n    Compare different model architectures.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    print(f\"\\n{'#'*70}\")",
+        "detail": "benchmark_all",
+        "documentation": {}
+    },
+    {
+        "label": "benchmark_training_techniques",
+        "kind": 2,
+        "importPath": "benchmark_all",
+        "description": "benchmark_all",
+        "peekOfCode": "def benchmark_training_techniques(epochs=10, batch_size=128):\n    \"\"\"\n    Compare modern vs standard training techniques.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    print(f\"\\n{'#'*70}\")",
+        "detail": "benchmark_all",
+        "documentation": {}
+    },
+    {
+        "label": "benchmark_activations",
+        "kind": 2,
+        "importPath": "benchmark_all",
+        "description": "benchmark_all",
+        "peekOfCode": "def benchmark_activations(epochs=10, batch_size=128):\n    \"\"\"\n    Compare different activation functions.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    print(f\"\\n{'#'*70}\")",
+        "detail": "benchmark_all",
+        "documentation": {}
+    },
+    {
+        "label": "save_benchmark_report",
+        "kind": 2,
+        "importPath": "benchmark_all",
+        "description": "benchmark_all",
+        "peekOfCode": "def save_benchmark_report(all_results, output_dir='./benchmarks'):\n    \"\"\"\n    Save comprehensive benchmark report.\n    Args:\n        all_results: Dictionary of all benchmark results\n        output_dir: Output directory\n    \"\"\"\n    os.makedirs(output_dir, exist_ok=True)\n    # Create summary report\n    report = {",
+        "detail": "benchmark_all",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "benchmark_all",
+        "description": "benchmark_all",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description='Comprehensive deep learning benchmark')\n    parser.add_argument('--full', action='store_true',\n                       help='Run all benchmarks (takes a long time)')\n    parser.add_argument('--quick', action='store_true',\n                       help='Quick benchmark with 2 epochs (for testing)')\n    parser.add_argument('--architectures', action='store_true',\n                       help='Benchmark different architectures')\n    parser.add_argument('--techniques', action='store_true',\n                       help='Benchmark training techniques')",
+        "detail": "benchmark_all",
         "documentation": {}
     },
     {
@@ -802,6 +1603,51 @@
         "description": "main",
         "peekOfCode": "def main():\n    # Get available activations dynamically\n    available_activations = get_available_activations()\n    activation_choices = available_activations + ['all', 'modern', 'classic']\n    parser = argparse.ArgumentParser(description='Train neural networks with different activation functions')\n    parser.add_argument('--activation', type=str, default='relu',\n                       choices=activation_choices,\n                       help='Activation function to use (default: relu). Use \"all\" for all functions, \"modern\" for recent ones, \"classic\" for traditional ones.')\n    parser.add_argument('--epochs', type=int, default=10,\n                       help='Number of training epochs (default: 10)')",
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "kind": 2,
+        "importPath": "main_modern",
+        "description": "main_modern",
+        "peekOfCode": "def get_model(model_name, activation='relu', num_classes=10):\n    \"\"\"\n    Get model by name.\n    Args:\n        model_name: Model architecture name\n        activation: Activation function\n        num_classes: Number of output classes\n    Returns:\n        PyTorch model\n    \"\"\"",
+        "detail": "main_modern",
+        "documentation": {}
+    },
+    {
+        "label": "train_with_modern_techniques",
+        "kind": 2,
+        "importPath": "main_modern",
+        "description": "main_modern",
+        "peekOfCode": "def train_with_modern_techniques(\n    model, train_loader, val_loader, test_loader, save_dir,\n    epochs=10, lr=0.001, use_amp=True, use_ema=True,\n    label_smoothing=0.1, gradient_clip=1.0,\n    use_mixup=False, use_cutmix=False, mixup_alpha=1.0\n):\n    \"\"\"\n    Train model with modern techniques.\n    Args:\n        model: PyTorch model",
+        "detail": "main_modern",
+        "documentation": {}
+    },
+    {
+        "label": "train_standard",
+        "kind": 2,
+        "importPath": "main_modern",
+        "description": "main_modern",
+        "peekOfCode": "def train_standard(model, train_loader, val_loader, test_loader, save_dir,\n                   epochs=10, lr=0.001):\n    \"\"\"\n    Train model with standard techniques (for comparison).\n    Args:\n        model: PyTorch model\n        train_loader: Training data loader\n        val_loader: Validation data loader\n        test_loader: Test data loader\n        save_dir: Save directory",
+        "detail": "main_modern",
+        "documentation": {}
+    },
+    {
+        "label": "compare_models",
+        "kind": 2,
+        "importPath": "main_modern",
+        "description": "main_modern",
+        "peekOfCode": "def compare_models(models, epochs=10, batch_size=128, modern_training=True):\n    \"\"\"\n    Compare different model architectures.\n    Args:\n        models: List of model names\n        epochs: Number of epochs\n        batch_size: Batch size\n        modern_training: Use modern training techniques\n    \"\"\"\n    results = []",
+        "detail": "main_modern",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main_modern",
+        "description": "main_modern",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        description='Modern Deep Learning Training Script',\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        epilog=\"\"\"\nExamples:\n  # Train ResNet-18 with modern techniques\n  python main_modern.py --model resnet18 --modern-training\n  # Train EfficientNet with RandAugment\n  python main_modern.py --model efficientnet_b0 --augmentation randaugment",
+        "detail": "main_modern",
         "documentation": {}
     }
 ]

@@ -1,0 +1,7 @@
+{
+  "test_loss": 0.9698674731616732,
+  "test_accuracy": 65.22,
+  "best_val_accuracy": 63.14,
+  "training_time": 440.2900638580322,
+  "model_parameters": 1228970
+}
