@@ -8,7 +8,6 @@ This implementation demonstrates:
 - Global average pooling instead of fully connected layers
 """
 
-import torch
 import torch.nn as nn
 from .activations import get_activation
 
@@ -234,7 +233,7 @@ class ModernResNet(nn.Module):
 
     def summary(self):
         """Print a summary of the network architecture."""
-        print(f"Modern ResNet Summary:")
+        print("Modern ResNet Summary:")
         print(f"Number of classes: {self.num_classes}")
         print(f"Activation: {self.activation_name}")
         print(f"Dropout rate: {self.dropout_rate}")

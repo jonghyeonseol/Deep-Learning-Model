@@ -27,8 +27,7 @@ Architecture Variants:
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from typing import List, Optional
+from typing import List
 
 
 class LayerNorm2d(nn.Module):
@@ -205,8 +204,8 @@ class ConvNeXt(nn.Module):
             # Downsampling layer (except for first stage)
             if i > 0:
                 downsample = nn.Sequential(
-                    LayerNorm2d(dims[i-1]),
-                    nn.Conv2d(dims[i-1], dims[i], kernel_size=2, stride=2)
+                    LayerNorm2d(dims[i - 1]),
+                    nn.Conv2d(dims[i - 1], dims[i], kernel_size=2, stride=2)
                 )
             else:
                 downsample = nn.Identity()

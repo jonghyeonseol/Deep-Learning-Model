@@ -4,24 +4,31 @@ from .activations import (
     LeakyReLU, ELU, PReLU, SELU, Hardswish, SiLU,
     get_activation, get_available_activations
 )
-from .resnet import resnet18, resnet34, resnet50, resnet101
-from .efficientnet import efficientnet_b0, efficientnet_b1
-from .cnn_transformer import CNNTransformer, VisionTransformer
+from .resnet import ResNet18, ResNet34, ResNet50, ResNet101, ResNet_Tiny
+from .efficientnet import EfficientNet_B0, EfficientNet_B1, EfficientNet_Tiny
+from .cnn_transformer import CNNTransformer, CNNTransformer_Small, CNNTransformer_Base, VisionTransformer_Tiny
 from .convnext import convnext_tiny, convnext_small, convnext_cifar
 
 __all__ = [
     # Basic models
     'NeuralNetwork',
     'ConvNeuralNetwork',
-    # Modern architectures
-    'resnet18',
-    'resnet34',
-    'resnet50',
-    'resnet101',
-    'efficientnet_b0',
-    'efficientnet_b1',
+    # Modern architectures - ResNet
+    'ResNet18',
+    'ResNet34',
+    'ResNet50',
+    'ResNet101',
+    'ResNet_Tiny',
+    # Modern architectures - EfficientNet
+    'EfficientNet_B0',
+    'EfficientNet_B1',
+    'EfficientNet_Tiny',
+    # Modern architectures - Transformers
     'CNNTransformer',
-    'VisionTransformer',
+    'CNNTransformer_Small',
+    'CNNTransformer_Base',
+    'VisionTransformer_Tiny',
+    # Modern architectures - ConvNeXt
     'convnext_tiny',
     'convnext_small',
     'convnext_cifar',

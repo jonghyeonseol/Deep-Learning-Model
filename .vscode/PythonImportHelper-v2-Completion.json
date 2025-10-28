@@ -36,6 +36,22 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "torchvision.transforms",
         "kind": 6,
         "isExtraImport": true,
@@ -964,6 +980,78 @@
         "description": "models.cnn_transformer",
         "peekOfCode": "def VisionTransformer_Tiny(num_classes=10, activation='gelu'):\n    \"\"\"Pure Vision Transformer (no CNN backbone)\"\"\"\n    return CNNTransformer(num_classes=num_classes, embed_dim=192, depth=12,\n                         num_heads=3, activation=activation, use_cnn_backbone=False)",
         "detail": "models.cnn_transformer",
+        "documentation": {}
+    },
+    {
+        "label": "LayerNorm2d",
+        "kind": 6,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "class LayerNorm2d(nn.Module):\n    \"\"\"\n    LayerNorm for channels-first tensors (B, C, H, W)\n    Standard LayerNorm expects (B, H, W, C), but CNNs use (B, C, H, W).\n    This implements LayerNorm compatible with CNN feature maps.\n    \"\"\"\n    def __init__(self, num_channels: int, eps: float = 1e-6):\n        super().__init__()\n        self.weight = nn.Parameter(torch.ones(num_channels))\n        self.bias = nn.Parameter(torch.zeros(num_channels))",
+        "detail": "models.convnext",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeXtBlock",
+        "kind": 6,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "class ConvNeXtBlock(nn.Module):\n    \"\"\"\n    ConvNeXt Block - Inverted bottleneck with depthwise conv\n    Architecture:\n    1. 7x7 depthwise conv (spatial mixing)\n    2. LayerNorm\n    3. 1x1 conv expand (4x channels)\n    4. GELU activation\n    5. 1x1 conv compress (back to original channels)\n    6. Layer scale (learnable per-channel scaling)",
+        "detail": "models.convnext",
+        "documentation": {}
+    },
+    {
+        "label": "DropPath",
+        "kind": 6,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "class DropPath(nn.Module):\n    \"\"\"\n    Stochastic Depth - randomly drop residual branches\n    During training, drops entire samples with probability `drop_prob`.\n    During inference, applies scaling to maintain expected value.\n    Paper: \"Deep Networks with Stochastic Depth\" (Huang et al., 2016)\n    \"\"\"\n    def __init__(self, drop_prob: float = 0.0):\n        super().__init__()\n        self.drop_prob = drop_prob",
+        "detail": "models.convnext",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeXt",
+        "kind": 6,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "class ConvNeXt(nn.Module):\n    \"\"\"\n    ConvNeXt - Modernized ConvNet architecture\n    Args:\n        in_channels: Number of input channels (3 for RGB)\n        num_classes: Number of output classes\n        depths: Number of blocks in each stage [3, 3, 9, 3] for Tiny\n        dims: Base dimension for each stage [96, 192, 384, 768] for Tiny\n        drop_path_rate: Stochastic depth rate (0.0 to 0.5)\n        layer_scale_init_value: Initial value for layer scale (1e-6)",
+        "detail": "models.convnext",
+        "documentation": {}
+    },
+    {
+        "label": "convnext_tiny",
+        "kind": 2,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "def convnext_tiny(num_classes: int = 10, drop_path_rate: float = 0.1, **kwargs) -> ConvNeXt:\n    \"\"\"\n    ConvNeXt-Tiny\n    Args:\n        num_classes: Number of output classes\n        drop_path_rate: Stochastic depth rate\n    Returns:\n        ConvNeXt model with ~27M parameters\n    Expected accuracy on CIFAR-10: ~97%+\n    \"\"\"",
+        "detail": "models.convnext",
+        "documentation": {}
+    },
+    {
+        "label": "convnext_small",
+        "kind": 2,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "def convnext_small(num_classes: int = 10, drop_path_rate: float = 0.2, **kwargs) -> ConvNeXt:\n    \"\"\"\n    ConvNeXt-Small\n    Args:\n        num_classes: Number of output classes\n        drop_path_rate: Stochastic depth rate\n    Returns:\n        ConvNeXt model with ~50M parameters\n    Expected accuracy on CIFAR-10: ~97%+\n    \"\"\"",
+        "detail": "models.convnext",
+        "documentation": {}
+    },
+    {
+        "label": "convnext_base",
+        "kind": 2,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "def convnext_base(num_classes: int = 10, drop_path_rate: float = 0.3, **kwargs) -> ConvNeXt:\n    \"\"\"\n    ConvNeXt-Base\n    Args:\n        num_classes: Number of output classes\n        drop_path_rate: Stochastic depth rate\n    Returns:\n        ConvNeXt model with ~89M parameters\n    \"\"\"\n    return ConvNeXt(",
+        "detail": "models.convnext",
+        "documentation": {}
+    },
+    {
+        "label": "convnext_cifar",
+        "kind": 2,
+        "importPath": "models.convnext",
+        "description": "models.convnext",
+        "peekOfCode": "def convnext_cifar(num_classes: int = 10, drop_path_rate: float = 0.1, **kwargs) -> ConvNeXt:\n    \"\"\"\n    ConvNeXt adapted for CIFAR-10 (32x32 images)\n    Smaller stem (2x2 conv instead of 4x4) to preserve spatial resolution\n    Reduced dimensions for efficiency\n    Args:\n        num_classes: Number of output classes\n        drop_path_rate: Stochastic depth rate\n    Returns:\n        Lightweight ConvNeXt model optimized for CIFAR-10",
+        "detail": "models.convnext",
         "documentation": {}
     },
     {

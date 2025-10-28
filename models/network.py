@@ -1,4 +1,3 @@
-import torch
 import torch.nn as nn
 from .activations import get_activation
 
@@ -81,7 +80,7 @@ class NeuralNetwork(nn.Module):
 
     def summary(self):
         """Print a summary of the network architecture."""
-        print(f"Neural Network Summary:")
+        print("Neural Network Summary:")
         print(f"Input size: {self.input_size}")
         print(f"Hidden layers: {self.hidden_sizes}")
         print(f"Output size: {self.output_size}")
@@ -92,11 +91,11 @@ class NeuralNetwork(nn.Module):
         print("\nLayer details:")
         for i, layer in enumerate(self.layers):
             if i == 0:
-                print(f"Input -> Hidden_{i+1}: {layer.in_features} -> {layer.out_features}")
+                print(f"Input -> Hidden_{i + 1}: {layer.in_features} -> {layer.out_features}")
             elif i == len(self.layers) - 1:
                 print(f"Hidden_{i} -> Output: {layer.in_features} -> {layer.out_features}")
             else:
-                print(f"Hidden_{i} -> Hidden_{i+1}: {layer.in_features} -> {layer.out_features}")
+                print(f"Hidden_{i} -> Hidden_{i + 1}: {layer.in_features} -> {layer.out_features}")
 
 
 class ConvNeuralNetwork(nn.Module):
@@ -183,7 +182,7 @@ class ConvNeuralNetwork(nn.Module):
 
     def summary(self):
         """Print a summary of the network architecture."""
-        print(f"Convolutional Neural Network Summary:")
+        print("Convolutional Neural Network Summary:")
         print(f"Input channels: {self.input_channels}")
         print(f"Number of classes: {self.num_classes}")
         print(f"Activation: {self.activation_name}")
