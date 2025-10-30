@@ -2,6 +2,40 @@
 
 A state-of-the-art PyTorch-based deep learning framework for CIFAR-10 image classification, featuring modern architectures, advanced training techniques, and comprehensive visualization tools.
 
+---
+
+## 👋 New to Deep Learning? Start Here!
+
+**Welcome!** This framework is designed to be **beginner-friendly** while teaching state-of-the-art techniques.
+
+### 🎯 Choose Your Path:
+
+| I am... | Start with... | Time Needed |
+|---------|---------------|-------------|
+| 🆕 **Complete Beginner** | 📖 [BEGINNER_START.md](BEGINNER_START.md) | 5 minutes to first model |
+| 📚 **Quick Learner** | 🚀 [CHEAT_SHEET.md](CHEAT_SHEET.md) | Copy-paste commands |
+| 🏗️ **Model Explorer** | 🎨 [ARCHITECTURES.md](ARCHITECTURES.md) | Compare architectures |
+| 🔬 **Researcher** | 📊 [MODERN_DL_GUIDE.md](MODERN_DL_GUIDE.md) | Latest techniques 2024-2025 |
+| 🆕 **What's New?** | ✨ [UPDATE_SUMMARY_2025.md](UPDATE_SUMMARY_2025.md) | 2025 updates |
+
+### ⚡ Super Quick Start (60 Seconds):
+
+```bash
+# 1. Activate environment
+source venv/bin/activate
+
+# 2. Train your first model (3-5 minutes)
+python3 main.py --activation relu --quick
+
+# 3. See your results in checkpoints/relu/
+```
+
+**Done!** You just trained a neural network! 🎉
+
+👉 **Never trained a model before?** Read the [Beginner's Guide](BEGINNER_START.md) for step-by-step instructions.
+
+---
+
 ## Features
 
 ### 🏗️ Modern Architectures (2024-2025)
