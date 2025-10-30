@@ -419,6 +419,221 @@ out = x + StochasticDepth(residual_block(x), drop_prob=0.1)
 
 ---
 
+## Latest Techniques (2024-2025) 🆕
+
+### 1. TrivialAugment - Simplified Data Augmentation
+
+**Key Innovation**: Even simpler than RandAugment, applies one random augmentation per image.
+
+**Why TrivialAugment is Better (2024 Research)**:
+- ✅ **No hyperparameter tuning** (RandAugment needs N and M)
+- ✅ **Outperforms RandAugment** in recent studies (Dec 2024)
+- ✅ **Best for completeness and coherence** in classification
+- ✅ **Easier to understand** for educational purposes
+
+**Implementation Concept**:
+```python
+# TrivialAugment pseudocode (not yet implemented)
+def trivial_augment(image):
+    # 1. Randomly select ONE augmentation from pool
+    augmentation = random.choice([
+        'rotate', 'shearX', 'shearY', 'translateX', 'translateY',
+        'brightness', 'contrast', 'sharpness', 'posterize', 'solarize'
+    ])
+
+    # 2. Sample magnitude uniformly (0-30)
+    magnitude = random.uniform(0, 30)
+
+    # 3. Apply augmentation
+    return apply_augmentation(image, augmentation, magnitude)
+```
+
+**Status**: ⚠️ Not yet implemented - great beginner project!
+
+---
+
+### 2. Test-Time Augmentation (TTA)
+
+**Key Innovation**: Ensemble predictions over multiple augmented versions at test time.
+
+**Benefits**:
+- ✅ **+0.2-0.5% accuracy** improvement
+- ✅ **No retraining** required
+- ✅ Reduces expected error (proven in 2024)
+- ✅ Easy to implement (10-20 lines of code)
+
+**Implementation Concept**:
+```python
+# TTA pseudocode (not yet implemented)
+def test_time_augmentation(model, image, num_augmentations=5):
+    predictions = []
+
+    # 1. Original image
+    predictions.append(model(image))
+
+    # 2. Augmented versions
+    for _ in range(num_augmentations - 1):
+        augmented = apply_augmentation(image)
+        predictions.append(model(augmented))
+
+    # 3. Ensemble via soft voting (average probabilities)
+    ensemble_prediction = torch.stack(predictions).mean(dim=0)
+
+    return ensemble_prediction
+```
+
+**Common Augmentations for TTA**:
+- Horizontal flip
+- Small rotations (±5°)
+- Small translations
+- Color jitter
+
+**Status**: ⚠️ Not yet implemented - perfect for intermediate learners!
+
+---
+
+### 3. Modern Optimizers: Lion and Sophia
+
+#### Lion Optimizer (Google Brain, 2023)
+
+**Key Innovation**: Discovered via genetic algorithms, simpler and more memory-efficient.
+
+**Properties**:
+- Uses **sign of gradient** (not gradient magnitude)
+- **50% less memory** than AdamW (single momentum buffer)
+- **3-10x smaller learning rate** than AdamW
+- **Fastest initial convergence**
+
+**Typical Hyperparameters**:
+```python
+# Lion (not yet implemented)
+optimizer = Lion(
+    model.parameters(),
+    lr=1e-4,           # 3-10x smaller than AdamW
+    weight_decay=0.1,  # 3-10x larger than AdamW
+    betas=(0.9, 0.99)
+)
+```
+
+**Status**: ⚠️ Not yet implemented - great for teaching optimizer mechanics!
+
+#### Sophia Optimizer (2023)
+
+**Key Innovation**: Second-order optimizer using Hessian diagonal approximation.
+
+**Properties**:
+- **2x speedup** over Adam (50% fewer steps for same loss)
+- Better **sample efficiency**
+- Particularly effective for **large-scale pre-training**
+- More complex than first-order optimizers
+
+**Status**: ⚠️ Not yet implemented - advanced project for understanding second-order methods!
+
+---
+
+### 4. Knowledge Distillation (2024-2025)
+
+**Key Innovation**: Transfer knowledge from large model (teacher) to small model (student).
+
+**Recent Advances (2024)**:
+- **Student-Centered KD**: Learning from human educational wisdom
+- **Cluster-Quantized KD**: Unified compression framework
+- **ViT-to-CNN Distillation**: Transfer transformer knowledge to efficient CNNs
+- **Privacy-Preserving KD**: Distillation under limited data
+
+**Educational Value**:
+- ✅ Teaches **model compression**
+- ✅ Demonstrates **knowledge transfer**
+- ✅ Practical for **deployment scenarios**
+- ✅ Bridges theory and practice
+
+**Implementation Concept**:
+```python
+# Knowledge Distillation pseudocode (not yet implemented)
+def distillation_loss(student_output, teacher_output, true_labels, temperature=3.0, alpha=0.5):
+    # Soft targets from teacher
+    soft_loss = KL_divergence(
+        softmax(student_output / temperature),
+        softmax(teacher_output / temperature)
+    ) * (temperature ** 2)
+
+    # Hard targets (true labels)
+    hard_loss = cross_entropy(student_output, true_labels)
+
+    # Combined loss
+    return alpha * soft_loss + (1 - alpha) * hard_loss
+```
+
+**Status**: ⚠️ Not yet implemented - excellent intermediate project!
+
+---
+
+### 5. ConvNeXt V2 (2024)
+
+**Key Innovation**: Co-designing CNNs with Masked Autoencoders.
+
+**New Features**:
+- **Global Response Normalization (GRN)**: Inter-channel feature competition
+- **Fully Convolutional Masked Autoencoder (FCMAE)**: Self-supervised pre-training
+- **Sparse convolution encoder**: Operates only on visible patches
+
+**Status**: ⚠️ ConvNeXt V1 implemented, V2 features not yet added
+
+**What's Needed**:
+```python
+# GRN Layer (not yet implemented)
+class GlobalResponseNorm(nn.Module):
+    """Enhances inter-channel feature competition"""
+    def __init__(self, dim):
+        super().__init__()
+        self.gamma = nn.Parameter(torch.zeros(1, dim, 1, 1))
+        self.beta = nn.Parameter(torch.zeros(1, dim, 1, 1))
+
+    def forward(self, x):
+        # Compute global spatial norm per channel
+        gx = torch.norm(x, p=2, dim=(2, 3), keepdim=True)
+        nx = gx / (gx.mean(dim=1, keepdim=True) + 1e-6)
+        return self.gamma * (x * nx) + self.beta + x
+```
+
+---
+
+### 6. Diffusion-Enhanced Augmentation (2024-2025)
+
+**Key Innovation**: Use generative AI (Stable Diffusion) to create synthetic training data.
+
+**Use Cases**:
+- **Small datasets**: Generate more training samples
+- **Rare classes**: Balance class distribution
+- **Domain adaptation**: Create variations for robustness
+
+**Benefits**:
+- ✅ **Improves dataset diversity**
+- ✅ **Controlled variations** (specify attributes)
+- ✅ **State-of-the-art technique** (2024-2025)
+
+**Status**: ⚠️ Not yet implemented - cutting-edge research project!
+
+---
+
+## Summary: Implementation Priority for Learners
+
+**Beginner-Friendly (Easy to Implement)**:
+1. ✅ **Test-Time Augmentation** - 10-20 lines, immediate benefit
+2. ✅ **TrivialAugment** - Similar to RandAugment, simpler logic
+
+**Intermediate (Moderate Complexity)**:
+3. ✅ **Lion Optimizer** - Teaches optimizer mechanics
+4. ✅ **Knowledge Distillation** - Practical compression technique
+5. ✅ **ConvNeXt V2 (GRN layer)** - Evolution of existing architecture
+
+**Advanced (Research-Level)**:
+6. ✅ **Sophia Optimizer** - Second-order optimization
+7. ✅ **Masked Autoencoders** - Self-supervised pre-training
+8. ✅ **Diffusion-Enhanced Augmentation** - Generative AI integration
+
+---
+
 ## Quick Start Examples
 
 ### Example 1: Train ResNet-18 with Modern Techniques

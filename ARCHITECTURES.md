@@ -383,6 +383,11 @@ x ────────────────────┐
 - **ConvNeXt-Tiny**: 27.8M params, ~97%+ accuracy (full-sized)
 - **ConvNeXt-Small**: 49.5M params, ~97%+ accuracy
 
+**Note**: ConvNeXt V2 (2023-2024) adds:
+- Global Response Normalization (GRN) layer for better inter-channel feature competition
+- Fully Convolutional Masked Autoencoder (FCMAE) for self-supervised pre-training
+- Status: ⚠️ V2 features not yet implemented (V1 available)
+
 ### Key Features
 - **Large Kernels (7x7)**: Larger receptive fields like transformers
 - **LayerNorm**: Instead of BatchNorm (from transformers)
@@ -538,4 +543,104 @@ python3 main_modern.py --model convnext_cifar --epochs 200 --amp \
 
 ---
 
+## Emerging Architectures (2024-2025) 🆕
+
+These architectures represent cutting-edge research and potential future additions to the framework:
+
+### LaViT (CVPR 2024)
+**Efficient Vision Transformers via Attention Reuse**
+
+**Key Innovation**:
+- Computes self-attention only in initial layers
+- Reuses attention scores through lightweight linear transformations
+- Dramatically reduces computational cost
+
+**Benefits**:
+- 30-40% faster than standard ViT
+- Minimal accuracy loss
+- Better for resource-constrained environments
+
+**Status**: ⚠️ Not yet implemented - advanced ViT optimization
+
+---
+
+### Hybrid CNN-Transformer (2025 Research)
+**Best of Both Worlds**
+
+**Recent Findings (2025)**:
+- Hybrid CNN-Transformer achieves superior accuracy vs standalone models
+- CNN extracts local features efficiently
+- Transformer captures global dependencies
+- Trade-off: Higher computational cost
+
+**Current Implementation**:
+- ✅ Basic CNN-Transformer hybrid available
+- ⚠️ Latest 2025 optimizations not yet included
+
+---
+
+### ConvNeXt V2 (2023-2024)
+**Co-designing CNNs with Self-Supervised Learning**
+
+**What's New in V2**:
+1. **Global Response Normalization (GRN)**
+   - Enhances inter-channel feature competition
+   - Improves feature quality without attention
+2. **Fully Convolutional Masked Autoencoder (FCMAE)**
+   - Self-supervised pre-training for CNNs
+   - Sparse convolution on visible patches only
+   - Transfer learning without ImageNet
+
+**Status**:
+- ✅ ConvNeXt V1 fully implemented
+- ⚠️ V2 features (GRN, FCMAE) not yet added
+- 🎓 Great intermediate project for learners
+
+---
+
+## Educational Roadmap
+
+For learners looking to expand this framework, here's a suggested progression:
+
+### Beginner Projects
+1. **Test-Time Augmentation**: Simple ensemble technique
+2. **TrivialAugment**: Simpler than RandAugment
+3. **Model Ensembling**: Average predictions from multiple models
+
+### Intermediate Projects
+4. **ConvNeXt V2 GRN Layer**: Add to existing ConvNeXt
+5. **Knowledge Distillation**: Compress large models to small ones
+6. **Lion Optimizer**: Alternative to AdamW
+
+### Advanced Projects
+7. **LaViT-style Attention Optimization**: Efficient transformers
+8. **Masked Autoencoders**: Self-supervised pre-training
+9. **Sophia Optimizer**: Second-order optimization
+
+---
+
+## Architecture Evolution Timeline
+
+```
+2012: AlexNet (CNN revolution)
+2015: ResNet (skip connections)
+2017: Squeeze-and-Excitation (channel attention)
+2019: EfficientNet (compound scaling)
+2020: Vision Transformer (pure attention)
+2022: ConvNeXt (modernized CNN)
+2023: ConvNeXt V2 (self-supervised CNNs)
+2024: LaViT (efficient ViT)
+2025: Hybrid models dominate
+```
+
+**Current State of the Art (2025)**:
+- Best accuracy: Vision Transformers with massive pre-training
+- Best efficiency: ConvNeXt V2 and EfficientNetV2
+- Best for CIFAR-10: Hybrid CNN-Transformer or ConvNeXt
+- Future direction: Hybrid architectures + self-supervised learning
+
+---
+
 **For detailed usage, see `QUICK_START.md` and `README.md`**
+
+**For latest techniques, see `MODERN_DL_GUIDE.md`**

@@ -394,15 +394,119 @@ python3 main_modern.py \
 
 *Performance depends on hyperparameters, augmentation, and hardware*
 
-### Recent Research Trends (2023-2025)
+### Recent Research Trends (2024-2025)
 
+**Latest Architectures (2024-2025):**
+1. **ConvNeXt V2** (2023-2024): Co-designing with Masked Autoencoders
+   - Fully Convolutional Masked Autoencoder (FCMAE) framework
+   - Global Response Normalization (GRN) layer for inter-channel competition
+   - Sparse convolution-based encoder for self-supervised pre-training
+2. **LaViT** (CVPR 2024): Efficient Vision Transformers
+   - Calculates self-attention only in initial layers
+   - Reuses attention scores through lightweight linear operations
+   - Significantly reduces computational costs
+3. **DC-AE** (ICLR 2025): Deep Compression Autoencoder
+   - Lightweight ViTs for high-resolution diffusion models
+   - Spatial compression ratios up to 128x
+   - Dramatically reduces token count for processing
+
+**Advanced Augmentation (2024-2025):**
+1. **TrivialAugment** (2021, validated 2024-2025): Simplest automated augmentation
+   - Randomly selects one augmentation per image
+   - Samples magnitude uniformly per operation
+   - Outperforms RandAugment in recent medical imaging studies (2024)
+   - Tuning-free approach (no hyperparameter search needed)
+2. **Generative AI Augmentation** (2024): Using diffusion models
+   - Generate synthetic training data with controlled variations
+   - Improves dataset diversity for rare classes
+   - Particularly effective for small datasets
+
+**Modern Optimizers (2024-2025):**
+1. **Lion Optimizer** (Google Brain, 2023, validated 2024-2025)
+   - Discovered via genetic algorithms
+   - 3-10x smaller learning rate than AdamW
+   - 50% less memory (single momentum buffer)
+   - Fastest initial convergence but may lag in final performance
+2. **Sophia Optimizer** (2023, validated 2024-2025)
+   - Scalable stochastic second-order optimizer
+   - 2x speedup over Adam for language models
+   - Better sample efficiency (50% fewer steps for same loss)
+   - Particularly effective for large-scale pre-training
+
+**Knowledge Distillation (2024-2025):**
+1. **Student-Centered KD**: Learning from human educational wisdom
+2. **Cluster-Quantized KD** (CQKD): Unified compression framework
+3. **ViT-to-CNN Distillation**: Transfer transformer knowledge to efficient CNNs
+4. **Privacy-Preserving KD**: Distillation under limited data scenarios
+
+**Test-Time Techniques (2024-2025):**
+1. **Test-Time Augmentation (TTA)**: Proven to reduce expected error
+   - Ensemble predictions across multiple augmented versions
+   - Soft voting (averaging class probabilities)
+   - 0.2-0.5% accuracy improvement with minimal cost
+2. **Diffusion-Enhanced TTA** (2025): Multi-modal test-time adaptation
+   - Uses pre-trained vision and language models
+   - Adapts to unknown domains at inference time
+
+**Other Emerging Trends:**
 1. **Vision-Language Models**: CLIP-style contrastive learning
 2. **Self-Supervised Learning**: SimCLR, MoCo, DINO, MAE
-3. **Efficient Transformers**: Swin, CrossViT, Twins
-4. **Hybrid Architectures**: ConvNeXt, CoAtNet (Conv + Attention)
+3. **Efficient Transformers**: Swin, CrossViT, Twins, LaViT
+4. **Hybrid Architectures**: ConvNeXt V2, CoAtNet (Conv + Attention)
 5. **Neural Architecture Search**: EfficientNetV2, RegNet
-6. **Test-Time Adaptation**: Dynamically adjust to distribution shift
-7. **Foundation Models**: Large pre-trained models for transfer learning
+6. **Foundation Models**: Large pre-trained models for transfer learning
+
+### Educational Roadmap: Potential Future Implementations
+
+The following techniques are not yet implemented but would be valuable additions for learners:
+
+**Ready for Implementation (Beginner-Friendly):**
+1. **TrivialAugment**: Simpler than RandAugment, easier to understand
+   - Single augmentation per image with uniform magnitude sampling
+   - No hyperparameter tuning required
+   - Great for teaching automated augmentation concepts
+2. **Test-Time Augmentation (TTA)**: Simple ensemble technique
+   - Augment test images multiple times and average predictions
+   - Easy to implement (10-20 lines of code)
+   - Demonstrates ensemble learning without training multiple models
+3. **Lion Optimizer**: Alternative to AdamW with interesting properties
+   - Simpler update rule than Adam/AdamW
+   - Good for teaching optimizer mechanics
+   - Demonstrates memory-efficient optimization
+
+**Intermediate Implementations:**
+1. **ConvNeXt V2**: Evolution of ConvNeXt (already implemented)
+   - Add Global Response Normalization (GRN) layer
+   - Demonstrates latest CNN improvements (2024)
+   - Shows progression from V1 to V2
+2. **Knowledge Distillation**: Teacher-student learning framework
+   - Train large model (teacher), transfer to small model (student)
+   - Teaches model compression and knowledge transfer
+   - Practical for deployment scenarios
+3. **Sophia Optimizer**: Second-order optimizer (advanced)
+   - Demonstrates Hessian diagonal approximation
+   - More complex but more efficient than first-order methods
+   - Good for understanding second-order optimization
+
+**Advanced Implementations (Research-Level):**
+1. **Masked Autoencoders (MAE)**: Self-supervised pre-training
+   - Mask random patches and reconstruct
+   - Demonstrates self-supervised learning
+   - Can improve performance with limited labeled data
+2. **Diffusion-Enhanced Augmentation**: Generative AI for data augmentation
+   - Use stable diffusion for synthetic data generation
+   - Cutting-edge technique (2024-2025)
+   - Bridges generative AI and discriminative models
+3. **Efficient ViT variants** (LaViT-style): Attention optimization
+   - Reduce attention computation via reuse
+   - Demonstrates efficiency techniques for transformers
+   - Balances accuracy and computational cost
+
+**Why These Additions Matter for Education:**
+- **Progressive Learning**: From simple (TTA) to advanced (MAE)
+- **Current Relevance**: All techniques validated in 2024-2025 research
+- **Practical Value**: Used in production systems and competitions
+- **Conceptual Coverage**: Spans optimization, augmentation, compression, and self-supervision
 
 ### Useful Resources
 
@@ -410,3 +514,7 @@ python3 main_modern.py \
 - **PyTorch Image Models (timm)**: https://github.com/rwightman/pytorch-image-models
 - **Awesome Deep Learning**: https://github.com/ChristosChristofidis/awesome-deep-learning
 - **Deep Learning Book**: http://www.deeplearningbook.org/
+- **Lion Optimizer**: https://github.com/lucidrains/lion-pytorch
+- **TrivialAugment Paper**: https://arxiv.org/abs/2103.10158
+- **Sophia Optimizer Paper**: https://arxiv.org/abs/2305.14342
+- **ConvNeXt V2 Paper**: https://arxiv.org/abs/2301.00808
