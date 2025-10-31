@@ -231,7 +231,9 @@ class LiveTrainingMonitor:
         try:
             ax.relim()
             ax.autoscale_view()
-        except:
+        except Exception as e:
+            # Silently handle rescaling errors (e.g., empty data, invalid axis)
+            # This is expected during initialization or when data is not yet available
             pass
 
 

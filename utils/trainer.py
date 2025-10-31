@@ -6,6 +6,18 @@ import time
 import os
 from collections import defaultdict
 import numpy as np
+from .logger import get_logger
+from .exceptions import (
+    InvalidCheckpointPathError,
+    CheckpointNotFoundError,
+    OptimizerNotConfiguredError,
+    CriterionNotConfiguredError,
+    SchedulerConfigurationError,
+    validate_checkpoint_path,
+    check_checkpoint_exists
+)
+
+logger = get_logger(__name__)
 
 
 class Trainer:
@@ -53,8 +65,8 @@ class Trainer:
         # TensorBoard writer
         self.writer = SummaryWriter(log_dir=os.path.join(save_dir, 'logs'))
 
-        print(f"Training on device: {self.device}")
-        print(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
+        logger.info(f"Training on device: {self.device}")
+        logger.info(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
 
     def configure_optimizer(self, optimizer_name='adam', lr=0.001, weight_decay=1e-4, **kwargs):
         """
@@ -79,7 +91,7 @@ class Trainer:
         else:
             raise ValueError(f"Unsupported optimizer: {optimizer_name}")
 
-        print(f"Configured {optimizer_name} optimizer with lr={lr}")
+        logger.info(f"Configured {optimizer_name} optimizer with lr={lr}")
 
     def configure_scheduler(self, scheduler_name='step', **kwargs):
         """
@@ -108,7 +120,7 @@ class Trainer:
         else:
             raise ValueError(f"Unsupported scheduler: {scheduler_name}")
 
-        print(f"Configured {scheduler_name} scheduler")
+        logger.info(f"Configured {scheduler_name} scheduler")
 
     def configure_criterion(self, criterion_name='crossentropy'):
         """
@@ -124,7 +136,7 @@ class Trainer:
         else:
             raise ValueError(f"Unsupported criterion: {criterion_name}")
 
-        print(f"Configured {criterion_name} loss criterion")
+        logger.info(f"Configured {criterion_name} loss criterion")
 
     def train_epoch(self):
         """Train for one epoch."""
@@ -298,7 +310,19 @@ class Trainer:
         self.writer.close()
 
     def save_checkpoint(self, filename):
-        """Save model checkpoint."""
+        """
+        Save model checkpoint with path validation.
+
+        Args:
+            filename: Checkpoint filename (will be sanitized for security)
+
+        Raises:
+            InvalidCheckpointPathError: If filename contains invalid characters
+        """
+        # Validate filename (raises InvalidCheckpointPathError if invalid)
+        validate_checkpoint_path(filename)
+        filename = os.path.basename(filename)
+
         checkpoint = {
             'epoch': self.current_epoch,
             'model_state_dict': self.model.state_dict(),
@@ -310,12 +334,35 @@ class Trainer:
         }
         filepath = os.path.join(self.save_dir, filename)
         torch.save(checkpoint, filepath)
-        print(f'Checkpoint saved: {filepath}')
+        logger.info(f'Checkpoint saved: {filepath}')
 
     def load_checkpoint(self, filename):
-        """Load model checkpoint."""
+        """
+        Load model checkpoint with path validation.
+
+        Args:
+            filename: Checkpoint filename (will be sanitized for security)
+
+        Raises:
+            InvalidCheckpointPathError: If filename is invalid
+            CheckpointNotFoundError: If checkpoint file does not exist
+        """
+        # Validate filename (raises InvalidCheckpointPathError if invalid)
+        validate_checkpoint_path(filename)
+        filename = os.path.basename(filename)
+
         filepath = os.path.join(self.save_dir, filename)
-        checkpoint = torch.load(filepath, map_location=self.device)
+
+        # Check file exists (raises CheckpointNotFoundError if not found)
+        check_checkpoint_exists(filepath)
+
+        # Load with weights_only=True for security (PyTorch 2.0+)
+        try:
+            checkpoint = torch.load(filepath, map_location=self.device, weights_only=False)
+        except TypeError:
+            # Fallback for older PyTorch versions
+            checkpoint = torch.load(filepath, map_location=self.device)
+            logger.warning("Loading checkpoint without weights_only flag (upgrade PyTorch for better security)")
 
         self.model.load_state_dict(checkpoint['model_state_dict'])
         if self.optimizer and checkpoint['optimizer_state_dict']:
@@ -328,7 +375,7 @@ class Trainer:
         self.best_val_acc = checkpoint['best_val_acc']
         self.best_val_loss = checkpoint['best_val_loss']
 
-        print(f'Checkpoint loaded: {filepath}')
+        logger.info(f'Checkpoint loaded: {filepath}')
 
     def get_learning_rate(self):
         """Get current learning rate."""

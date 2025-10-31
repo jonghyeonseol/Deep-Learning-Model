@@ -31,6 +31,9 @@ from models.cnn_transformer import CNNTransformer_Small
 from utils.modern_trainer import ModernTrainer
 from utils.trainer import Trainer
 from utils.data_loader import CIFAR10DataLoader
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def run_experiment(experiment_name, model, train_loader, val_loader, test_loader,
@@ -51,9 +54,9 @@ def run_experiment(experiment_name, model, train_loader, val_loader, test_loader
     Returns:
         Results dictionary
     """
-    print(f"\n{'='*70}")
-    print(f"EXPERIMENT: {experiment_name}")
-    print(f"{'='*70}")
+    logger.info(f"\n{'='*70}")
+    logger.info(f"EXPERIMENT: {experiment_name}")
+    logger.info(f"{'='*70}")
 
     save_dir = f'./benchmarks/{experiment_name}'
     os.makedirs(save_dir, exist_ok=True)
@@ -115,14 +118,14 @@ def run_experiment(experiment_name, model, train_loader, val_loader, test_loader
         with open(os.path.join(save_dir, 'result.json'), 'w') as f:
             json.dump(result, f, indent=2)
 
-        print(f"\n✓ {experiment_name} completed successfully")
-        print(f"  Test Accuracy: {test_acc:.2f}%")
-        print(f"  Training Time: {training_time:.1f}s")
+        logger.info(f"\n✓ {experiment_name} completed successfully")
+        logger.info(f"  Test Accuracy: {test_acc:.2f}%")
+        logger.info(f"  Training Time: {training_time:.1f}s")
 
         return result
 
     except Exception as e:
-        print(f"\n✗ {experiment_name} failed: {e}")
+        logger.info(f"\n✗ {experiment_name} failed: {e}")
         import traceback
         traceback.print_exc()
 
@@ -144,9 +147,9 @@ def benchmark_architectures(epochs=10, batch_size=128):
     Returns:
         List of results
     """
-    print(f"\n{'#'*70}")
-    print("# BENCHMARK: Model Architectures")
-    print(f"{'#'*70}\n")
+    logger.info(f"\n{'#'*70}")
+    logger.info("# BENCHMARK: Model Architectures")
+    logger.info(f"{'#'*70}\n")
 
     # Load data
     data_loader = CIFAR10DataLoader(batch_size=batch_size, validation_split=0.1)
@@ -185,9 +188,9 @@ def benchmark_training_techniques(epochs=10, batch_size=128):
     Returns:
         List of results
     """
-    print(f"\n{'#'*70}")
-    print("# BENCHMARK: Training Techniques")
-    print(f"{'#'*70}\n")
+    logger.info(f"\n{'#'*70}")
+    logger.info("# BENCHMARK: Training Techniques")
+    logger.info(f"{'#'*70}\n")
 
     # Load data
     data_loader = CIFAR10DataLoader(batch_size=batch_size, validation_split=0.1)
@@ -223,9 +226,9 @@ def benchmark_activations(epochs=10, batch_size=128):
     Returns:
         List of results
     """
-    print(f"\n{'#'*70}")
-    print("# BENCHMARK: Activation Functions")
-    print(f"{'#'*70}\n")
+    logger.info(f"\n{'#'*70}")
+    logger.info("# BENCHMARK: Activation Functions")
+    logger.info(f"{'#'*70}\n")
 
     # Load data
     data_loader = CIFAR10DataLoader(batch_size=batch_size, validation_split=0.1)
@@ -271,7 +274,7 @@ def save_benchmark_report(all_results, output_dir='./benchmarks'):
     with open(report_path, 'w') as f:
         json.dump(report, f, indent=2)
 
-    print(f"\n✓ Benchmark report saved to {report_path}")
+    logger.info(f"\n✓ Benchmark report saved to {report_path}")
 
     # Create CSV for each benchmark type
     for benchmark_name, results in all_results.items():
@@ -286,29 +289,29 @@ def save_benchmark_report(all_results, output_dir='./benchmarks'):
         df = pd.DataFrame(successful_results)
         csv_path = os.path.join(output_dir, f'{benchmark_name}.csv')
         df.to_csv(csv_path, index=False)
-        print(f"✓ {benchmark_name} results saved to {csv_path}")
+        logger.info(f"✓ {benchmark_name} results saved to {csv_path}")
 
     # Print summary
-    print(f"\n{'='*70}")
-    print("BENCHMARK SUMMARY")
-    print(f"{'='*70}\n")
+    logger.info(f"\n{'='*70}")
+    logger.info("BENCHMARK SUMMARY")
+    logger.info(f"{'='*70}\n")
 
     for benchmark_name, results in all_results.items():
         successful = [r for r in results if r.get('status') == 'success']
         if not successful:
             continue
 
-        print(f"\n{benchmark_name.upper()}:")
-        print(f"{'Experiment':<30} {'Test Acc (%)':<15} {'Time (s)':<15}")
-        print(f"{'-'*60}")
+        logger.info(f"\n{benchmark_name.upper()}:")
+        logger.info(f"{'Experiment':<30} {'Test Acc (%)':<15} {'Time (s)':<15}")
+        logger.info(f"{'-'*60}")
 
         for result in successful:
-            print(f"{result['experiment']:<30} "
+            logger.info(f"{result['experiment']:<30} "
                   f"{result['test_accuracy']:<15.2f} "
                   f"{result['training_time']:<15.1f}")
 
         best = max(successful, key=lambda x: x['test_accuracy'])
-        print(f"\n  Best: {best['experiment']} ({best['test_accuracy']:.2f}%)")
+        logger.info(f"\n  Best: {best['experiment']} ({best['test_accuracy']:.2f}%)")
 
 
 def main():
@@ -340,16 +343,16 @@ def main():
     # Set epochs
     epochs = 2 if args.quick else args.epochs
 
-    print(f"\n{'='*70}")
-    print("COMPREHENSIVE DEEP LEARNING BENCHMARK")
-    print(f"{'='*70}")
-    print(f"PyTorch version: {torch.__version__}")
-    print(f"CUDA available: {torch.cuda.is_available()}")
+    logger.info(f"\n{'='*70}")
+    logger.info("COMPREHENSIVE DEEP LEARNING BENCHMARK")
+    logger.info(f"{'='*70}")
+    logger.info(f"PyTorch version: {torch.__version__}")
+    logger.info(f"CUDA available: {torch.cuda.is_available()}")
     if torch.cuda.is_available():
-        print(f"CUDA device: {torch.cuda.get_device_name()}")
-    print(f"Epochs per experiment: {epochs}")
-    print(f"Batch size: {args.batch_size}")
-    print(f"{'='*70}\n")
+        logger.info(f"CUDA device: {torch.cuda.get_device_name()}")
+    logger.info(f"Epochs per experiment: {epochs}")
+    logger.info(f"Batch size: {args.batch_size}")
+    logger.info(f"{'='*70}\n")
 
     all_results = {}
 
@@ -368,21 +371,21 @@ def main():
 
     # If no specific benchmark selected, show help
     if not any([args.full, args.architectures, args.techniques, args.activations]):
-        print("Please specify which benchmarks to run:")
-        print("  --full          : Run all benchmarks")
-        print("  --architectures : Compare architectures")
-        print("  --techniques    : Compare training techniques")
-        print("  --activations   : Compare activation functions")
-        print("  --quick         : Quick mode (2 epochs)\n")
+        logger.info("Please specify which benchmarks to run:")
+        logger.info("  --full          : Run all benchmarks")
+        logger.info("  --architectures : Compare architectures")
+        logger.info("  --techniques    : Compare training techniques")
+        logger.info("  --activations   : Compare activation functions")
+        logger.info("  --quick         : Quick mode (2 epochs)\n")
         return
 
     # Save report
     if all_results:
         save_benchmark_report(all_results)
 
-    print(f"\n{'='*70}")
-    print("BENCHMARK COMPLETED")
-    print(f"{'='*70}\n")
+    logger.info(f"\n{'='*70}")
+    logger.info("BENCHMARK COMPLETED")
+    logger.info(f"{'='*70}\n")
 
 
 if __name__ == '__main__':

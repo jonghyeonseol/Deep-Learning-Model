@@ -2,6 +2,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import math
+import sys
+import os
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.exceptions import InvalidActivationError
 
 
 class GELU(nn.Module):
@@ -150,8 +156,8 @@ def get_activation(activation_name):
     }
 
     if activation_name.lower() not in activation_map:
-        raise ValueError(f"Unsupported activation function: {activation_name}. "
-                        f"Supported functions: {list(activation_map.keys())}")
+        available = list(activation_map.keys())
+        raise InvalidActivationError(activation_name, available=available)
 
     return activation_map[activation_name.lower()]
 

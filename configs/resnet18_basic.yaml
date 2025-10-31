@@ -1,0 +1,58 @@
+# Basic ResNet-18 Training Configuration
+# Optimized for quick training and baseline performance
+
+model:
+  architecture: resnet18
+  activation: swish
+  num_classes: 10
+  pretrained: false
+
+training:
+  epochs: 100
+  batch_size: 128
+  learning_rate: 0.1
+  optimizer: sgd
+  momentum: 0.9
+  weight_decay: 0.0005
+
+  # Training enhancements
+  use_amp: false
+  use_ema: false
+  label_smoothing: 0.0
+  gradient_clip: 0.0
+
+scheduler:
+  type: cosine
+  min_lr: 0.000001
+  warmup_epochs: 0
+
+augmentation:
+  use_randaugment: true
+  randaugment_n: 2
+  randaugment_m: 9
+
+  use_mixup: false
+  mixup_alpha: 1.0
+
+  use_cutmix: false
+  cutmix_alpha: 1.0
+
+  use_cutout: false
+  cutout_size: 16
+
+data:
+  dataset: cifar10
+  data_dir: ./data
+  num_workers: 4
+  pin_memory: true
+
+checkpoint:
+  save_dir: ./checkpoints
+  save_best: true
+  save_frequency: 10
+
+logging:
+  log_dir: ./logs
+  tensorboard: true
+  console_log_level: INFO
+  file_log_level: DEBUG

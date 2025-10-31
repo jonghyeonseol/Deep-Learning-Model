@@ -1,0 +1,90 @@
+# Vision Transformer (ViT) Training Configuration
+# Transformer-based image classification with modern techniques
+
+model:
+  architecture: vit
+  patch_size: 4               # 4x4 patches for CIFAR-10 (32x32 images)
+  embed_dim: 384
+  depth: 7                    # Number of transformer blocks
+  num_heads: 6                # Attention heads
+  mlp_ratio: 4.0              # MLP hidden dim = embed_dim * mlp_ratio
+  num_classes: 10
+  drop_rate: 0.1
+  attn_drop_rate: 0.0
+  drop_path_rate: 0.1
+
+training:
+  epochs: 300
+  batch_size: 64              # Smaller batch for transformers (memory intensive)
+  learning_rate: 0.001
+  optimizer: adamw
+  weight_decay: 0.0001
+
+  # Transformer training best practices
+  use_amp: true               # Essential for transformer training
+  use_ema: true               # Stabilize transformer training
+  ema_decay: 0.9999
+  label_smoothing: 0.1        # Recommended for transformers
+  gradient_clip: 1.0          # Prevent instability
+
+scheduler:
+  type: cosine_warmup
+  warmup_epochs: 20           # Longer warmup for transformers
+  min_lr: 0.000001
+
+augmentation:
+  # Strong augmentation for transformers
+  use_randaugment: true
+  randaugment_n: 2
+  randaugment_m: 15           # Higher magnitude for transformers
+
+  # MixUp works very well with transformers
+  use_mixup: true
+  mixup_alpha: 0.8
+  mixup_prob: 0.8
+
+  use_cutmix: false           # Typically use either MixUp or CutMix
+  use_cutout: false
+
+regularization:
+  # Stochastic Depth is crucial for deep transformers
+  use_stochastic_depth: true
+  stochastic_depth_prob: 0.1
+
+data:
+  dataset: cifar10
+  data_dir: ./data
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+
+checkpoint:
+  save_dir: ./checkpoints/vit
+  save_best: true
+  save_frequency: 50
+  keep_last_n: 3
+
+logging:
+  log_dir: ./logs/vit
+  tensorboard: true
+  console_log_level: INFO
+  file_log_level: DEBUG
+  log_lr: true
+  log_grad_norm: true
+  log_attention_maps: true    # Visualize attention patterns
+
+performance:
+  cudnn_benchmark: false      # Transformers have variable input sizes
+  cudnn_deterministic: false
+
+early_stopping:
+  enabled: true
+  patience: 50                # Transformers need longer patience
+  metric: val_acc
+  mode: max
+
+# Transformer-specific settings
+transformer:
+  pos_encoding: learnable     # learnable or sinusoidal
+  cls_token: true             # Use classification token
+  global_pool: false          # Use CLS token instead of global pooling

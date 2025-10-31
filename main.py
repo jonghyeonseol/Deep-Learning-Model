@@ -10,6 +10,9 @@ import os
 import time
 from models import ConvNeuralNetwork, get_activation, get_available_activations
 from utils import CIFAR10DataLoader, Trainer, Visualizer
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def launch_interactive_propagation(activation='relu'):
@@ -19,25 +22,25 @@ def launch_interactive_propagation(activation='relu'):
     Args:
         activation (str): Activation function to use
     """
-    print("🧠" + "="*60 + "🧠")
-    print("    INTERACTIVE PROPAGATION PANEL")
-    print("    Forward & Backward Pass with Synapses")
-    print("🧠" + "="*60 + "🧠")
-    print()
-    print("📊 What you'll see:")
-    print("   🔵 Neurons (circles) - Process incoming signals")
-    print("   ➡️  Synapses (arrows) - Weighted connections between neurons")
-    print("   📊 Weight values - Numbers displayed on synapses")
-    print("   💡 Forward pass - Data flows left to right through synapses")
-    print("   🎯 Backward pass - Gradients flow right to left through synapses")
-    print("   🎚️  Interactive controls - Pause, step, adjust speed")
-    print()
+    logger.info("🧠" + "="*60 + "🧠")
+    logger.info("    INTERACTIVE PROPAGATION PANEL")
+    logger.info("    Forward & Backward Pass with Synapses")
+    logger.info("🧠" + "="*60 + "🧠")
+    logger.info("")
+    logger.info("📊 What you'll see:")
+    logger.info("   🔵 Neurons (circles) - Process incoming signals")
+    logger.info("   ➡️  Synapses (arrows) - Weighted connections between neurons")
+    logger.info("   📊 Weight values - Numbers displayed on synapses")
+    logger.info("   💡 Forward pass - Data flows left to right through synapses")
+    logger.info("   🎯 Backward pass - Gradients flow right to left through synapses")
+    logger.info("   🎚️  Interactive controls - Pause, step, adjust speed")
+    logger.info("")
 
     try:
         from utils.interactive_propagation_panel import launch_propagation_panel
 
         # Create a small model for visualization
-        print("⚙️  Creating neural network model...")
+        logger.info("⚙️  Creating neural network model...")
         model = ConvNeuralNetwork(
             input_channels=3,
             num_classes=10,
@@ -47,39 +50,37 @@ def launch_interactive_propagation(activation='relu'):
 
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         model = model.to(device)
-        print(f"   ✓ Model created with {activation.upper()} activation")
-        print(f"   ✓ Device: {device}")
+        logger.info(f"   ✓ Model created with {activation.upper()} activation")
+        logger.info(f"   ✓ Device: {device}")
 
         # Load a small batch of data
-        print("\n📦 Loading CIFAR-10 data...")
+        logger.info("\n📦 Loading CIFAR-10 data...")
         data_loader = CIFAR10DataLoader(batch_size=4, validation_split=0.1)
         _, _, test_loader = data_loader.get_data_loaders()
-        print("   ✓ Data loaded")
+        logger.info("   ✓ Data loaded")
 
-        print("\n" + "="*60)
-        print("🚀 Launching Interactive Propagation Panel...")
-        print("="*60)
-        print()
-        print("💡 TIP: Watch how:")
-        print("   1. Input signals travel through synapses (weighted connections)")
-        print("   2. Each neuron computes: σ(Σ(input × weight) + bias)")
-        print("   3. Gradients flow backward to update synapse weights")
-        print()
+        logger.info("\n" + "="*60)
+        logger.info("🚀 Launching Interactive Propagation Panel...")
+        logger.info("="*60)
+        logger.info("")
+        logger.info("💡 TIP: Watch how:")
+        logger.info("   1. Input signals travel through synapses (weighted connections)")
+        logger.info("   2. Each neuron computes: σ(Σ(input × weight) + bias)")
+        logger.info("   3. Gradients flow backward to update synapse weights")
+        logger.info("")
 
         input("Press ENTER to start the interactive panel... ")
 
         # Launch the panel
         launch_propagation_panel(model, test_loader, device)
 
-        print("\n✅ Interactive propagation panel completed!")
+        logger.info("\n✅ Interactive propagation panel completed!")
 
     except ImportError as e:
-        print(f"❌ Interactive panel not available: {e}")
-        print("   Make sure all dependencies are installed.")
+        logger.error(f"❌ Interactive panel not available: {e}")
+        logger.error("   Make sure all dependencies are installed.")
     except Exception as e:
-        print(f"❌ Error: {e}")
-        import traceback
-        traceback.print_exc()
+        logger.error(f"❌ Error: {e}", exc_info=True)
 
 
 def visualize_network(activation='relu'):
@@ -89,18 +90,18 @@ def visualize_network(activation='relu'):
     Args:
         activation (str): Activation function to use
     """
-    print("🧠" + "="*60 + "🧠")
-    print("    LIVE NEURAL NETWORK VISUALIZATION")
-    print("🧠" + "="*60 + "🧠")
-    print()
-    print("📊 What you'll see:")
-    print("   🔵 Blue circles = Input neurons")
-    print("   🔴 Red circles = Hidden neurons")
-    print("   🟢 Green circles = Output neurons")
-    print("   ➡️  Arrows = Connections (weights)")
-    print("   💡 Brightness = Neuron activation level")
-    print("   📏 Arrow thickness = Weight strength")
-    print()
+    logger.info("🧠" + "="*60 + "🧠")
+    logger.info("    LIVE NEURAL NETWORK VISUALIZATION")
+    logger.info("🧠" + "="*60 + "🧠")
+    logger.info("")
+    logger.info("📊 What you'll see:")
+    logger.info("   🔵 Blue circles = Input neurons")
+    logger.info("   🔴 Red circles = Hidden neurons")
+    logger.info("   🟢 Green circles = Output neurons")
+    logger.info("   ➡️  Arrows = Connections (weights)")
+    logger.info("   💡 Brightness = Neuron activation level")
+    logger.info("   📏 Arrow thickness = Weight strength")
+    logger.info("")
 
     try:
         from utils.live_network_viz import LivePerceptronNetwork
@@ -120,19 +121,19 @@ def visualize_network(activation='relu'):
         ]
 
         input("👀 Press ENTER to start the live visualization... ")
-        print()
+        logger.info("")
 
         for i, demo in enumerate(demos, 1):
-            print(f"🎯 Demo {i}/{len(demos)}: {demo['name']}")
-            print(f"   Structure: {demo['description']}")
-            print()
+            logger.info(f"🎯 Demo {i}/{len(demos)}: {demo['name']}")
+            logger.info(f"   Structure: {demo['description']}")
+            logger.info("")
 
             network = LivePerceptronNetwork(demo['structure'])
             network.start_visualization()
 
-            print("🎬 Starting animation (30 seconds)")
-            print("   Watch the neurons and connections!")
-            print()
+            logger.info("🎬 Starting animation (30 seconds)")
+            logger.info("   Watch the neurons and connections!")
+            logger.info("")
 
             try:
                 start_time = time.time()
@@ -154,19 +155,19 @@ def visualize_network(activation='relu'):
                     time.sleep(0.3)
 
             except KeyboardInterrupt:
-                print("\n⏹️ Visualization stopped by user")
+                logger.info("\n⏹️ Visualization stopped by user")
 
             network.stop_visualization()
 
             if i < len(demos):
                 input("Press ENTER to continue to next demo... ")
-                print()
+                logger.info("")
 
-        print("✅ Network visualization completed!")
+        logger.info("✅ Network visualization completed!")
 
     except ImportError as e:
-        print(f"❌ Live visualization not available: {e}")
-        print("   Make sure all dependencies are installed.")
+        logger.error(f"❌ Live visualization not available: {e}")
+        logger.error("   Make sure all dependencies are installed.")
 
 
 def train_model(activation, epochs=10, batch_size=32, lr=0.001, enable_monitoring=False):
@@ -183,11 +184,11 @@ def train_model(activation, epochs=10, batch_size=32, lr=0.001, enable_monitorin
     Returns:
         dict: Training results
     """
-    print(f"\n{'='*60}")
-    print(f"Training model with {activation.upper()} activation")
+    logger.info(f"\n{'='*60}")
+    logger.info(f"Training model with {activation.upper()} activation")
     if enable_monitoring:
-        print("📊 Live monitoring: ENABLED")
-    print(f"{'='*60}")
+        logger.info("📊 Live monitoring: ENABLED")
+    logger.info(f"{'='*60}")
 
     # Create data loader
     data_loader = CIFAR10DataLoader(batch_size=batch_size, validation_split=0.1)
@@ -195,11 +196,11 @@ def train_model(activation, epochs=10, batch_size=32, lr=0.001, enable_monitorin
 
     # Print dataset info
     dataset_info = data_loader.get_dataset_info()
-    print(f"Dataset: CIFAR-10")
-    print(f"Train samples: {dataset_info['train_size']:,}")
-    print(f"Validation samples: {dataset_info['val_size']:,}")
-    print(f"Test samples: {dataset_info['test_size']:,}")
-    print(f"Number of classes: {dataset_info['num_classes']}")
+    logger.info(f"Dataset: CIFAR-10")
+    logger.info(f"Train samples: {dataset_info['train_size']:,}")
+    logger.info(f"Validation samples: {dataset_info['val_size']:,}")
+    logger.info(f"Test samples: {dataset_info['test_size']:,}")
+    logger.info(f"Number of classes: {dataset_info['num_classes']}")
 
     # Create model
     model = ConvNeuralNetwork(
@@ -229,9 +230,9 @@ def train_model(activation, epochs=10, batch_size=32, lr=0.001, enable_monitorin
                 save_dir=save_dir,
                 enable_live_monitoring=True
             )
-            print("📺 Live monitoring initialized!")
+            logger.info("📺 Live monitoring initialized!")
         except ImportError:
-            print("⚠️  Live monitoring not available, using standard trainer")
+            logger.warning("⚠️  Live monitoring not available, using standard trainer")
             trainer = Trainer(
                 model=model,
                 train_loader=train_loader,
@@ -310,28 +311,28 @@ def compare_activations(activations, epochs=10, batch_size=32, lr=0.001, enable_
             result = train_model(activation, epochs, batch_size, lr, enable_monitoring)
             results.append(result)
         except Exception as e:
-            print(f"Error training with {activation}: {e}")
+            logger.error(f"Error training with {activation}: {e}", exc_info=True)
             continue
 
     # Display comparison results
-    print(f"\n{'='*80}")
-    print("ACTIVATION FUNCTION COMPARISON RESULTS")
-    print(f"{'='*80}")
-    print(f"{'Activation':<12} {'Test Loss':<12} {'Test Acc (%)':<12} {'Val Acc (%)':<12} {'Parameters':<12}")
-    print(f"{'-'*80}")
+    logger.info(f"\n{'='*80}")
+    logger.info("ACTIVATION FUNCTION COMPARISON RESULTS")
+    logger.info(f"{'='*80}")
+    logger.info(f"{'Activation':<12} {'Test Loss':<12} {'Test Acc (%)':<12} {'Val Acc (%)':<12} {'Parameters':<12}")
+    logger.info(f"{'-'*80}")
 
     for result in results:
-        print(f"{result['activation']:<12} "
-              f"{result['test_loss']:<12.4f} "
-              f"{result['test_accuracy']:<12.2f} "
-              f"{result['best_val_accuracy']:<12.2f} "
-              f"{result['model_parameters']:<12,}")
+        logger.info(f"{result['activation']:<12} "
+                   f"{result['test_loss']:<12.4f} "
+                   f"{result['test_accuracy']:<12.2f} "
+                   f"{result['best_val_accuracy']:<12.2f} "
+                   f"{result['model_parameters']:<12,}")
 
     # Find best performing activation
     if results:
         best_result = max(results, key=lambda x: x['test_accuracy'])
-        print(f"\nBest performing activation: {best_result['activation'].upper()}")
-        print(f"Test accuracy: {best_result['test_accuracy']:.2f}%")
+        logger.info(f"\nBest performing activation: {best_result['activation'].upper()}")
+        logger.info(f"Test accuracy: {best_result['test_accuracy']:.2f}%")
 
 
 def main():
@@ -374,49 +375,49 @@ def main():
 
     # List activations if requested
     if args.list_activations:
-        print("Available activation functions:")
+        logger.info("Available activation functions:")
         classic = ['relu', 'tanh', 'sigmoid', 'step', 'softmax']
         modern = ['gelu', 'swish', 'mish', 'silu', 'hardswish']
         others = ['leakyrelu', 'elu', 'prelu', 'selu']
 
-        print(f"Classic: {', '.join(classic)}")
-        print(f"Modern: {', '.join(modern)}")
-        print(f"Others: {', '.join(others)}")
-        print(f"All: {', '.join(available_activations)}")
+        logger.info(f"Classic: {', '.join(classic)}")
+        logger.info(f"Modern: {', '.join(modern)}")
+        logger.info(f"Others: {', '.join(others)}")
+        logger.info(f"All: {', '.join(available_activations)}")
         return
 
     # Adjust epochs for quick training
     if args.quick:
         args.epochs = 2
-        print("Quick training mode: using 2 epochs")
+        logger.info("Quick training mode: using 2 epochs")
 
-    print("CIFAR-10 Neural Network Training")
-    print(f"Arguments: {args}")
-    print(f"PyTorch version: {torch.__version__}")
-    print(f"CUDA available: {torch.cuda.is_available()}")
+    logger.info("CIFAR-10 Neural Network Training")
+    logger.info(f"Arguments: {args}")
+    logger.info(f"PyTorch version: {torch.__version__}")
+    logger.info(f"CUDA available: {torch.cuda.is_available()}")
     if torch.cuda.is_available():
-        print(f"CUDA device: {torch.cuda.get_device_name()}")
+        logger.info(f"CUDA device: {torch.cuda.get_device_name()}")
 
     # Determine which activations to train
     if args.activation == 'all':
         activations = available_activations
-        print(f"\nTraining with ALL activation functions: {activations}")
+        logger.info(f"\nTraining with ALL activation functions: {activations}")
         compare_activations(activations, args.epochs, args.batch_size, args.lr, args.monitor)
     elif args.activation == 'modern':
         activations = ['gelu', 'swish', 'mish', 'silu', 'hardswish']
-        print(f"\nTraining with MODERN activation functions: {activations}")
+        logger.info(f"\nTraining with MODERN activation functions: {activations}")
         compare_activations(activations, args.epochs, args.batch_size, args.lr, args.monitor)
     elif args.activation == 'classic':
         activations = ['relu', 'tanh', 'sigmoid', 'leakyrelu', 'elu']
-        print(f"\nTraining with CLASSIC activation functions: {activations}")
+        logger.info(f"\nTraining with CLASSIC activation functions: {activations}")
         compare_activations(activations, args.epochs, args.batch_size, args.lr, args.monitor)
     else:
         # Train with single activation function
-        print(f"\nTraining with {args.activation} activation")
+        logger.info(f"\nTraining with {args.activation} activation")
         result = train_model(args.activation, args.epochs, args.batch_size, args.lr, args.monitor)
-        print(f"\nFinal results:")
-        print(f"Test accuracy: {result['test_accuracy']:.2f}%")
-        print(f"Test loss: {result['test_loss']:.4f}")
+        logger.info(f"\nFinal results:")
+        logger.info(f"Test accuracy: {result['test_accuracy']:.2f}%")
+        logger.info(f"Test loss: {result['test_loss']:.4f}")
 
 
 if __name__ == '__main__':

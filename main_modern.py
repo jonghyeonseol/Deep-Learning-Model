@@ -44,6 +44,9 @@ from utils.visualization import Visualizer
 from utils.augmentation import (
     get_cifar10_transforms, MixUp, CutMix, mixup_criterion
 )
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def get_model(model_name, activation='relu', num_classes=10):
@@ -86,8 +89,8 @@ def get_model(model_name, activation='relu', num_classes=10):
         raise ValueError(f"Unknown model: {model_name}. Available: {list(model_dict.keys())}")
 
     model = model_dict[model_name]()
-    print(f"✓ Created {model_name} model")
-    print(f"  Parameters: {sum(p.numel() for p in model.parameters()):,}")
+    logger.info(f"✓ Created {model_name} model")
+    logger.info(f"  Parameters: {sum(p.numel() for p in model.parameters()):,}")
 
     return model
 
@@ -120,24 +123,24 @@ def train_with_modern_techniques(
     Returns:
         Training results dict
     """
-    print(f"\n{'='*70}")
-    print("MODERN TRAINING CONFIGURATION")
-    print(f"{'='*70}")
-    print(f"✓ AdamW optimizer (decoupled weight decay)")
-    print(f"✓ Cosine annealing with warmup")
+    logger.info(f"\n{'='*70}")
+    logger.info("MODERN TRAINING CONFIGURATION")
+    logger.info(f"{'='*70}")
+    logger.info(f"✓ AdamW optimizer (decoupled weight decay)")
+    logger.info(f"✓ Cosine annealing with warmup")
     if use_amp:
-        print(f"✓ Mixed precision training (AMP)")
+        logger.info(f"✓ Mixed precision training (AMP)")
     if use_ema:
-        print(f"✓ Exponential moving average (EMA)")
+        logger.info(f"✓ Exponential moving average (EMA)")
     if label_smoothing > 0:
-        print(f"✓ Label smoothing ({label_smoothing})")
+        logger.info(f"✓ Label smoothing ({label_smoothing})")
     if gradient_clip > 0:
-        print(f"✓ Gradient clipping (max_norm={gradient_clip})")
+        logger.info(f"✓ Gradient clipping (max_norm={gradient_clip})")
     if use_mixup:
-        print(f"✓ MixUp augmentation (alpha={mixup_alpha})")
+        logger.info(f"✓ MixUp augmentation (alpha={mixup_alpha})")
     if use_cutmix:
-        print(f"✓ CutMix augmentation (alpha={mixup_alpha})")
-    print(f"{'='*70}\n")
+        logger.info(f"✓ CutMix augmentation (alpha={mixup_alpha})")
+    logger.info(f"{'='*70}\n")
 
     # Create modern trainer
     trainer = ModernTrainer(
@@ -180,9 +183,9 @@ def train_with_modern_techniques(
 
     # Handle MixUp/CutMix augmentation
     if use_mixup or use_cutmix:
-        print("⚠️  MixUp/CutMix requires custom training loop")
-        print("   Using standard training without MixUp/CutMix for now")
-        print("   (See utils/augmentation.py for MixUp/CutMix implementation)\n")
+        logger.info("⚠️  MixUp/CutMix requires custom training loop")
+        logger.info("   Using standard training without MixUp/CutMix for now")
+        logger.info("   (See utils/augmentation.py for MixUp/CutMix implementation)\n")
 
     # Train model
     start_time = time.time()
@@ -223,13 +226,13 @@ def train_standard(model, train_loader, val_loader, test_loader, save_dir,
     Returns:
         Training results dict
     """
-    print(f"\n{'='*70}")
-    print("STANDARD TRAINING CONFIGURATION")
-    print(f"{'='*70}")
-    print(f"✓ Adam optimizer")
-    print(f"✓ Step LR scheduler")
-    print(f"✓ Cross entropy loss")
-    print(f"{'='*70}\n")
+    logger.info(f"\n{'='*70}")
+    logger.info("STANDARD TRAINING CONFIGURATION")
+    logger.info(f"{'='*70}")
+    logger.info(f"✓ Adam optimizer")
+    logger.info(f"✓ Step LR scheduler")
+    logger.info(f"✓ Cross entropy loss")
+    logger.info(f"{'='*70}\n")
 
     # Create standard trainer
     trainer = Trainer(
@@ -275,15 +278,15 @@ def compare_models(models, epochs=10, batch_size=128, modern_training=True):
     results = []
 
     # Load data
-    print("\n📦 Loading CIFAR-10 dataset...")
+    logger.info("\n📦 Loading CIFAR-10 dataset...")
     data_loader = CIFAR10DataLoader(batch_size=batch_size, validation_split=0.1)
     train_loader, val_loader, test_loader = data_loader.get_data_loaders()
-    print("✓ Data loaded\n")
+    logger.info("✓ Data loaded\n")
 
     for model_name in models:
-        print(f"\n{'#'*70}")
-        print(f"# Training: {model_name}")
-        print(f"{'#'*70}\n")
+        logger.info(f"\n{'#'*70}")
+        logger.info(f"# Training: {model_name}")
+        logger.info(f"{'#'*70}\n")
 
         try:
             # Create model
@@ -315,20 +318,20 @@ def compare_models(models, epochs=10, batch_size=128, modern_training=True):
                 json.dump(result, f, indent=2)
 
         except Exception as e:
-            print(f"❌ Error training {model_name}: {e}")
+            logger.info(f"❌ Error training {model_name}: {e}")
             import traceback
             traceback.print_exc()
             continue
 
     # Display comparison
-    print(f"\n{'='*90}")
-    print("MODEL COMPARISON RESULTS")
-    print(f"{'='*90}")
-    print(f"{'Model':<25} {'Test Acc (%)':<15} {'Val Acc (%)':<15} {'Params':<15} {'Time (s)':<10}")
-    print(f"{'-'*90}")
+    logger.info(f"\n{'='*90}")
+    logger.info("MODEL COMPARISON RESULTS")
+    logger.info(f"{'='*90}")
+    logger.info(f"{'Model':<25} {'Test Acc (%)':<15} {'Val Acc (%)':<15} {'Params':<15} {'Time (s)':<10}")
+    logger.info(f"{'-'*90}")
 
     for result in results:
-        print(f"{result['model_name']:<25} "
+        logger.info(f"{result['model_name']:<25} "
               f"{result['test_accuracy']:<15.2f} "
               f"{result['best_val_accuracy']:<15.2f} "
               f"{result['model_parameters']:<15,} "
@@ -336,9 +339,9 @@ def compare_models(models, epochs=10, batch_size=128, modern_training=True):
 
     if results:
         best = max(results, key=lambda x: x['test_accuracy'])
-        print(f"\n✓ Best model: {best['model_name']}")
-        print(f"  Test accuracy: {best['test_accuracy']:.2f}%")
-        print(f"  Parameters: {best['model_parameters']:,}")
+        logger.info(f"\n✓ Best model: {best['model_name']}")
+        logger.info(f"  Test accuracy: {best['test_accuracy']:.2f}%")
+        logger.info(f"  Parameters: {best['model_parameters']:,}")
 
     return results
 
@@ -430,45 +433,45 @@ Examples:
 
     # List models
     if args.list_models:
-        print("\n📋 Available Models:")
-        print("\nOriginal CNN:")
-        print("  - cnn: Basic convolutional network")
-        print("\nResNet variants:")
-        print("  - resnet18: ResNet-18 (11M params)")
-        print("  - resnet34: ResNet-34 (21M params)")
-        print("  - resnet50: ResNet-50 with bottleneck (23M params)")
-        print("  - resnet_tiny: Tiny ResNet for quick experiments")
-        print("\nEfficientNet variants:")
-        print("  - efficientnet_b0: EfficientNet-B0 baseline")
-        print("  - efficientnet_b1: EfficientNet-B1 (wider & deeper)")
-        print("  - efficientnet_tiny: Tiny EfficientNet")
-        print("\nCNN-Transformer hybrids:")
-        print("  - cnn_transformer_small: Small CNN-Transformer")
-        print("  - cnn_transformer_base: Base CNN-Transformer")
-        print("  - vit_tiny: Pure Vision Transformer\n")
+        logger.info("\n📋 Available Models:")
+        logger.info("\nOriginal CNN:")
+        logger.info("  - cnn: Basic convolutional network")
+        logger.info("\nResNet variants:")
+        logger.info("  - resnet18: ResNet-18 (11M params)")
+        logger.info("  - resnet34: ResNet-34 (21M params)")
+        logger.info("  - resnet50: ResNet-50 with bottleneck (23M params)")
+        logger.info("  - resnet_tiny: Tiny ResNet for quick experiments")
+        logger.info("\nEfficientNet variants:")
+        logger.info("  - efficientnet_b0: EfficientNet-B0 baseline")
+        logger.info("  - efficientnet_b1: EfficientNet-B1 (wider & deeper)")
+        logger.info("  - efficientnet_tiny: Tiny EfficientNet")
+        logger.info("\nCNN-Transformer hybrids:")
+        logger.info("  - cnn_transformer_small: Small CNN-Transformer")
+        logger.info("  - cnn_transformer_base: Base CNN-Transformer")
+        logger.info("  - vit_tiny: Pure Vision Transformer\n")
         return
 
     # Quick mode
     if args.quick:
         args.epochs = 2
-        print("⚡ Quick mode: 2 epochs\n")
+        logger.info("⚡ Quick mode: 2 epochs\n")
 
     # Print configuration
-    print(f"\n{'='*70}")
-    print("CONFIGURATION")
-    print(f"{'='*70}")
-    print(f"PyTorch version: {torch.__version__}")
-    print(f"CUDA available: {torch.cuda.is_available()}")
+    logger.info(f"\n{'='*70}")
+    logger.info("CONFIGURATION")
+    logger.info(f"{'='*70}")
+    logger.info(f"PyTorch version: {torch.__version__}")
+    logger.info(f"CUDA available: {torch.cuda.is_available()}")
     if torch.cuda.is_available():
-        print(f"CUDA device: {torch.cuda.get_device_name()}")
-    print(f"Model: {args.model}")
-    print(f"Activation: {args.activation}")
-    print(f"Epochs: {args.epochs}")
-    print(f"Batch size: {args.batch_size}")
-    print(f"Learning rate: {args.lr}")
-    print(f"Augmentation: {args.augmentation}")
-    print(f"Modern training: {args.modern_training}")
-    print(f"{'='*70}\n")
+        logger.info(f"CUDA device: {torch.cuda.get_device_name()}")
+    logger.info(f"Model: {args.model}")
+    logger.info(f"Activation: {args.activation}")
+    logger.info(f"Epochs: {args.epochs}")
+    logger.info(f"Batch size: {args.batch_size}")
+    logger.info(f"Learning rate: {args.lr}")
+    logger.info(f"Augmentation: {args.augmentation}")
+    logger.info(f"Modern training: {args.modern_training}")
+    logger.info(f"{'='*70}\n")
 
     # Compare models
     if args.compare_models:
@@ -481,10 +484,10 @@ Examples:
         return
 
     # Single model training
-    print("📦 Loading CIFAR-10 dataset...")
+    logger.info("📦 Loading CIFAR-10 dataset...")
     data_loader = CIFAR10DataLoader(batch_size=args.batch_size, validation_split=0.1)
     train_loader, val_loader, test_loader = data_loader.get_data_loaders()
-    print("✓ Data loaded\n")
+    logger.info("✓ Data loaded\n")
 
     # Create model
     model = get_model(args.model, activation=args.activation)
@@ -517,21 +520,21 @@ Examples:
         )
 
     # Print final results
-    print(f"\n{'='*70}")
-    print("FINAL RESULTS")
-    print(f"{'='*70}")
-    print(f"Test accuracy: {result['test_accuracy']:.2f}%")
-    print(f"Test loss: {result['test_loss']:.4f}")
-    print(f"Best val accuracy: {result['best_val_accuracy']:.2f}%")
-    print(f"Training time: {result['training_time']:.1f}s")
-    print(f"Model parameters: {result['model_parameters']:,}")
-    print(f"{'='*70}\n")
+    logger.info(f"\n{'='*70}")
+    logger.info("FINAL RESULTS")
+    logger.info(f"{'='*70}")
+    logger.info(f"Test accuracy: {result['test_accuracy']:.2f}%")
+    logger.info(f"Test loss: {result['test_loss']:.4f}")
+    logger.info(f"Best val accuracy: {result['best_val_accuracy']:.2f}%")
+    logger.info(f"Training time: {result['training_time']:.1f}s")
+    logger.info(f"Model parameters: {result['model_parameters']:,}")
+    logger.info(f"{'='*70}\n")
 
     # Save results
     with open(os.path.join(save_dir, 'results.json'), 'w') as f:
         json.dump(result, f, indent=2)
 
-    print(f"✓ Results saved to {save_dir}/results.json")
+    logger.info(f"✓ Results saved to {save_dir}/results.json")
 
 
 if __name__ == '__main__':

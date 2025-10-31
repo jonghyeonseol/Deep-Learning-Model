@@ -1,0 +1,96 @@
+# Modern EfficientNet Training Configuration
+# Uses state-of-the-art training techniques for maximum performance
+
+model:
+  architecture: efficientnet_b0
+  activation: swish
+  num_classes: 10
+  pretrained: false
+  drop_rate: 0.2
+  drop_path_rate: 0.2
+
+training:
+  epochs: 300
+  batch_size: 128
+  learning_rate: 0.001
+  optimizer: adamw
+  weight_decay: 0.0001
+
+  # Modern training enhancements
+  use_amp: true               # Mixed precision training for 2x speedup
+  use_ema: true               # Exponential moving average for stable inference
+  ema_decay: 0.9999
+  label_smoothing: 0.1        # Soften labels for better generalization
+  gradient_clip: 1.0          # Prevent exploding gradients
+
+scheduler:
+  type: cosine_warmup         # Cosine annealing with warmup
+  warmup_epochs: 20           # Linear warmup for 20 epochs
+  min_lr: 0.000001
+
+augmentation:
+  # RandAugment: Simple but effective augmentation
+  use_randaugment: true
+  randaugment_n: 2            # Number of augmentations per image
+  randaugment_m: 9            # Magnitude of augmentations
+
+  # MixUp: Linear interpolation between samples
+  use_mixup: true
+  mixup_alpha: 0.8
+
+  # CutMix: Cut and paste patches between images
+  use_cutmix: true
+  cutmix_alpha: 1.0
+  cutmix_prob: 0.5            # Probability of applying CutMix vs MixUp
+
+  # Cutout: Random erasing for robustness
+  use_cutout: true
+  cutout_size: 16
+  cutout_prob: 0.5
+
+regularization:
+  # DropBlock: Structured dropout for CNNs
+  use_dropblock: true
+  dropblock_size: 5
+  dropblock_prob: 0.1
+
+  # Stochastic Depth: Drop entire layers during training
+  use_stochastic_depth: true
+  stochastic_depth_prob: 0.2
+
+data:
+  dataset: cifar10
+  data_dir: ./data
+  num_workers: 8              # More workers for faster data loading
+  pin_memory: true
+  persistent_workers: true
+
+checkpoint:
+  save_dir: ./checkpoints
+  save_best: true
+  save_frequency: 50
+  keep_last_n: 3              # Keep only last 3 checkpoints
+
+logging:
+  log_dir: ./logs
+  tensorboard: true
+  wandb: false                # Weights & Biases integration (optional)
+  console_log_level: INFO
+  file_log_level: DEBUG
+
+  # Log additional metrics
+  log_lr: true
+  log_grad_norm: true
+  log_weights_histogram: false
+
+# Performance optimization
+performance:
+  cudnn_benchmark: true       # Optimize for fixed input sizes
+  cudnn_deterministic: false  # Disable for better performance
+
+# Early stopping
+early_stopping:
+  enabled: true
+  patience: 30                # Stop if no improvement for 30 epochs
+  metric: val_acc             # Monitor validation accuracy
+  mode: max                   # Maximize validation accuracy

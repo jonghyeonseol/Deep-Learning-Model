@@ -1,0 +1,53 @@
+# Quick Test Configuration
+# Minimal configuration for rapid testing and debugging (3-5 minutes)
+
+model:
+  architecture: resnet18
+  activation: relu
+  num_classes: 10
+  pretrained: false
+
+training:
+  epochs: 2                   # Just 2 epochs for quick testing
+  batch_size: 64              # Smaller batch for faster iteration
+  learning_rate: 0.01
+  optimizer: adam
+  weight_decay: 0.0001
+
+  # Disable advanced features for speed
+  use_amp: false
+  use_ema: false
+  label_smoothing: 0.0
+  gradient_clip: 0.0
+
+scheduler:
+  type: step
+  step_size: 1
+  gamma: 0.1
+
+augmentation:
+  # Minimal augmentation for speed
+  use_randaugment: false
+  use_mixup: false
+  use_cutmix: false
+  use_cutout: false
+
+data:
+  dataset: cifar10
+  data_dir: ./data
+  num_workers: 2              # Fewer workers for simplicity
+  pin_memory: true
+
+checkpoint:
+  save_dir: ./checkpoints/quick_test
+  save_best: true
+  save_frequency: 1           # Save every epoch
+
+logging:
+  log_dir: ./logs/quick_test
+  tensorboard: false          # Disable TensorBoard for speed
+  console_log_level: INFO
+  file_log_level: INFO
+
+early_stopping:
+  enabled: false              # No early stopping for quick tests

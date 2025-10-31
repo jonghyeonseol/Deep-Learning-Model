@@ -1,0 +1,1025 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>utils.regularization &mdash; Deep Learning Framework 2.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=60dbed4a"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Deep Learning Framework
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../models.html">models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../models.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../models.activations.html">models.activations module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.GELU"><code class="docutils literal notranslate"><span class="pre">GELU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.ReLU"><code class="docutils literal notranslate"><span class="pre">ReLU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.Tanh"><code class="docutils literal notranslate"><span class="pre">Tanh</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.Sigmoid"><code class="docutils literal notranslate"><span class="pre">Sigmoid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.Step"><code class="docutils literal notranslate"><span class="pre">Step</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.Softmax"><code class="docutils literal notranslate"><span class="pre">Softmax</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.Swish"><code class="docutils literal notranslate"><span class="pre">Swish</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.Mish"><code class="docutils literal notranslate"><span class="pre">Mish</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.LeakyReLU"><code class="docutils literal notranslate"><span class="pre">LeakyReLU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.ELU"><code class="docutils literal notranslate"><span class="pre">ELU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.PReLU"><code class="docutils literal notranslate"><span class="pre">PReLU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.SELU"><code class="docutils literal notranslate"><span class="pre">SELU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.Hardswish"><code class="docutils literal notranslate"><span class="pre">Hardswish</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.SiLU"><code class="docutils literal notranslate"><span class="pre">SiLU</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.get_activation"><code class="docutils literal notranslate"><span class="pre">get_activation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.activations.html#models.activations.get_available_activations"><code class="docutils literal notranslate"><span class="pre">get_available_activations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.cnn_transformer.html">models.cnn_transformer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.PatchEmbedding"><code class="docutils literal notranslate"><span class="pre">PatchEmbedding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.MultiHeadSelfAttention"><code class="docutils literal notranslate"><span class="pre">MultiHeadSelfAttention</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.TransformerEncoderBlock"><code class="docutils literal notranslate"><span class="pre">TransformerEncoderBlock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.CNNBackbone"><code class="docutils literal notranslate"><span class="pre">CNNBackbone</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.CNNTransformer"><code class="docutils literal notranslate"><span class="pre">CNNTransformer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.CNNTransformer_Small"><code class="docutils literal notranslate"><span class="pre">CNNTransformer_Small()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.CNNTransformer_Base"><code class="docutils literal notranslate"><span class="pre">CNNTransformer_Base()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.cnn_transformer.html#models.cnn_transformer.VisionTransformer_Tiny"><code class="docutils literal notranslate"><span class="pre">VisionTransformer_Tiny()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.convnext.html">models.convnext module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.LayerNorm2d"><code class="docutils literal notranslate"><span class="pre">LayerNorm2d</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.ConvNeXtBlock"><code class="docutils literal notranslate"><span class="pre">ConvNeXtBlock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.DropPath"><code class="docutils literal notranslate"><span class="pre">DropPath</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.ConvNeXt"><code class="docutils literal notranslate"><span class="pre">ConvNeXt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.convnext_tiny"><code class="docutils literal notranslate"><span class="pre">convnext_tiny()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.convnext_small"><code class="docutils literal notranslate"><span class="pre">convnext_small()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.convnext_base"><code class="docutils literal notranslate"><span class="pre">convnext_base()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.convnext.html#models.convnext.convnext_cifar"><code class="docutils literal notranslate"><span class="pre">convnext_cifar()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.efficientnet.html">models.efficientnet module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.efficientnet.html#models.efficientnet.SqueezeExcitation"><code class="docutils literal notranslate"><span class="pre">SqueezeExcitation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.efficientnet.html#models.efficientnet.DepthwiseSeparableConv"><code class="docutils literal notranslate"><span class="pre">DepthwiseSeparableConv</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.efficientnet.html#models.efficientnet.MBConvBlock"><code class="docutils literal notranslate"><span class="pre">MBConvBlock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.efficientnet.html#models.efficientnet.EfficientNet"><code class="docutils literal notranslate"><span class="pre">EfficientNet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.efficientnet.html#models.efficientnet.EfficientNet_B0"><code class="docutils literal notranslate"><span class="pre">EfficientNet_B0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.efficientnet.html#models.efficientnet.EfficientNet_B1"><code class="docutils literal notranslate"><span class="pre">EfficientNet_B1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.efficientnet.html#models.efficientnet.EfficientNet_Tiny"><code class="docutils literal notranslate"><span class="pre">EfficientNet_Tiny()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.network.html">models.network module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.network.html#models.network.NeuralNetwork"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.network.html#models.network.ConvNeuralNetwork"><code class="docutils literal notranslate"><span class="pre">ConvNeuralNetwork</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.resnet.html">models.resnet module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.BasicBlock"><code class="docutils literal notranslate"><span class="pre">BasicBlock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.BottleneckBlock"><code class="docutils literal notranslate"><span class="pre">BottleneckBlock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.ModernResNet"><code class="docutils literal notranslate"><span class="pre">ModernResNet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.ResNet18"><code class="docutils literal notranslate"><span class="pre">ResNet18()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.ResNet34"><code class="docutils literal notranslate"><span class="pre">ResNet34()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.ResNet50"><code class="docutils literal notranslate"><span class="pre">ResNet50()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.ResNet101"><code class="docutils literal notranslate"><span class="pre">ResNet101()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.resnet.html#models.resnet.ResNet_Tiny"><code class="docutils literal notranslate"><span class="pre">ResNet_Tiny()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../models.html#module-models">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.NeuralNetwork"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.NeuralNetwork.__init__"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.NeuralNetwork.forward"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.NeuralNetwork.get_num_parameters"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.get_num_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.NeuralNetwork.summary"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ConvNeuralNetwork"><code class="docutils literal notranslate"><span class="pre">ConvNeuralNetwork</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ConvNeuralNetwork.__init__"><code class="docutils literal notranslate"><span class="pre">ConvNeuralNetwork.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ConvNeuralNetwork.forward"><code class="docutils literal notranslate"><span class="pre">ConvNeuralNetwork.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ConvNeuralNetwork.get_num_parameters"><code class="docutils literal notranslate"><span class="pre">ConvNeuralNetwork.get_num_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ConvNeuralNetwork.summary"><code class="docutils literal notranslate"><span class="pre">ConvNeuralNetwork.summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ResNet18"><code class="docutils literal notranslate"><span class="pre">ResNet18()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ResNet34"><code class="docutils literal notranslate"><span class="pre">ResNet34()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ResNet50"><code class="docutils literal notranslate"><span class="pre">ResNet50()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ResNet101"><code class="docutils literal notranslate"><span class="pre">ResNet101()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ResNet_Tiny"><code class="docutils literal notranslate"><span class="pre">ResNet_Tiny()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.EfficientNet_B0"><code class="docutils literal notranslate"><span class="pre">EfficientNet_B0()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.EfficientNet_B1"><code class="docutils literal notranslate"><span class="pre">EfficientNet_B1()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.EfficientNet_Tiny"><code class="docutils literal notranslate"><span class="pre">EfficientNet_Tiny()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.CNNTransformer"><code class="docutils literal notranslate"><span class="pre">CNNTransformer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.CNNTransformer.__init__"><code class="docutils literal notranslate"><span class="pre">CNNTransformer.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.CNNTransformer.forward"><code class="docutils literal notranslate"><span class="pre">CNNTransformer.forward()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.CNNTransformer.get_num_parameters"><code class="docutils literal notranslate"><span class="pre">CNNTransformer.get_num_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.CNNTransformer.summary"><code class="docutils literal notranslate"><span class="pre">CNNTransformer.summary()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.CNNTransformer_Small"><code class="docutils literal notranslate"><span class="pre">CNNTransformer_Small()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.CNNTransformer_Base"><code class="docutils literal notranslate"><span class="pre">CNNTransformer_Base()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.VisionTransformer_Tiny"><code class="docutils literal notranslate"><span class="pre">VisionTransformer_Tiny()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.convnext_tiny"><code class="docutils literal notranslate"><span class="pre">convnext_tiny()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.convnext_small"><code class="docutils literal notranslate"><span class="pre">convnext_small()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.convnext_cifar"><code class="docutils literal notranslate"><span class="pre">convnext_cifar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.GELU"><code class="docutils literal notranslate"><span class="pre">GELU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.GELU.__init__"><code class="docutils literal notranslate"><span class="pre">GELU.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.GELU.forward"><code class="docutils literal notranslate"><span class="pre">GELU.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ReLU"><code class="docutils literal notranslate"><span class="pre">ReLU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ReLU.__init__"><code class="docutils literal notranslate"><span class="pre">ReLU.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ReLU.forward"><code class="docutils literal notranslate"><span class="pre">ReLU.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.Tanh"><code class="docutils literal notranslate"><span class="pre">Tanh</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Tanh.__init__"><code class="docutils literal notranslate"><span class="pre">Tanh.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Tanh.forward"><code class="docutils literal notranslate"><span class="pre">Tanh.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.Sigmoid"><code class="docutils literal notranslate"><span class="pre">Sigmoid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Sigmoid.__init__"><code class="docutils literal notranslate"><span class="pre">Sigmoid.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Sigmoid.forward"><code class="docutils literal notranslate"><span class="pre">Sigmoid.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.Step"><code class="docutils literal notranslate"><span class="pre">Step</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Step.__init__"><code class="docutils literal notranslate"><span class="pre">Step.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Step.forward"><code class="docutils literal notranslate"><span class="pre">Step.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.Softmax"><code class="docutils literal notranslate"><span class="pre">Softmax</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Softmax.__init__"><code class="docutils literal notranslate"><span class="pre">Softmax.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Softmax.forward"><code class="docutils literal notranslate"><span class="pre">Softmax.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.Swish"><code class="docutils literal notranslate"><span class="pre">Swish</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Swish.__init__"><code class="docutils literal notranslate"><span class="pre">Swish.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Swish.forward"><code class="docutils literal notranslate"><span class="pre">Swish.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.Mish"><code class="docutils literal notranslate"><span class="pre">Mish</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Mish.__init__"><code class="docutils literal notranslate"><span class="pre">Mish.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Mish.forward"><code class="docutils literal notranslate"><span class="pre">Mish.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.LeakyReLU"><code class="docutils literal notranslate"><span class="pre">LeakyReLU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.LeakyReLU.__init__"><code class="docutils literal notranslate"><span class="pre">LeakyReLU.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.LeakyReLU.forward"><code class="docutils literal notranslate"><span class="pre">LeakyReLU.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.ELU"><code class="docutils literal notranslate"><span class="pre">ELU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ELU.__init__"><code class="docutils literal notranslate"><span class="pre">ELU.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.ELU.forward"><code class="docutils literal notranslate"><span class="pre">ELU.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.PReLU"><code class="docutils literal notranslate"><span class="pre">PReLU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.PReLU.__init__"><code class="docutils literal notranslate"><span class="pre">PReLU.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.PReLU.forward"><code class="docutils literal notranslate"><span class="pre">PReLU.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.SELU"><code class="docutils literal notranslate"><span class="pre">SELU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.SELU.__init__"><code class="docutils literal notranslate"><span class="pre">SELU.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.SELU.forward"><code class="docutils literal notranslate"><span class="pre">SELU.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.Hardswish"><code class="docutils literal notranslate"><span class="pre">Hardswish</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Hardswish.__init__"><code class="docutils literal notranslate"><span class="pre">Hardswish.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.Hardswish.forward"><code class="docutils literal notranslate"><span class="pre">Hardswish.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.SiLU"><code class="docutils literal notranslate"><span class="pre">SiLU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.SiLU.__init__"><code class="docutils literal notranslate"><span class="pre">SiLU.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../models.html#models.SiLU.forward"><code class="docutils literal notranslate"><span class="pre">SiLU.forward()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.get_activation"><code class="docutils literal notranslate"><span class="pre">get_activation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../models.html#models.get_available_activations"><code class="docutils literal notranslate"><span class="pre">get_available_activations()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../utils.html">utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../utils.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.augmentation.html">utils.augmentation module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.RandAugment"><code class="docutils literal notranslate"><span class="pre">RandAugment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.Cutout"><code class="docutils literal notranslate"><span class="pre">Cutout</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.RandomErasing"><code class="docutils literal notranslate"><span class="pre">RandomErasing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.MixUp"><code class="docutils literal notranslate"><span class="pre">MixUp</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.CutMix"><code class="docutils literal notranslate"><span class="pre">CutMix</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.mixup_criterion"><code class="docutils literal notranslate"><span class="pre">mixup_criterion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.CIFAR10Augmentation"><code class="docutils literal notranslate"><span class="pre">CIFAR10Augmentation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.TestAugmentation"><code class="docutils literal notranslate"><span class="pre">TestAugmentation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.augmentation.html#utils.augmentation.get_cifar10_transforms"><code class="docutils literal notranslate"><span class="pre">get_cifar10_transforms()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.config.html">utils.config module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.config.html#utils.config.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.config.html#utils.config.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.config.html#utils.config.save_config"><code class="docutils literal notranslate"><span class="pre">save_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.config.html#utils.config.validate_training_config"><code class="docutils literal notranslate"><span class="pre">validate_training_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.config.html#utils.config.create_example_config"><code class="docutils literal notranslate"><span class="pre">create_example_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.data_loader.html">utils.data_loader module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.data_loader.html#utils.data_loader.CIFAR10DataLoader"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.data_loader.html#utils.data_loader.create_cifar10_loader"><code class="docutils literal notranslate"><span class="pre">create_cifar10_loader()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.exceptions.html">utils.exceptions module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.DLFrameworkError"><code class="docutils literal notranslate"><span class="pre">DLFrameworkError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.ConfigurationError"><code class="docutils literal notranslate"><span class="pre">ConfigurationError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.CheckpointError"><code class="docutils literal notranslate"><span class="pre">CheckpointError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.InvalidCheckpointPathError"><code class="docutils literal notranslate"><span class="pre">InvalidCheckpointPathError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.CheckpointNotFoundError"><code class="docutils literal notranslate"><span class="pre">CheckpointNotFoundError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.CheckpointLoadError"><code class="docutils literal notranslate"><span class="pre">CheckpointLoadError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.ModelError"><code class="docutils literal notranslate"><span class="pre">ModelError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.InvalidArchitectureError"><code class="docutils literal notranslate"><span class="pre">InvalidArchitectureError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.InvalidActivationError"><code class="docutils literal notranslate"><span class="pre">InvalidActivationError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.TrainingError"><code class="docutils literal notranslate"><span class="pre">TrainingError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.OptimizerNotConfiguredError"><code class="docutils literal notranslate"><span class="pre">OptimizerNotConfiguredError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.CriterionNotConfiguredError"><code class="docutils literal notranslate"><span class="pre">CriterionNotConfiguredError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.SchedulerConfigurationError"><code class="docutils literal notranslate"><span class="pre">SchedulerConfigurationError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.DataError"><code class="docutils literal notranslate"><span class="pre">DataError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.DataLoaderError"><code class="docutils literal notranslate"><span class="pre">DataLoaderError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.InvalidDatasetError"><code class="docutils literal notranslate"><span class="pre">InvalidDatasetError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.AugmentationError"><code class="docutils literal notranslate"><span class="pre">AugmentationError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.DeviceError"><code class="docutils literal notranslate"><span class="pre">DeviceError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.CUDANotAvailableError"><code class="docutils literal notranslate"><span class="pre">CUDANotAvailableError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.require_optimizer"><code class="docutils literal notranslate"><span class="pre">require_optimizer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.require_criterion"><code class="docutils literal notranslate"><span class="pre">require_criterion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.validate_checkpoint_path"><code class="docutils literal notranslate"><span class="pre">validate_checkpoint_path()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.exceptions.html#utils.exceptions.check_checkpoint_exists"><code class="docutils literal notranslate"><span class="pre">check_checkpoint_exists()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.interactive_propagation_panel.html">utils.interactive_propagation_panel module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.interactive_propagation_panel.html#utils.interactive_propagation_panel.InteractivePropagationPanel"><code class="docutils literal notranslate"><span class="pre">InteractivePropagationPanel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.interactive_propagation_panel.html#utils.interactive_propagation_panel.launch_propagation_panel"><code class="docutils literal notranslate"><span class="pre">launch_propagation_panel()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.live_network_viz.html">utils.live_network_viz module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.live_network_viz.html#utils.live_network_viz.LiveNetworkVisualizer"><code class="docutils literal notranslate"><span class="pre">LiveNetworkVisualizer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.live_network_viz.html#utils.live_network_viz.LivePerceptronNetwork"><code class="docutils literal notranslate"><span class="pre">LivePerceptronNetwork</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.live_network_viz.html#utils.live_network_viz.create_live_network_demo"><code class="docutils literal notranslate"><span class="pre">create_live_network_demo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.live_trainer.html">utils.live_trainer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.live_trainer.html#utils.live_trainer.LiveTrainer"><code class="docutils literal notranslate"><span class="pre">LiveTrainer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.logger.html">utils.logger module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.logger.html#utils.logger.get_logger"><code class="docutils literal notranslate"><span class="pre">get_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.logger.html#utils.logger.setup_training_logger"><code class="docutils literal notranslate"><span class="pre">setup_training_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.logger.html#utils.logger.debug"><code class="docutils literal notranslate"><span class="pre">debug()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.logger.html#utils.logger.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.logger.html#utils.logger.warning"><code class="docutils literal notranslate"><span class="pre">warning()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.logger.html#utils.logger.error"><code class="docutils literal notranslate"><span class="pre">error()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.logger.html#utils.logger.critical"><code class="docutils literal notranslate"><span class="pre">critical()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.modern_trainer.html">utils.modern_trainer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.modern_trainer.html#utils.modern_trainer.LabelSmoothingCrossEntropy"><code class="docutils literal notranslate"><span class="pre">LabelSmoothingCrossEntropy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.modern_trainer.html#utils.modern_trainer.CosineAnnealingWarmupRestarts"><code class="docutils literal notranslate"><span class="pre">CosineAnnealingWarmupRestarts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.modern_trainer.html#utils.modern_trainer.EMA"><code class="docutils literal notranslate"><span class="pre">EMA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.modern_trainer.html#utils.modern_trainer.ModernTrainer"><code class="docutils literal notranslate"><span class="pre">ModernTrainer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.monitor.html">utils.monitor module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.monitor.html#utils.monitor.PerceptronVisualizer"><code class="docutils literal notranslate"><span class="pre">PerceptronVisualizer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.monitor.html#utils.monitor.LayerMonitor"><code class="docutils literal notranslate"><span class="pre">LayerMonitor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.monitor.html#utils.monitor.ActivationAnalyzer"><code class="docutils literal notranslate"><span class="pre">ActivationAnalyzer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.monitor.html#utils.monitor.RealTimeMonitor"><code class="docutils literal notranslate"><span class="pre">RealTimeMonitor</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.profiler.html">utils.profiler module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.Profiler"><code class="docutils literal notranslate"><span class="pre">Profiler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.profile_model"><code class="docutils literal notranslate"><span class="pre">profile_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.estimate_flops"><code class="docutils literal notranslate"><span class="pre">estimate_flops()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.benchmark_inference"><code class="docutils literal notranslate"><span class="pre">benchmark_inference()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.get_model_memory"><code class="docutils literal notranslate"><span class="pre">get_model_memory()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.compare_models"><code class="docutils literal notranslate"><span class="pre">compare_models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.print_model_comparison"><code class="docutils literal notranslate"><span class="pre">print_model_comparison()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.profiler.html#utils.profiler.profile_training_step"><code class="docutils literal notranslate"><span class="pre">profile_training_step()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.realtime_monitor.html">utils.realtime_monitor module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.realtime_monitor.html#utils.realtime_monitor.LiveTrainingMonitor"><code class="docutils literal notranslate"><span class="pre">LiveTrainingMonitor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.realtime_monitor.html#utils.realtime_monitor.LiveLayerMonitor"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.realtime_monitor.html#utils.realtime_monitor.LiveNeuralNetworkVisualizer"><code class="docutils literal notranslate"><span class="pre">LiveNeuralNetworkVisualizer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.realtime_monitor.html#utils.realtime_monitor.create_comprehensive_monitor"><code class="docutils literal notranslate"><span class="pre">create_comprehensive_monitor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.regularization.html">utils.regularization module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.DropBlock2D"><code class="docutils literal notranslate"><span class="pre">DropBlock2D</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.StochasticDepth"><code class="docutils literal notranslate"><span class="pre">StochasticDepth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.DropPath"><code class="docutils literal notranslate"><span class="pre">DropPath</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.LinearScheduler"><code class="docutils literal notranslate"><span class="pre">LinearScheduler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.ShakeShake"><code class="docutils literal notranslate"><span class="pre">ShakeShake</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.WeightDecayScheduler"><code class="docutils literal notranslate"><span class="pre">WeightDecayScheduler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.AdaptiveDropout"><code class="docutils literal notranslate"><span class="pre">AdaptiveDropout</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.GradualWarmup"><code class="docutils literal notranslate"><span class="pre">GradualWarmup</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.apply_weight_decay_exemptions"><code class="docutils literal notranslate"><span class="pre">apply_weight_decay_exemptions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.regularization.html#utils.regularization.MixedPrecisionWrapper"><code class="docutils literal notranslate"><span class="pre">MixedPrecisionWrapper</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.trainer.html">utils.trainer module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.trainer.html#utils.trainer.Trainer"><code class="docutils literal notranslate"><span class="pre">Trainer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.visualization.html">utils.visualization module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.visualization.html#utils.visualization.Visualizer"><code class="docutils literal notranslate"><span class="pre">Visualizer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.visualization.html#utils.visualization.create_visualizer"><code class="docutils literal notranslate"><span class="pre">create_visualizer()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils.html#module-utils">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.CIFAR10DataLoader"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.CIFAR10DataLoader.__init__"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.CIFAR10DataLoader.denormalize"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader.denormalize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.CIFAR10DataLoader.get_class_distribution"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader.get_class_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.CIFAR10DataLoader.get_data_loaders"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader.get_data_loaders()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.CIFAR10DataLoader.get_dataset_info"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader.get_dataset_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.CIFAR10DataLoader.get_sample_batch"><code class="docutils literal notranslate"><span class="pre">CIFAR10DataLoader.get_sample_batch()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.create_cifar10_loader"><code class="docutils literal notranslate"><span class="pre">create_cifar10_loader()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.Trainer"><code class="docutils literal notranslate"><span class="pre">Trainer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.__init__"><code class="docutils literal notranslate"><span class="pre">Trainer.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.configure_criterion"><code class="docutils literal notranslate"><span class="pre">Trainer.configure_criterion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.configure_optimizer"><code class="docutils literal notranslate"><span class="pre">Trainer.configure_optimizer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.configure_scheduler"><code class="docutils literal notranslate"><span class="pre">Trainer.configure_scheduler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.get_learning_rate"><code class="docutils literal notranslate"><span class="pre">Trainer.get_learning_rate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.load_checkpoint"><code class="docutils literal notranslate"><span class="pre">Trainer.load_checkpoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.save_checkpoint"><code class="docutils literal notranslate"><span class="pre">Trainer.save_checkpoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.test"><code class="docutils literal notranslate"><span class="pre">Trainer.test()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.train"><code class="docutils literal notranslate"><span class="pre">Trainer.train()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.train_epoch"><code class="docutils literal notranslate"><span class="pre">Trainer.train_epoch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Trainer.validate_epoch"><code class="docutils literal notranslate"><span class="pre">Trainer.validate_epoch()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.Visualizer"><code class="docutils literal notranslate"><span class="pre">Visualizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.__init__"><code class="docutils literal notranslate"><span class="pre">Visualizer.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.plot_activation_distributions"><code class="docutils literal notranslate"><span class="pre">Visualizer.plot_activation_distributions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.plot_class_distribution"><code class="docutils literal notranslate"><span class="pre">Visualizer.plot_class_distribution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.plot_confusion_matrix"><code class="docutils literal notranslate"><span class="pre">Visualizer.plot_confusion_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.plot_learning_rate_schedule"><code class="docutils literal notranslate"><span class="pre">Visualizer.plot_learning_rate_schedule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.plot_model_predictions"><code class="docutils literal notranslate"><span class="pre">Visualizer.plot_model_predictions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.plot_sample_images"><code class="docutils literal notranslate"><span class="pre">Visualizer.plot_sample_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.Visualizer.plot_training_history"><code class="docutils literal notranslate"><span class="pre">Visualizer.plot_training_history()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.create_visualizer"><code class="docutils literal notranslate"><span class="pre">create_visualizer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.PerceptronVisualizer"><code class="docutils literal notranslate"><span class="pre">PerceptronVisualizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.PerceptronVisualizer.__init__"><code class="docutils literal notranslate"><span class="pre">PerceptronVisualizer.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.PerceptronVisualizer.plot_network_architecture"><code class="docutils literal notranslate"><span class="pre">PerceptronVisualizer.plot_network_architecture()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.PerceptronVisualizer.plot_single_perceptron"><code class="docutils literal notranslate"><span class="pre">PerceptronVisualizer.plot_single_perceptron()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.LayerMonitor"><code class="docutils literal notranslate"><span class="pre">LayerMonitor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LayerMonitor.__init__"><code class="docutils literal notranslate"><span class="pre">LayerMonitor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LayerMonitor.clear_hooks"><code class="docutils literal notranslate"><span class="pre">LayerMonitor.clear_hooks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LayerMonitor.plot_gradient_flow"><code class="docutils literal notranslate"><span class="pre">LayerMonitor.plot_gradient_flow()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LayerMonitor.plot_layer_activations"><code class="docutils literal notranslate"><span class="pre">LayerMonitor.plot_layer_activations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LayerMonitor.register_hooks"><code class="docutils literal notranslate"><span class="pre">LayerMonitor.register_hooks()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.ActivationAnalyzer"><code class="docutils literal notranslate"><span class="pre">ActivationAnalyzer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.ActivationAnalyzer.__init__"><code class="docutils literal notranslate"><span class="pre">ActivationAnalyzer.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.ActivationAnalyzer.analyze_activation_properties"><code class="docutils literal notranslate"><span class="pre">ActivationAnalyzer.analyze_activation_properties()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.ActivationAnalyzer.plot_activation_functions"><code class="docutils literal notranslate"><span class="pre">ActivationAnalyzer.plot_activation_functions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.RealTimeMonitor"><code class="docutils literal notranslate"><span class="pre">RealTimeMonitor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.RealTimeMonitor.__init__"><code class="docutils literal notranslate"><span class="pre">RealTimeMonitor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.RealTimeMonitor.plot_training_progress"><code class="docutils literal notranslate"><span class="pre">RealTimeMonitor.plot_training_progress()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.RealTimeMonitor.update"><code class="docutils literal notranslate"><span class="pre">RealTimeMonitor.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.LiveTrainingMonitor"><code class="docutils literal notranslate"><span class="pre">LiveTrainingMonitor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveTrainingMonitor.__init__"><code class="docutils literal notranslate"><span class="pre">LiveTrainingMonitor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveTrainingMonitor.setup_plots"><code class="docutils literal notranslate"><span class="pre">LiveTrainingMonitor.setup_plots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveTrainingMonitor.start_monitoring"><code class="docutils literal notranslate"><span class="pre">LiveTrainingMonitor.start_monitoring()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveTrainingMonitor.stop_monitoring"><code class="docutils literal notranslate"><span class="pre">LiveTrainingMonitor.stop_monitoring()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveTrainingMonitor.update"><code class="docutils literal notranslate"><span class="pre">LiveTrainingMonitor.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor.__init__"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor.clear_hooks"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor.clear_hooks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor.setup_hooks"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor.setup_hooks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor.setup_plots"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor.setup_plots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor.start_monitoring"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor.start_monitoring()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor.stop_monitoring"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor.stop_monitoring()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveLayerMonitor.update"><code class="docutils literal notranslate"><span class="pre">LiveLayerMonitor.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.LiveNeuralNetworkVisualizer"><code class="docutils literal notranslate"><span class="pre">LiveNeuralNetworkVisualizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveNeuralNetworkVisualizer.__init__"><code class="docutils literal notranslate"><span class="pre">LiveNeuralNetworkVisualizer.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveNeuralNetworkVisualizer.setup_visualization"><code class="docutils literal notranslate"><span class="pre">LiveNeuralNetworkVisualizer.setup_visualization()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveNeuralNetworkVisualizer.start_visualization"><code class="docutils literal notranslate"><span class="pre">LiveNeuralNetworkVisualizer.start_visualization()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveNeuralNetworkVisualizer.stop_visualization"><code class="docutils literal notranslate"><span class="pre">LiveNeuralNetworkVisualizer.stop_visualization()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.LiveNeuralNetworkVisualizer.update_visualization"><code class="docutils literal notranslate"><span class="pre">LiveNeuralNetworkVisualizer.update_visualization()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.create_comprehensive_monitor"><code class="docutils literal notranslate"><span class="pre">create_comprehensive_monitor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.InteractivePropagationPanel"><code class="docutils literal notranslate"><span class="pre">InteractivePropagationPanel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.InteractivePropagationPanel.__init__"><code class="docutils literal notranslate"><span class="pre">InteractivePropagationPanel.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.InteractivePropagationPanel.start_panel"><code class="docutils literal notranslate"><span class="pre">InteractivePropagationPanel.start_panel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utils.html#utils.InteractivePropagationPanel.stop_panel"><code class="docutils literal notranslate"><span class="pre">InteractivePropagationPanel.stop_panel()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../utils.html#utils.launch_propagation_panel"><code class="docutils literal notranslate"><span class="pre">launch_propagation_panel()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Deep Learning Framework</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">utils.regularization</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for utils.regularization</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Modern regularization techniques for deep learning.</span>
+
+<span class="sd">This module implements:</span>
+<span class="sd">- DropBlock: Structured dropout for CNNs</span>
+<span class="sd">- Stochastic Depth: Randomly drop entire layers during training</span>
+<span class="sd">- Shake-Shake regularization</span>
+<span class="sd">- Drop Path (similar to Stochastic Depth but for any architecture)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn.functional</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+
+<div class="viewcode-block" id="DropBlock2D">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.DropBlock2D">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DropBlock2D</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    DropBlock: A regularization method for convolutional networks.</span>
+
+<span class="sd">    Paper: &quot;DropBlock: A regularization method for convolutional networks&quot;</span>
+<span class="sd">    https://arxiv.org/abs/1810.12890</span>
+
+<span class="sd">    Unlike standard dropout which drops individual values independently,</span>
+<span class="sd">    DropBlock drops contiguous regions. This is more effective for CNNs</span>
+<span class="sd">    because nearby activations are highly correlated.</span>
+
+<span class="sd">    Key differences from Dropout:</span>
+<span class="sd">    - Drops spatial blocks instead of individual pixels</span>
+<span class="sd">    - More effective for convolutional layers</span>
+<span class="sd">    - Typically applied with increasing probability during training</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        drop_prob: Probability of dropping a block</span>
+<span class="sd">        block_size: Size of blocks to drop</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="DropBlock2D.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.DropBlock2D.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drop_prob</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">block_size</span><span class="o">=</span><span class="mi">7</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DropBlock2D</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">=</span> <span class="n">drop_prob</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">=</span> <span class="n">block_size</span></div>
+
+
+<div class="viewcode-block" id="DropBlock2D.forward">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.DropBlock2D.forward">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span>
+
+        <span class="c1"># Get shape</span>
+        <span class="n">batch_size</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+
+        <span class="c1"># Compute gamma (sampling mask probability)</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_gamma</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+
+        <span class="c1"># Sample mask</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span>
+                          <span class="n">device</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">device</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">gamma</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">()</span>
+
+        <span class="c1"># Apply block mask</span>
+        <span class="n">block_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_block_mask</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+
+        <span class="c1"># Normalize and apply</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">block_mask</span> <span class="o">*</span> <span class="n">block_mask</span><span class="o">.</span><span class="n">numel</span><span class="p">()</span> <span class="o">/</span> <span class="n">block_mask</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">out</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_compute_gamma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute gamma for DropBlock.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> \
+               <span class="p">((</span><span class="n">height</span> <span class="o">*</span> <span class="n">width</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">height</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span>
+                                   <span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_compute_block_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Expand point mask to block mask.&quot;&quot;&quot;</span>
+        <span class="n">block_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">block_size</span>
+        <span class="n">pad</span> <span class="o">=</span> <span class="n">block_size</span> <span class="o">//</span> <span class="mi">2</span>
+
+        <span class="c1"># Pad mask</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="p">[</span><span class="n">pad</span><span class="p">,</span> <span class="n">pad</span><span class="p">,</span> <span class="n">pad</span><span class="p">,</span> <span class="n">pad</span><span class="p">])</span>
+
+        <span class="c1"># Max pooling to expand points to blocks</span>
+        <span class="n">block_mask</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">max_pool2d</span><span class="p">(</span>
+            <span class="n">mask</span><span class="p">,</span>
+            <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="n">block_size</span><span class="p">,</span> <span class="n">block_size</span><span class="p">),</span>
+            <span class="n">stride</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">padding</span><span class="o">=</span><span class="mi">0</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Invert (0 becomes dropped region)</span>
+        <span class="n">block_mask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">block_mask</span>
+
+        <span class="k">return</span> <span class="n">block_mask</span>
+
+<div class="viewcode-block" id="DropBlock2D.set_drop_prob">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.DropBlock2D.set_drop_prob">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_drop_prob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drop_prob</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update drop probability (useful for scheduling).&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">=</span> <span class="n">drop_prob</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="StochasticDepth">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.StochasticDepth">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">StochasticDepth</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Stochastic Depth: Deep Networks with Stochastic Depth.</span>
+
+<span class="sd">    Paper: &quot;Deep Networks with Stochastic Depth&quot;</span>
+<span class="sd">    https://arxiv.org/abs/1603.09382</span>
+
+<span class="sd">    Randomly drops entire residual blocks during training.</span>
+<span class="sd">    This reduces training time and improves generalization.</span>
+
+<span class="sd">    During inference, all layers are used with scaling.</span>
+
+<span class="sd">    Usage:</span>
+<span class="sd">        Wrap residual blocks with StochasticDepth:</span>
+<span class="sd">        out = x + StochasticDepth(residual_block(x), drop_prob)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        drop_prob: Probability of dropping the block (0.0 to 1.0)</span>
+<span class="sd">        mode: &#39;batch&#39; or &#39;sample&#39; - whether to drop per batch or per sample</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="StochasticDepth.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.StochasticDepth.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drop_prob</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;batch&#39;</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">StochasticDepth</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">=</span> <span class="n">drop_prob</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span></div>
+
+
+<div class="viewcode-block" id="StochasticDepth.forward">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.StochasticDepth.forward">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span>
+
+        <span class="n">keep_prob</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;batch&#39;</span><span class="p">:</span>
+            <span class="c1"># Drop entire batch or keep entire batch</span>
+            <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">keep_prob</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">x</span> <span class="o">/</span> <span class="n">keep_prob</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Drop per sample</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">random_tensor</span> <span class="o">=</span> <span class="n">keep_prob</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+            <span class="n">random_tensor</span><span class="o">.</span><span class="n">floor_</span><span class="p">()</span>  <span class="c1"># Binarize</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">random_tensor</span> <span class="o">/</span> <span class="n">keep_prob</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="DropPath">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.DropPath">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DropPath</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Drop Path (Stochastic Depth per sample).</span>
+
+<span class="sd">    Used in modern architectures like EfficientNet and Vision Transformers.</span>
+
+<span class="sd">    Randomly drops paths (samples) in a batch during training.</span>
+<span class="sd">    Different from DropBlock which drops spatial regions.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        drop_prob: Probability of dropping a path</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="DropPath.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.DropPath.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drop_prob</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DropPath</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">=</span> <span class="n">drop_prob</span></div>
+
+
+<div class="viewcode-block" id="DropPath.forward">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.DropPath.forward">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">==</span> <span class="mf">0.0</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span>
+
+        <span class="n">keep_prob</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">random_tensor</span> <span class="o">=</span> <span class="n">keep_prob</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">random_tensor</span><span class="o">.</span><span class="n">floor_</span><span class="p">()</span>  <span class="c1"># Binarize</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">keep_prob</span><span class="p">)</span> <span class="o">*</span> <span class="n">random_tensor</span>
+        <span class="k">return</span> <span class="n">output</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="LinearScheduler">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.LinearScheduler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LinearScheduler</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Linear scheduler for DropBlock/StochasticDepth probabilities.</span>
+
+<span class="sd">    Gradually increases drop probability during training.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dropblock_module: DropBlock module to schedule</span>
+<span class="sd">        start_value: Initial drop probability</span>
+<span class="sd">        stop_value: Final drop probability</span>
+<span class="sd">        nr_steps: Number of steps to reach stop_value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="LinearScheduler.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.LinearScheduler.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dropblock_module</span><span class="p">,</span> <span class="n">start_value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">stop_value</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">nr_steps</span><span class="o">=</span><span class="mi">5000</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dropblock</span> <span class="o">=</span> <span class="n">dropblock_module</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_value</span> <span class="o">=</span> <span class="n">start_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">=</span> <span class="n">stop_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nr_steps</span> <span class="o">=</span> <span class="n">nr_steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="LinearScheduler.step">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.LinearScheduler.step">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update drop probability.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">nr_steps</span><span class="p">:</span>
+            <span class="n">drop_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_value</span> <span class="o">+</span> \
+                       <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_value</span><span class="p">)</span> <span class="o">*</span> \
+                       <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">nr_steps</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dropblock</span><span class="o">.</span><span class="n">set_drop_prob</span><span class="p">(</span><span class="n">drop_prob</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">+=</span> <span class="mi">1</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="ShakeShake">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.ShakeShake">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ShakeShake</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Shake-Shake regularization for residual networks.</span>
+
+<span class="sd">    Paper: &quot;Shake-Shake regularization&quot;</span>
+<span class="sd">    https://arxiv.org/abs/1705.07485</span>
+
+<span class="sd">    Applies random interpolation between two residual branches</span>
+<span class="sd">    during training, with different weights for forward and backward passes.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ShakeShake.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.ShakeShake.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ShakeShake</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="ShakeShake.forward">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.ShakeShake.forward">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            x1: First branch output</span>
+<span class="sd">            x2: Second branch output</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Shaken combination</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">:</span>
+            <span class="c1"># At test time, use average</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">x1</span> <span class="o">+</span> <span class="n">x2</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+
+        <span class="c1"># During training, use random weights</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">x1</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">x1</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="c1"># Forward pass: use alpha</span>
+        <span class="c1"># Backward pass: use different random values (implemented via gradient hook)</span>
+        <span class="k">return</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">x1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">)</span> <span class="o">*</span> <span class="n">x2</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="WeightDecayScheduler">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.WeightDecayScheduler">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">WeightDecayScheduler</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scheduler for weight decay (L2 regularization).</span>
+
+<span class="sd">    Gradually changes weight decay during training.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        optimizer: PyTorch optimizer</span>
+<span class="sd">        start_value: Initial weight decay</span>
+<span class="sd">        stop_value: Final weight decay</span>
+<span class="sd">        nr_steps: Number of steps</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="WeightDecayScheduler.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.WeightDecayScheduler.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">start_value</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">stop_value</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">nr_steps</span><span class="o">=</span><span class="mi">5000</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_value</span> <span class="o">=</span> <span class="n">start_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">=</span> <span class="n">stop_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nr_steps</span> <span class="o">=</span> <span class="n">nr_steps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="WeightDecayScheduler.step">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.WeightDecayScheduler.step">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update weight decay.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">nr_steps</span><span class="p">:</span>
+            <span class="n">weight_decay</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_value</span> <span class="o">+</span> \
+                          <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop_value</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_value</span><span class="p">)</span> <span class="o">*</span> \
+                          <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">nr_steps</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">param_group</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">param_groups</span><span class="p">:</span>
+                <span class="n">param_group</span><span class="p">[</span><span class="s1">&#39;weight_decay&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_decay</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">+=</span> <span class="mi">1</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="AdaptiveDropout">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.AdaptiveDropout">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AdaptiveDropout</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Adaptive Dropout: Adjusts dropout rate based on activation statistics.</span>
+
+<span class="sd">    Higher dropout for neurons with higher activation.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        p: Base dropout probability</span>
+<span class="sd">        adaptive: Whether to use adaptive dropout</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="AdaptiveDropout.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.AdaptiveDropout.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">adaptive</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AdaptiveDropout</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">=</span> <span class="n">p</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adaptive</span> <span class="o">=</span> <span class="n">adaptive</span></div>
+
+
+<div class="viewcode-block" id="AdaptiveDropout.forward">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.AdaptiveDropout.forward">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">adaptive</span><span class="p">:</span>
+            <span class="c1"># Compute per-neuron activation magnitude</span>
+            <span class="n">act_magnitude</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">act_magnitude</span> <span class="o">=</span> <span class="n">act_magnitude</span> <span class="o">/</span> <span class="p">(</span><span class="n">act_magnitude</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">1e-8</span><span class="p">)</span>
+
+            <span class="c1"># Higher activation -&gt; higher dropout probability</span>
+            <span class="n">drop_prob</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span> <span class="o">*</span> <span class="n">act_magnitude</span>
+
+            <span class="c1"># Generate mask</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bernoulli</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">drop_prob</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">mask</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Standard dropout</span>
+            <span class="k">return</span> <span class="n">F</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="GradualWarmup">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.GradualWarmup">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">GradualWarmup</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gradual warmup for regularization techniques.</span>
+
+<span class="sd">    Slowly increases regularization strength during training.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        module: Module with regularization (must have set_strength method)</span>
+<span class="sd">        warmup_epochs: Number of epochs for warmup</span>
+<span class="sd">        target_strength: Target regularization strength</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="GradualWarmup.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.GradualWarmup.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">warmup_epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">target_strength</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">module</span> <span class="o">=</span> <span class="n">module</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warmup_epochs</span> <span class="o">=</span> <span class="n">warmup_epochs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_strength</span> <span class="o">=</span> <span class="n">target_strength</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="GradualWarmup.step">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.GradualWarmup.step">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update regularization strength.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">warmup_epochs</span><span class="p">:</span>
+            <span class="n">strength</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_strength</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">warmup_epochs</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="p">,</span> <span class="s1">&#39;set_strength&#39;</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">module</span><span class="o">.</span><span class="n">set_strength</span><span class="p">(</span><span class="n">strength</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_epoch</span> <span class="o">+=</span> <span class="mi">1</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="apply_weight_decay_exemptions">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.apply_weight_decay_exemptions">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">apply_weight_decay_exemptions</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">weight_decay</span><span class="p">,</span> <span class="n">skip_list</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;bias&#39;</span><span class="p">,</span> <span class="s1">&#39;bn&#39;</span><span class="p">,</span> <span class="s1">&#39;ln&#39;</span><span class="p">)):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply weight decay exemptions for specific parameters.</span>
+
+<span class="sd">    Modern best practice: Don&#39;t apply weight decay to bias and normalization layers.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model: PyTorch model</span>
+<span class="sd">        weight_decay: Weight decay value</span>
+<span class="sd">        skip_list: Parameter names to skip (default: bias, batch norm, layer norm)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List of parameter groups for optimizer</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">decay</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">no_decay</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">named_parameters</span><span class="p">():</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">param</span><span class="o">.</span><span class="n">requires_grad</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># Check if parameter should skip weight decay</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">skip_name</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">skip_name</span> <span class="ow">in</span> <span class="n">skip_list</span><span class="p">):</span>
+            <span class="n">no_decay</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">decay</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="n">no_decay</span><span class="p">,</span> <span class="s1">&#39;weight_decay&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="n">decay</span><span class="p">,</span> <span class="s1">&#39;weight_decay&#39;</span><span class="p">:</span> <span class="n">weight_decay</span><span class="p">}</span>
+    <span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="MixedPrecisionWrapper">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.MixedPrecisionWrapper">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MixedPrecisionWrapper</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wrapper for automatic mixed precision training.</span>
+
+<span class="sd">    Handles gradient scaling and overflow detection.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model: PyTorch model</span>
+<span class="sd">        optimizer: PyTorch optimizer</span>
+<span class="sd">        enabled: Whether to enable mixed precision</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="MixedPrecisionWrapper.__init__">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.MixedPrecisionWrapper.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">optimizer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="n">enabled</span> <span class="ow">and</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span><span class="p">:</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">torch.cuda.amp</span><span class="w"> </span><span class="kn">import</span> <span class="n">GradScaler</span><span class="p">,</span> <span class="n">autocast</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span> <span class="o">=</span> <span class="n">GradScaler</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">autocast</span> <span class="o">=</span> <span class="n">autocast</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">autocast</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">autocast</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="MixedPrecisionWrapper.backward">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.MixedPrecisionWrapper.backward">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loss</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Backward pass with gradient scaling.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MixedPrecisionWrapper.step">
+<a class="viewcode-back" href="../../utils.regularization.html#utils.regularization.MixedPrecisionWrapper.step">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Optimizer step with gradient scaling.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">enabled</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, CIFAR-10 Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

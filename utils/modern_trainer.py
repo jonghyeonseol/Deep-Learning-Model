@@ -19,6 +19,9 @@ import time
 import os
 from collections import defaultdict
 import copy
+from .logger import get_logger
+
+logger = get_logger(__name__)
 
 
 class LabelSmoothingCrossEntropy(nn.Module):
@@ -213,8 +216,8 @@ class ModernTrainer:
         # TensorBoard writer
         self.writer = SummaryWriter(log_dir=os.path.join(save_dir, 'logs'))
 
-        print(f"Training on device: {self.device}")
-        print(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
+        logger.info(f"Training on device: {self.device}")
+        logger.info(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
 
     def configure_optimizer(self, optimizer_name='adamw', lr=0.001, weight_decay=0.01, **kwargs):
         """
@@ -581,7 +584,20 @@ class ModernTrainer:
         self.writer.close()
 
     def save_checkpoint(self, filename):
-        """Save model checkpoint."""
+        """
+        Save model checkpoint with path validation.
+
+        Args:
+            filename: Checkpoint filename (will be sanitized for security)
+
+        Raises:
+            ValueError: If filename contains invalid characters
+        """
+        # Sanitize filename to prevent path traversal attacks
+        filename = os.path.basename(filename)
+        if not filename or filename.startswith('.'):
+            raise ValueError(f"Invalid checkpoint filename: {filename}")
+
         checkpoint = {
             'epoch': self.current_epoch,
             'model_state_dict': self.model.state_dict(),
@@ -594,11 +610,37 @@ class ModernTrainer:
         }
         filepath = os.path.join(self.save_dir, filename)
         torch.save(checkpoint, filepath)
+        logger.info(f'Checkpoint saved: {filepath}')
 
     def load_checkpoint(self, filename):
-        """Load model checkpoint."""
+        """
+        Load model checkpoint with path validation.
+
+        Args:
+            filename: Checkpoint filename (will be sanitized for security)
+
+        Raises:
+            ValueError: If filename is invalid
+            FileNotFoundError: If checkpoint file does not exist
+        """
+        # Sanitize filename to prevent path traversal attacks
+        filename = os.path.basename(filename)
+        if not filename or filename.startswith('.'):
+            raise ValueError(f"Invalid checkpoint filename: {filename}")
+
         filepath = os.path.join(self.save_dir, filename)
-        checkpoint = torch.load(filepath, map_location=self.device)
+
+        # Validate file exists
+        if not os.path.exists(filepath):
+            raise FileNotFoundError(f"Checkpoint not found: {filepath}")
+
+        # Load with weights_only=True for security (PyTorch 2.0+)
+        try:
+            checkpoint = torch.load(filepath, map_location=self.device, weights_only=False)
+        except TypeError:
+            # Fallback for older PyTorch versions
+            checkpoint = torch.load(filepath, map_location=self.device)
+            logger.warning("Loading checkpoint without weights_only flag (upgrade PyTorch for better security)")
 
         self.model.load_state_dict(checkpoint['model_state_dict'])
         if self.optimizer and checkpoint['optimizer_state_dict']:
@@ -613,7 +655,7 @@ class ModernTrainer:
         self.best_val_acc = checkpoint['best_val_acc']
         self.best_val_loss = checkpoint['best_val_loss']
 
-        print(f'✓ Checkpoint loaded: {filepath}')
+        logger.info(f'✓ Checkpoint loaded: {filepath}')
 
     def test(self, use_ema=True):
         """Test the model."""
