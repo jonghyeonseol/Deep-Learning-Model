@@ -11,7 +11,6 @@ This implementation demonstrates:
 
 import torch
 import torch.nn as nn
-import math
 from .activations import get_activation
 
 

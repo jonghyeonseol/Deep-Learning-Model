@@ -8,7 +8,6 @@ This implementation demonstrates:
 - Compound scaling (depth, width, resolution)
 """
 
-import torch
 import torch.nn as nn
 import math
 from .activations import get_activation

@@ -18,9 +18,49 @@ __pycache__/
 *.py[cod]
 *.class
 .Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
+
+# Logs and output
+logs/
+*.log
+
+# Training outputs
+checkpoints/
+benchmarks/
+runs/
+outputs/
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Sphinx documentation
+docs/sphinx/_build/
+docs/sphinx/_static/
+docs/sphinx/_templates/
+docs/sphinx/.doctrees/
+
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+tmp/
+temp/
+*.tmp
