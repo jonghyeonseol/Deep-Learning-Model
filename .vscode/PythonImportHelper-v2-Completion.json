@@ -1,5 +1,23 @@
 [
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
         "label": "torch",
         "kind": 6,
         "isExtraImport": true,
@@ -36,6 +54,54 @@
         "documentation": {}
     },
     {
+        "label": "InvalidActivationError",
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "isExtraImport": true,
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -49,6 +115,299 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "GELU",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "ReLU",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Tanh",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Sigmoid",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Swish",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Mish",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "LeakyReLU",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "ELU",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "PReLU",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "SELU",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "Hardswish",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "SiLU",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "get_activation",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_activations",
+        "importPath": "models.activations",
+        "description": "models.activations",
+        "isExtraImport": true,
+        "detail": "models.activations",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "importlib.util",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib.util",
+        "description": "importlib.util",
+        "detail": "importlib.util",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "utils.trainer",
+        "description": "utils.trainer",
+        "isExtraImport": true,
+        "detail": "utils.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "utils.trainer",
+        "description": "utils.trainer",
+        "isExtraImport": true,
+        "detail": "utils.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "utils.trainer",
+        "description": "utils.trainer",
+        "isExtraImport": true,
+        "detail": "utils.trainer",
         "documentation": {}
     },
     {
@@ -112,6 +471,67 @@
         "documentation": {}
     },
     {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "torchvision",
         "kind": 6,
         "isExtraImport": true,
@@ -134,15 +554,6 @@
         "description": "torch.utils.data",
         "isExtraImport": true,
         "detail": "torch.utils.data",
-        "documentation": {}
-    },
-    {
-        "label": "matplotlib.pyplot",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "matplotlib.pyplot",
-        "description": "matplotlib.pyplot",
-        "detail": "matplotlib.pyplot",
         "documentation": {}
     },
     {
@@ -308,6 +719,14 @@
         "documentation": {}
     },
     {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "deque",
         "importPath": "collections",
         "description": "collections",
@@ -384,12 +803,91 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
         "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "recall_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "f1_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "precision_recall_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "average_precision_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_auc_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "roc_curve",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "classification_report",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
         "documentation": {}
     },
     {
@@ -434,12 +932,20 @@
         "documentation": {}
     },
     {
-        "label": "seaborn",
+        "label": "psutil",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "seaborn",
-        "description": "seaborn",
-        "detail": "seaborn",
+        "importPath": "psutil",
+        "description": "psutil",
+        "detail": "psutil",
+        "documentation": {}
+    },
+    {
+        "label": "contextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
         "documentation": {}
     },
     {
@@ -452,54 +958,12 @@
         "documentation": {}
     },
     {
-        "label": "confusion_matrix",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "classification_report",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
         "label": "argparse",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "argparse",
         "description": "argparse",
         "detail": "argparse",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "pandas",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pandas",
-        "description": "pandas",
-        "detail": "pandas",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -567,6 +1031,30 @@
         "documentation": {}
     },
     {
+        "label": "ResNet18",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet34",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet50",
+        "importPath": "models.resnet",
+        "description": "models.resnet",
+        "isExtraImport": true,
+        "detail": "models.resnet",
+        "documentation": {}
+    },
+    {
         "label": "EfficientNet_Tiny",
         "importPath": "models.efficientnet",
         "description": "models.efficientnet",
@@ -592,6 +1080,14 @@
     },
     {
         "label": "EfficientNet_Tiny",
+        "importPath": "models.efficientnet",
+        "description": "models.efficientnet",
+        "isExtraImport": true,
+        "detail": "models.efficientnet",
+        "documentation": {}
+    },
+    {
+        "label": "EfficientNet_B0",
         "importPath": "models.efficientnet",
         "description": "models.efficientnet",
         "isExtraImport": true,
@@ -631,11 +1127,11 @@
         "documentation": {}
     },
     {
-        "label": "ModernTrainer",
-        "importPath": "utils.modern_trainer",
-        "description": "utils.modern_trainer",
+        "label": "VisionTransformer",
+        "importPath": "models.cnn_transformer",
+        "description": "models.cnn_transformer",
         "isExtraImport": true,
-        "detail": "utils.modern_trainer",
+        "detail": "models.cnn_transformer",
         "documentation": {}
     },
     {
@@ -647,19 +1143,11 @@
         "documentation": {}
     },
     {
-        "label": "Trainer",
-        "importPath": "utils.trainer",
-        "description": "utils.trainer",
+        "label": "ModernTrainer",
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
         "isExtraImport": true,
-        "detail": "utils.trainer",
-        "documentation": {}
-    },
-    {
-        "label": "Trainer",
-        "importPath": "utils.trainer",
-        "description": "utils.trainer",
-        "isExtraImport": true,
-        "detail": "utils.trainer",
+        "detail": "utils.modern_trainer",
         "documentation": {}
     },
     {
@@ -676,6 +1164,62 @@
         "description": "utils.data_loader",
         "isExtraImport": true,
         "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10DataLoader",
+        "importPath": "utils.data_loader",
+        "description": "utils.data_loader",
+        "isExtraImport": true,
+        "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "ActivationComparisonDashboard",
+        "importPath": "utils.dashboard",
+        "description": "utils.dashboard",
+        "isExtraImport": true,
+        "detail": "utils.dashboard",
         "documentation": {}
     },
     {
@@ -700,6 +1244,54 @@
         "description": "models",
         "isExtraImport": true,
         "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeuralNetwork",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_activation",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_available_activations",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "CIFAR10DataLoader",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "Visualizer",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
         "documentation": {}
     },
     {
@@ -764,6 +1356,280 @@
         "description": "utils.augmentation",
         "isExtraImport": true,
         "detail": "utils.augmentation",
+        "documentation": {}
+    },
+    {
+        "label": "profile_model",
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "isExtraImport": true,
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "compare_models",
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "isExtraImport": true,
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "print_model_comparison",
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "isExtraImport": true,
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "Profiler",
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "isExtraImport": true,
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "profile_training_step",
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "isExtraImport": true,
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "project = 'Deep Learning Framework'\ncopyright = '2025, CIFAR-10 Team'\nauthor = 'CIFAR-10 Team'\nversion = '2.0'\nrelease = '2.0'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.viewcode',",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "copyright = '2025, CIFAR-10 Team'\nauthor = 'CIFAR-10 Team'\nversion = '2.0'\nrelease = '2.0'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.viewcode',\n    'sphinx.ext.intersphinx',",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "author",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "author = 'CIFAR-10 Team'\nversion = '2.0'\nrelease = '2.0'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.viewcode',\n    'sphinx.ext.intersphinx',\n    'sphinx.ext.napoleon',",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "version",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "version = '2.0'\nrelease = '2.0'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.viewcode',\n    'sphinx.ext.intersphinx',\n    'sphinx.ext.napoleon',\n    'sphinx_autodoc_typehints',",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "release",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "release = '2.0'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.viewcode',\n    'sphinx.ext.intersphinx',\n    'sphinx.ext.napoleon',\n    'sphinx_autodoc_typehints',\n]",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "extensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.viewcode',\n    'sphinx.ext.intersphinx',\n    'sphinx.ext.napoleon',\n    'sphinx_autodoc_typehints',\n]\n# Napoleon settings (for Google/NumPy style docstrings)\nnapoleon_google_docstring = True\nnapoleon_numpy_docstring = True",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_google_docstring",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_google_docstring = True\nnapoleon_numpy_docstring = True\nnapoleon_include_init_with_doc = True\nnapoleon_include_private_with_doc = False\nnapoleon_include_special_with_doc = True\nnapoleon_use_admonition_for_examples = False\nnapoleon_use_admonition_for_notes = False\nnapoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_numpy_docstring",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_numpy_docstring = True\nnapoleon_include_init_with_doc = True\nnapoleon_include_private_with_doc = False\nnapoleon_include_special_with_doc = True\nnapoleon_use_admonition_for_examples = False\nnapoleon_use_admonition_for_notes = False\nnapoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_include_init_with_doc",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_include_init_with_doc = True\nnapoleon_include_private_with_doc = False\nnapoleon_include_special_with_doc = True\nnapoleon_use_admonition_for_examples = False\nnapoleon_use_admonition_for_notes = False\nnapoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_include_private_with_doc",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_include_private_with_doc = False\nnapoleon_include_special_with_doc = True\nnapoleon_use_admonition_for_examples = False\nnapoleon_use_admonition_for_notes = False\nnapoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_include_special_with_doc",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_include_special_with_doc = True\nnapoleon_use_admonition_for_examples = False\nnapoleon_use_admonition_for_notes = False\nnapoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {\n    'members': True,",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_use_admonition_for_examples",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_use_admonition_for_examples = False\nnapoleon_use_admonition_for_notes = False\nnapoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {\n    'members': True,\n    'member-order': 'bysource',",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_use_admonition_for_notes",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_use_admonition_for_notes = False\nnapoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {\n    'members': True,\n    'member-order': 'bysource',\n    'special-members': '__init__',",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_use_admonition_for_references",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_use_admonition_for_references = False\nnapoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {\n    'members': True,\n    'member-order': 'bysource',\n    'special-members': '__init__',\n    'undoc-members': True,",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_use_ivar",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_use_ivar = False\nnapoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {\n    'members': True,\n    'member-order': 'bysource',\n    'special-members': '__init__',\n    'undoc-members': True,\n    'exclude-members': '__weakref__'",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_use_param",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_use_param = True\nnapoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {\n    'members': True,\n    'member-order': 'bysource',\n    'special-members': '__init__',\n    'undoc-members': True,\n    'exclude-members': '__weakref__'\n}",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "napoleon_use_rtype",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "napoleon_use_rtype = True\n# Autodoc settings\nautodoc_default_options = {\n    'members': True,\n    'member-order': 'bysource',\n    'special-members': '__init__',\n    'undoc-members': True,\n    'exclude-members': '__weakref__'\n}\nautodoc_typehints = 'description'",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autodoc_default_options",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "autodoc_default_options = {\n    'members': True,\n    'member-order': 'bysource',\n    'special-members': '__init__',\n    'undoc-members': True,\n    'exclude-members': '__weakref__'\n}\nautodoc_typehints = 'description'\nautodoc_typehints_description_target = 'documented'\ntemplates_path = ['_templates']",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autodoc_typehints",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "autodoc_typehints = 'description'\nautodoc_typehints_description_target = 'documented'\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'sphinx_rtd_theme'\nhtml_static_path = ['_static']\n# Theme options\nhtml_theme_options = {",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autodoc_typehints_description_target",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "autodoc_typehints_description_target = 'documented'\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'sphinx_rtd_theme'\nhtml_static_path = ['_static']\n# Theme options\nhtml_theme_options = {\n    'navigation_depth': 4,",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "templates_path",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "templates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'sphinx_rtd_theme'\nhtml_static_path = ['_static']\n# Theme options\nhtml_theme_options = {\n    'navigation_depth': 4,\n    'collapse_navigation': False,",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'sphinx_rtd_theme'\nhtml_static_path = ['_static']\n# Theme options\nhtml_theme_options = {\n    'navigation_depth': 4,\n    'collapse_navigation': False,\n    'sticky_navigation': True,",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "html_theme = 'sphinx_rtd_theme'\nhtml_static_path = ['_static']\n# Theme options\nhtml_theme_options = {\n    'navigation_depth': 4,\n    'collapse_navigation': False,\n    'sticky_navigation': True,\n    'includehidden': True,\n    'titles_only': False\n}",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_static_path",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "html_static_path = ['_static']\n# Theme options\nhtml_theme_options = {\n    'navigation_depth': 4,\n    'collapse_navigation': False,\n    'sticky_navigation': True,\n    'includehidden': True,\n    'titles_only': False\n}\n# -- Options for intersphinx extension ---------------------------------------",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme_options",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "html_theme_options = {\n    'navigation_depth': 4,\n    'collapse_navigation': False,\n    'sticky_navigation': True,\n    'includehidden': True,\n    'titles_only': False\n}\n# -- Options for intersphinx extension ---------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html#configuration\nintersphinx_mapping = {",
+        "detail": "docs.sphinx.conf",
+        "documentation": {}
+    },
+    {
+        "label": "intersphinx_mapping",
+        "kind": 5,
+        "importPath": "docs.sphinx.conf",
+        "description": "docs.sphinx.conf",
+        "peekOfCode": "intersphinx_mapping = {\n    'python': ('https://docs.python.org/3', None),\n    'torch': ('https://pytorch.org/docs/stable/', None),\n    'numpy': ('https://numpy.org/doc/stable/', None),\n}",
+        "detail": "docs.sphinx.conf",
         "documentation": {}
     },
     {
@@ -1120,6 +1986,24 @@
     {
         "label": "NeuralNetwork",
         "kind": 6,
+        "importPath": "models.network 2",
+        "description": "models.network 2",
+        "peekOfCode": "class NeuralNetwork(nn.Module):\n    def __init__(self, input_size, hidden_sizes, output_size, activation='relu', dropout_rate=0.2):\n        \"\"\"\n        A flexible neural network implementation.\n        Args:\n            input_size (int): Size of input features\n            hidden_sizes (list): List of hidden layer sizes\n            output_size (int): Size of output layer\n            activation (str): Activation function name ('gelu', 'relu', 'tanh')\n            dropout_rate (float): Dropout rate for regularization",
+        "detail": "models.network 2",
+        "documentation": {}
+    },
+    {
+        "label": "ConvNeuralNetwork",
+        "kind": 6,
+        "importPath": "models.network 2",
+        "description": "models.network 2",
+        "peekOfCode": "class ConvNeuralNetwork(nn.Module):\n    def __init__(self, input_channels=3, num_classes=10, activation='relu', dropout_rate=0.2):\n        \"\"\"\n        Convolutional Neural Network for image classification (e.g., CIFAR-10).\n        Args:\n            input_channels (int): Number of input channels (3 for RGB)\n            num_classes (int): Number of output classes\n            activation (str): Activation function name\n            dropout_rate (float): Dropout rate\n        \"\"\"",
+        "detail": "models.network 2",
+        "documentation": {}
+    },
+    {
+        "label": "NeuralNetwork",
+        "kind": 6,
         "importPath": "models.network",
         "description": "models.network",
         "peekOfCode": "class NeuralNetwork(nn.Module):\n    def __init__(self, input_size, hidden_sizes, output_size, activation='relu', dropout_rate=0.2):\n        \"\"\"\n        A flexible neural network implementation.\n        Args:\n            input_size (int): Size of input features\n            hidden_sizes (list): List of hidden layer sizes\n            output_size (int): Size of output layer\n            activation (str): Activation function name ('gelu', 'relu', 'tanh')\n            dropout_rate (float): Dropout rate for regularization",
@@ -1208,6 +2092,78 @@
         "documentation": {}
     },
     {
+        "label": "TestActivationFunctions",
+        "kind": 6,
+        "importPath": "tests.test_activations",
+        "description": "tests.test_activations",
+        "peekOfCode": "class TestActivationFunctions(unittest.TestCase):\n    \"\"\"Test suite for activation functions.\"\"\"\n    def setUp(self):\n        \"\"\"Set up test fixtures.\"\"\"\n        self.batch_size = 32\n        self.features = 128\n        self.test_input = torch.randn(self.batch_size, self.features)\n    def test_gelu_output_shape(self):\n        \"\"\"Test GELU maintains input shape.\"\"\"\n        gelu = GELU()",
+        "detail": "tests.test_activations",
+        "documentation": {}
+    },
+    {
+        "label": "TestLogger",
+        "kind": 6,
+        "importPath": "tests.test_logger",
+        "description": "tests.test_logger",
+        "peekOfCode": "class TestLogger(unittest.TestCase):\n    \"\"\"Test suite for logging functionality.\"\"\"\n    def setUp(self):\n        \"\"\"Set up test fixtures.\"\"\"\n        self.test_dir = tempfile.mkdtemp()\n        self.test_log_file = os.path.join(self.test_dir, 'test.log')\n    def tearDown(self):\n        \"\"\"Clean up test fixtures.\"\"\"\n        if os.path.exists(self.test_dir):\n            shutil.rmtree(self.test_dir)",
+        "detail": "tests.test_logger",
+        "documentation": {}
+    },
+    {
+        "label": "spec",
+        "kind": 5,
+        "importPath": "tests.test_logger",
+        "description": "tests.test_logger",
+        "peekOfCode": "spec = importlib.util.spec_from_file_location(\n    \"logger\",\n    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'utils', 'logger.py')\n)\nlogger_module = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(logger_module)\nget_logger = logger_module.get_logger\nsetup_training_logger = logger_module.setup_training_logger\nclass TestLogger(unittest.TestCase):\n    \"\"\"Test suite for logging functionality.\"\"\"",
+        "detail": "tests.test_logger",
+        "documentation": {}
+    },
+    {
+        "label": "logger_module",
+        "kind": 5,
+        "importPath": "tests.test_logger",
+        "description": "tests.test_logger",
+        "peekOfCode": "logger_module = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(logger_module)\nget_logger = logger_module.get_logger\nsetup_training_logger = logger_module.setup_training_logger\nclass TestLogger(unittest.TestCase):\n    \"\"\"Test suite for logging functionality.\"\"\"\n    def setUp(self):\n        \"\"\"Set up test fixtures.\"\"\"\n        self.test_dir = tempfile.mkdtemp()\n        self.test_log_file = os.path.join(self.test_dir, 'test.log')",
+        "detail": "tests.test_logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "kind": 5,
+        "importPath": "tests.test_logger",
+        "description": "tests.test_logger",
+        "peekOfCode": "get_logger = logger_module.get_logger\nsetup_training_logger = logger_module.setup_training_logger\nclass TestLogger(unittest.TestCase):\n    \"\"\"Test suite for logging functionality.\"\"\"\n    def setUp(self):\n        \"\"\"Set up test fixtures.\"\"\"\n        self.test_dir = tempfile.mkdtemp()\n        self.test_log_file = os.path.join(self.test_dir, 'test.log')\n    def tearDown(self):\n        \"\"\"Clean up test fixtures.\"\"\"",
+        "detail": "tests.test_logger",
+        "documentation": {}
+    },
+    {
+        "label": "setup_training_logger",
+        "kind": 5,
+        "importPath": "tests.test_logger",
+        "description": "tests.test_logger",
+        "peekOfCode": "setup_training_logger = logger_module.setup_training_logger\nclass TestLogger(unittest.TestCase):\n    \"\"\"Test suite for logging functionality.\"\"\"\n    def setUp(self):\n        \"\"\"Set up test fixtures.\"\"\"\n        self.test_dir = tempfile.mkdtemp()\n        self.test_log_file = os.path.join(self.test_dir, 'test.log')\n    def tearDown(self):\n        \"\"\"Clean up test fixtures.\"\"\"\n        if os.path.exists(self.test_dir):",
+        "detail": "tests.test_logger",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleModel",
+        "kind": 6,
+        "importPath": "tests.test_trainer",
+        "description": "tests.test_trainer",
+        "peekOfCode": "class SimpleModel(nn.Module):\n    \"\"\"Simple model for testing.\"\"\"\n    def __init__(self):\n        super().__init__()\n        self.fc = nn.Linear(10, 5)\n    def forward(self, x):\n        return self.fc(x)\nclass TestTrainer(unittest.TestCase):\n    \"\"\"Test suite for Trainer class.\"\"\"\n    def setUp(self):",
+        "detail": "tests.test_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "TestTrainer",
+        "kind": 6,
+        "importPath": "tests.test_trainer",
+        "description": "tests.test_trainer",
+        "peekOfCode": "class TestTrainer(unittest.TestCase):\n    \"\"\"Test suite for Trainer class.\"\"\"\n    def setUp(self):\n        \"\"\"Set up test fixtures.\"\"\"\n        self.test_dir = tempfile.mkdtemp()\n        self.model = SimpleModel()\n        self.train_data = [(torch.randn(4, 10), torch.randint(0, 5, (4,))) for _ in range(2)]\n        self.train_loader = self.train_data\n        self.trainer = Trainer(\n            model=self.model,",
+        "detail": "tests.test_trainer",
+        "documentation": {}
+    },
+    {
         "label": "RandAugment",
         "kind": 6,
         "importPath": "utils.augmentation",
@@ -1289,6 +2245,87 @@
         "documentation": {}
     },
     {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "utils.config",
+        "description": "utils.config",
+        "peekOfCode": "class Config:\n    \"\"\"\n    Configuration container with dot notation access.\n    Examples:\n        >>> config = Config({'model': {'architecture': 'resnet18'}})\n        >>> config.model.architecture\n        'resnet18'\n        >>> config.get('model.learning_rate', 0.001)\n        0.001\n    \"\"\"",
+        "detail": "utils.config",
+        "documentation": {}
+    },
+    {
+        "label": "load_config",
+        "kind": 2,
+        "importPath": "utils.config",
+        "description": "utils.config",
+        "peekOfCode": "def load_config(config_path: Union[str, Path]) -> Config:\n    \"\"\"\n    Load configuration from YAML or JSON file.\n    Args:\n        config_path: Path to configuration file\n    Returns:\n        Config object\n    Raises:\n        ConfigurationError: If file cannot be loaded or parsed\n    Examples:",
+        "detail": "utils.config",
+        "documentation": {}
+    },
+    {
+        "label": "save_config",
+        "kind": 2,
+        "importPath": "utils.config",
+        "description": "utils.config",
+        "peekOfCode": "def save_config(config: Union[Config, Dict], save_path: Union[str, Path]):\n    \"\"\"\n    Save configuration to YAML or JSON file.\n    Args:\n        config: Configuration to save\n        save_path: Path to save configuration\n    Raises:\n        ConfigurationError: If file cannot be saved\n    \"\"\"\n    save_path = Path(save_path)",
+        "detail": "utils.config",
+        "documentation": {}
+    },
+    {
+        "label": "validate_training_config",
+        "kind": 2,
+        "importPath": "utils.config",
+        "description": "utils.config",
+        "peekOfCode": "def validate_training_config(config: Config) -> None:\n    \"\"\"\n    Validate training configuration has required fields.\n    Args:\n        config: Configuration to validate\n    Raises:\n        ConfigurationError: If required fields are missing or invalid\n    \"\"\"\n    required_fields = {\n        'model.architecture': str,",
+        "detail": "utils.config",
+        "documentation": {}
+    },
+    {
+        "label": "create_example_config",
+        "kind": 2,
+        "importPath": "utils.config",
+        "description": "utils.config",
+        "peekOfCode": "def create_example_config(name: str, save_path: Union[str, Path]):\n    \"\"\"\n    Create example configuration file.\n    Args:\n        name: Example config name ('resnet18_basic' or 'efficientnet_modern')\n        save_path: Path to save configuration\n    Raises:\n        ConfigurationError: If example name is invalid\n    \"\"\"\n    if name not in EXAMPLE_CONFIGS:",
+        "detail": "utils.config",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils.config",
+        "description": "utils.config",
+        "peekOfCode": "logger = get_logger(__name__)\nclass Config:\n    \"\"\"\n    Configuration container with dot notation access.\n    Examples:\n        >>> config = Config({'model': {'architecture': 'resnet18'}})\n        >>> config.model.architecture\n        'resnet18'\n        >>> config.get('model.learning_rate', 0.001)\n        0.001",
+        "detail": "utils.config",
+        "documentation": {}
+    },
+    {
+        "label": "EXAMPLE_CONFIGS",
+        "kind": 5,
+        "importPath": "utils.config",
+        "description": "utils.config",
+        "peekOfCode": "EXAMPLE_CONFIGS = {\n    'resnet18_basic': {\n        'model': {\n            'architecture': 'resnet18',\n            'activation': 'swish',\n            'num_classes': 10\n        },\n        'training': {\n            'epochs': 100,\n            'batch_size': 128,",
+        "detail": "utils.config",
+        "documentation": {}
+    },
+    {
+        "label": "MetricsDashboard",
+        "kind": 6,
+        "importPath": "utils.dashboard",
+        "description": "utils.dashboard",
+        "peekOfCode": "class MetricsDashboard:\n    \"\"\"Create comprehensive visualizations for model evaluation metrics.\"\"\"\n    def __init__(self, save_dir: str, model_name: str = \"model\"):\n        \"\"\"\n        Initialize metrics dashboard.\n        Args:\n            save_dir: Directory to save dashboard images\n            model_name: Name of the model (for filenames)\n        \"\"\"\n        self.save_dir = Path(save_dir)",
+        "detail": "utils.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "ActivationComparisonDashboard",
+        "kind": 6,
+        "importPath": "utils.dashboard",
+        "description": "utils.dashboard",
+        "peekOfCode": "class ActivationComparisonDashboard:\n    \"\"\"Create comparison dashboard for different activation functions.\"\"\"\n    def __init__(self, save_dir: str):\n        \"\"\"\n        Initialize comparison dashboard.\n        Args:\n            save_dir: Directory to save dashboard images\n        \"\"\"\n        self.save_dir = Path(save_dir)\n        self.save_dir.mkdir(parents=True, exist_ok=True)",
+        "detail": "utils.dashboard",
+        "documentation": {}
+    },
+    {
         "label": "CIFAR10DataLoader",
         "kind": 6,
         "importPath": "utils.data_loader",
@@ -1304,6 +2341,213 @@
         "description": "utils.data_loader",
         "peekOfCode": "def create_cifar10_loader(batch_size=32, validation_split=0.1, data_dir='./data'):\n    \"\"\"\n    Convenience function to create CIFAR-10 data loader.\n    Args:\n        batch_size (int): Batch size\n        validation_split (float): Validation split ratio\n        data_dir (str): Data directory\n    Returns:\n        CIFAR10DataLoader: Configured data loader\n    \"\"\"",
         "detail": "utils.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "DLFrameworkError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class DLFrameworkError(Exception):\n    \"\"\"Base exception for all Deep Learning framework errors.\"\"\"\n    pass\nclass ConfigurationError(DLFrameworkError):\n    \"\"\"Raised when there's an error in configuration.\"\"\"\n    def __init__(self, message: str, param_name: str = None):\n        self.param_name = param_name\n        if param_name:\n            message = f\"Configuration error for '{param_name}': {message}\"\n        super().__init__(message)",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigurationError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class ConfigurationError(DLFrameworkError):\n    \"\"\"Raised when there's an error in configuration.\"\"\"\n    def __init__(self, message: str, param_name: str = None):\n        self.param_name = param_name\n        if param_name:\n            message = f\"Configuration error for '{param_name}': {message}\"\n        super().__init__(message)\nclass CheckpointError(DLFrameworkError):\n    \"\"\"Raised when there's an error with checkpoint operations.\"\"\"\n    pass",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "CheckpointError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class CheckpointError(DLFrameworkError):\n    \"\"\"Raised when there's an error with checkpoint operations.\"\"\"\n    pass\nclass InvalidCheckpointPathError(CheckpointError):\n    \"\"\"Raised when checkpoint path is invalid or insecure.\"\"\"\n    def __init__(self, path: str, reason: str):\n        message = f\"Invalid checkpoint path '{path}': {reason}\"\n        super().__init__(message)\n        self.path = path\n        self.reason = reason",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidCheckpointPathError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class InvalidCheckpointPathError(CheckpointError):\n    \"\"\"Raised when checkpoint path is invalid or insecure.\"\"\"\n    def __init__(self, path: str, reason: str):\n        message = f\"Invalid checkpoint path '{path}': {reason}\"\n        super().__init__(message)\n        self.path = path\n        self.reason = reason\nclass CheckpointNotFoundError(CheckpointError, FileNotFoundError):\n    \"\"\"Raised when checkpoint file is not found.\"\"\"\n    def __init__(self, path: str):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "CheckpointNotFoundError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class CheckpointNotFoundError(CheckpointError, FileNotFoundError):\n    \"\"\"Raised when checkpoint file is not found.\"\"\"\n    def __init__(self, path: str):\n        message = (\n            f\"Checkpoint file not found: {path}\\n\"\n            f\"Make sure the file exists and the path is correct.\"\n        )\n        super().__init__(message)\n        self.path = path\nclass CheckpointLoadError(CheckpointError):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "CheckpointLoadError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class CheckpointLoadError(CheckpointError):\n    \"\"\"Raised when checkpoint cannot be loaded.\"\"\"\n    def __init__(self, path: str, reason: str):\n        message = (\n            f\"Failed to load checkpoint from '{path}': {reason}\\n\"\n            f\"The file may be corrupted or incompatible.\"\n        )\n        super().__init__(message)\n        self.path = path\n        self.reason = reason",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ModelError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class ModelError(DLFrameworkError):\n    \"\"\"Raised when there's an error with model operations.\"\"\"\n    pass\nclass InvalidArchitectureError(ModelError):\n    \"\"\"Raised when model architecture is invalid.\"\"\"\n    def __init__(self, architecture_name: str, available: list = None):\n        message = f\"Invalid architecture: '{architecture_name}'\"\n        if available:\n            message += f\"\\nAvailable architectures: {', '.join(available)}\"\n        super().__init__(message)",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidArchitectureError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class InvalidArchitectureError(ModelError):\n    \"\"\"Raised when model architecture is invalid.\"\"\"\n    def __init__(self, architecture_name: str, available: list = None):\n        message = f\"Invalid architecture: '{architecture_name}'\"\n        if available:\n            message += f\"\\nAvailable architectures: {', '.join(available)}\"\n        super().__init__(message)\n        self.architecture_name = architecture_name\n        self.available = available\nclass InvalidActivationError(ModelError):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidActivationError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class InvalidActivationError(ModelError):\n    \"\"\"Raised when activation function is invalid.\"\"\"\n    def __init__(self, activation_name: str, available: list = None):\n        message = f\"Invalid activation function: '{activation_name}'\"\n        if available:\n            message += f\"\\nAvailable activations: {', '.join(available)}\"\n        super().__init__(message)\n        self.activation_name = activation_name\n        self.available = available\nclass TrainingError(DLFrameworkError):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "TrainingError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class TrainingError(DLFrameworkError):\n    \"\"\"Raised when there's an error during training.\"\"\"\n    pass\nclass OptimizerNotConfiguredError(TrainingError):\n    \"\"\"Raised when optimizer is not configured before training.\"\"\"\n    def __init__(self):\n        message = (\n            \"Optimizer not configured. \"\n            \"Call trainer.configure_optimizer() before training.\"\n        )",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "OptimizerNotConfiguredError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class OptimizerNotConfiguredError(TrainingError):\n    \"\"\"Raised when optimizer is not configured before training.\"\"\"\n    def __init__(self):\n        message = (\n            \"Optimizer not configured. \"\n            \"Call trainer.configure_optimizer() before training.\"\n        )\n        super().__init__(message)\nclass CriterionNotConfiguredError(TrainingError):\n    \"\"\"Raised when loss criterion is not configured before training.\"\"\"",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "CriterionNotConfiguredError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class CriterionNotConfiguredError(TrainingError):\n    \"\"\"Raised when loss criterion is not configured before training.\"\"\"\n    def __init__(self):\n        message = (\n            \"Loss criterion not configured. \"\n            \"Call trainer.configure_criterion() before training.\"\n        )\n        super().__init__(message)\nclass SchedulerConfigurationError(TrainingError):\n    \"\"\"Raised when scheduler configuration fails.\"\"\"",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "SchedulerConfigurationError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class SchedulerConfigurationError(TrainingError):\n    \"\"\"Raised when scheduler configuration fails.\"\"\"\n    def __init__(self, reason: str):\n        message = f\"Failed to configure scheduler: {reason}\"\n        super().__init__(message)\n        self.reason = reason\nclass DataError(DLFrameworkError):\n    \"\"\"Raised when there's an error with data operations.\"\"\"\n    pass\nclass DataLoaderError(DataError):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class DataError(DLFrameworkError):\n    \"\"\"Raised when there's an error with data operations.\"\"\"\n    pass\nclass DataLoaderError(DataError):\n    \"\"\"Raised when data loader creation fails.\"\"\"\n    def __init__(self, reason: str):\n        message = f\"Failed to create data loader: {reason}\"\n        super().__init__(message)\n        self.reason = reason\nclass InvalidDatasetError(DataError):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoaderError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class DataLoaderError(DataError):\n    \"\"\"Raised when data loader creation fails.\"\"\"\n    def __init__(self, reason: str):\n        message = f\"Failed to create data loader: {reason}\"\n        super().__init__(message)\n        self.reason = reason\nclass InvalidDatasetError(DataError):\n    \"\"\"Raised when dataset is invalid or corrupted.\"\"\"\n    def __init__(self, dataset_name: str, reason: str):\n        message = f\"Invalid dataset '{dataset_name}': {reason}\"",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidDatasetError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class InvalidDatasetError(DataError):\n    \"\"\"Raised when dataset is invalid or corrupted.\"\"\"\n    def __init__(self, dataset_name: str, reason: str):\n        message = f\"Invalid dataset '{dataset_name}': {reason}\"\n        super().__init__(message)\n        self.dataset_name = dataset_name\n        self.reason = reason\nclass AugmentationError(DataError):\n    \"\"\"Raised when data augmentation fails.\"\"\"\n    def __init__(self, augmentation_name: str, reason: str):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "AugmentationError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class AugmentationError(DataError):\n    \"\"\"Raised when data augmentation fails.\"\"\"\n    def __init__(self, augmentation_name: str, reason: str):\n        message = f\"Augmentation '{augmentation_name}' failed: {reason}\"\n        super().__init__(message)\n        self.augmentation_name = augmentation_name\n        self.reason = reason\nclass DeviceError(DLFrameworkError):\n    \"\"\"Raised when there's an error with device operations.\"\"\"\n    pass",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "DeviceError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class DeviceError(DLFrameworkError):\n    \"\"\"Raised when there's an error with device operations.\"\"\"\n    pass\nclass CUDANotAvailableError(DeviceError):\n    \"\"\"Raised when CUDA is required but not available.\"\"\"\n    def __init__(self):\n        message = (\n            \"CUDA is not available. \"\n            \"Make sure PyTorch is installed with CUDA support or use CPU.\"\n        )",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "CUDANotAvailableError",
+        "kind": 6,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "class CUDANotAvailableError(DeviceError):\n    \"\"\"Raised when CUDA is required but not available.\"\"\"\n    def __init__(self):\n        message = (\n            \"CUDA is not available. \"\n            \"Make sure PyTorch is installed with CUDA support or use CPU.\"\n        )\n        super().__init__(message)\n# Convenience functions for raising common errors\ndef require_optimizer(optimizer):",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "require_optimizer",
+        "kind": 2,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "def require_optimizer(optimizer):\n    \"\"\"Raise error if optimizer is not configured.\"\"\"\n    if optimizer is None:\n        raise OptimizerNotConfiguredError()\ndef require_criterion(criterion):\n    \"\"\"Raise error if criterion is not configured.\"\"\"\n    if criterion is None:\n        raise CriterionNotConfiguredError()\ndef validate_checkpoint_path(filename: str):\n    \"\"\"",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "require_criterion",
+        "kind": 2,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "def require_criterion(criterion):\n    \"\"\"Raise error if criterion is not configured.\"\"\"\n    if criterion is None:\n        raise CriterionNotConfiguredError()\ndef validate_checkpoint_path(filename: str):\n    \"\"\"\n    Validate checkpoint filename.\n    Args:\n        filename: Checkpoint filename\n    Raises:",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "validate_checkpoint_path",
+        "kind": 2,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "def validate_checkpoint_path(filename: str):\n    \"\"\"\n    Validate checkpoint filename.\n    Args:\n        filename: Checkpoint filename\n    Raises:\n        InvalidCheckpointPathError: If filename is invalid\n    \"\"\"\n    import os\n    if not filename:",
+        "detail": "utils.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "check_checkpoint_exists",
+        "kind": 2,
+        "importPath": "utils.exceptions",
+        "description": "utils.exceptions",
+        "peekOfCode": "def check_checkpoint_exists(filepath: str):\n    \"\"\"\n    Check if checkpoint file exists.\n    Args:\n        filepath: Full path to checkpoint file\n    Raises:\n        CheckpointNotFoundError: If file does not exist\n    \"\"\"\n    import os\n    if not os.path.exists(filepath):",
+        "detail": "utils.exceptions",
         "documentation": {}
     },
     {
@@ -1370,6 +2614,87 @@
         "documentation": {}
     },
     {
+        "label": "get_logger",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def get_logger(\n    name: str,\n    level: int = logging.INFO,\n    log_file: Optional[str] = None,\n    console: bool = True\n) -> logging.Logger:\n    \"\"\"\n    Get a configured logger instance.\n    Args:\n        name: Logger name (typically __name__)",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "setup_training_logger",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def setup_training_logger(\n    save_dir: str,\n    level: int = logging.INFO\n) -> logging.Logger:\n    \"\"\"\n    Setup logger for training runs with file and console output.\n    Args:\n        save_dir: Directory to save log files\n        level: Logging level\n    Returns:",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "debug",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def debug(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log debug message to root logger.\"\"\"\n    logging.debug(msg, *args, **kwargs)\ndef info(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log info message to root logger.\"\"\"\n    logging.info(msg, *args, **kwargs)\ndef warning(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log warning message to root logger.\"\"\"\n    logging.warning(msg, *args, **kwargs)\ndef error(msg: str, *args, **kwargs) -> None:",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "info",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def info(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log info message to root logger.\"\"\"\n    logging.info(msg, *args, **kwargs)\ndef warning(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log warning message to root logger.\"\"\"\n    logging.warning(msg, *args, **kwargs)\ndef error(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log error message to root logger.\"\"\"\n    logging.error(msg, *args, **kwargs)\ndef critical(msg: str, *args, **kwargs) -> None:",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "warning",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def warning(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log warning message to root logger.\"\"\"\n    logging.warning(msg, *args, **kwargs)\ndef error(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log error message to root logger.\"\"\"\n    logging.error(msg, *args, **kwargs)\ndef critical(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log critical message to root logger.\"\"\"\n    logging.critical(msg, *args, **kwargs)",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "error",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def error(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log error message to root logger.\"\"\"\n    logging.error(msg, *args, **kwargs)\ndef critical(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log critical message to root logger.\"\"\"\n    logging.critical(msg, *args, **kwargs)",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "critical",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def critical(msg: str, *args, **kwargs) -> None:\n    \"\"\"Log critical message to root logger.\"\"\"\n    logging.critical(msg, *args, **kwargs)",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "MetricsCalculator",
+        "kind": 6,
+        "importPath": "utils.metrics",
+        "description": "utils.metrics",
+        "peekOfCode": "class MetricsCalculator:\n    \"\"\"Calculate comprehensive evaluation metrics for classification tasks.\"\"\"\n    def __init__(self, num_classes: int, class_names: Optional[List[str]] = None):\n        \"\"\"\n        Initialize metrics calculator.\n        Args:\n            num_classes: Number of classes in the dataset\n            class_names: Optional list of class names for better readability\n        \"\"\"\n        self.num_classes = num_classes",
+        "detail": "utils.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_top_k_accuracy",
+        "kind": 2,
+        "importPath": "utils.metrics",
+        "description": "utils.metrics",
+        "peekOfCode": "def calculate_top_k_accuracy(predictions: torch.Tensor, targets: torch.Tensor, k: int = 5) -> float:\n    \"\"\"\n    Calculate top-k accuracy.\n    Args:\n        predictions: Model output probabilities (N x C)\n        targets: Ground truth labels (N,)\n        k: Number of top predictions to consider\n    Returns:\n        Top-k accuracy\n    \"\"\"",
+        "detail": "utils.metrics",
+        "documentation": {}
+    },
+    {
         "label": "LabelSmoothingCrossEntropy",
         "kind": 6,
         "importPath": "utils.modern_trainer",
@@ -1402,6 +2727,15 @@
         "importPath": "utils.modern_trainer",
         "description": "utils.modern_trainer",
         "peekOfCode": "class ModernTrainer:\n    \"\"\"\n    Modern trainer with state-of-the-art training techniques.\n    Features:\n    - AdamW optimizer with decoupled weight decay\n    - Cosine annealing with warmup\n    - Automatic Mixed Precision (AMP) for 2-3x speedup\n    - Gradient clipping for stability\n    - Gradient accumulation for large batch simulation\n    - Label smoothing for better calibration",
+        "detail": "utils.modern_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils.modern_trainer",
+        "description": "utils.modern_trainer",
+        "peekOfCode": "logger = get_logger(__name__)\nclass LabelSmoothingCrossEntropy(nn.Module):\n    \"\"\"\n    Label Smoothing Cross Entropy Loss.\n    Prevents the model from becoming over-confident by distributing\n    some probability mass to incorrect classes.\n    Instead of targets [0, 0, 1, 0] (one-hot),\n    use smoothed targets [0.03, 0.03, 0.91, 0.03] (with smoothing=0.1)\n    Args:\n        smoothing: Label smoothing factor (0.0 to 1.0, typically 0.1)",
         "detail": "utils.modern_trainer",
         "documentation": {}
     },
@@ -1439,6 +2773,87 @@
         "description": "utils.monitor",
         "peekOfCode": "class RealTimeMonitor:\n    \"\"\"Monitor training progress in real-time.\"\"\"\n    def __init__(self):\n        self.training_data = defaultdict(list)\n        self.epoch_data = defaultdict(list)\n    def update(self, epoch, batch, loss, accuracy, lr=None):\n        \"\"\"Update monitoring data.\"\"\"\n        self.training_data['epoch'].append(epoch)\n        self.training_data['batch'].append(batch)\n        self.training_data['loss'].append(loss)",
         "detail": "utils.monitor",
+        "documentation": {}
+    },
+    {
+        "label": "Profiler",
+        "kind": 6,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "class Profiler:\n    \"\"\"\n    Performance profiler for tracking execution time and resource usage.\n    Features:\n    - Context manager for timing code blocks\n    - Cumulative statistics across multiple runs\n    - Memory usage tracking (CPU and GPU)\n    - Pretty-printed summary reports\n    Example:\n        >>> profiler = Profiler()",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "profile_model",
+        "kind": 2,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "def profile_model(\n    model: nn.Module,\n    input_shape: Tuple[int, ...] = (3, 32, 32),\n    batch_size: int = 1,\n    device: str = 'cuda' if torch.cuda.is_available() else 'cpu'\n) -> Dict:\n    \"\"\"\n    Profile model complexity and inference speed.\n    Args:\n        model: PyTorch model to profile",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "estimate_flops",
+        "kind": 2,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "def estimate_flops(model: nn.Module, dummy_input: torch.Tensor) -> int:\n    \"\"\"\n    Estimate FLOPs for model forward pass.\n    Args:\n        model: PyTorch model\n        dummy_input: Example input tensor\n    Returns:\n        Estimated FLOPs (floating point operations)\n    \"\"\"\n    flops = 0",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "benchmark_inference",
+        "kind": 2,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "def benchmark_inference(\n    model: nn.Module,\n    input_shape: Tuple[int, ...],\n    batch_size: int = 1,\n    device: str = 'cuda',\n    num_iterations: int = 100,\n    warmup_iterations: int = 10\n) -> Tuple[float, float]:\n    \"\"\"\n    Benchmark model inference speed.",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "get_model_memory",
+        "kind": 2,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "def get_model_memory(model: nn.Module) -> float:\n    \"\"\"\n    Calculate model memory footprint in MB.\n    Args:\n        model: PyTorch model\n    Returns:\n        Memory footprint in MB\n    \"\"\"\n    param_size = 0\n    buffer_size = 0",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "compare_models",
+        "kind": 2,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "def compare_models(\n    models: Dict[str, nn.Module],\n    input_shape: Tuple[int, ...] = (3, 32, 32),\n    batch_size: int = 1\n) -> Dict:\n    \"\"\"\n    Compare multiple models' complexity and speed.\n    Args:\n        models: Dictionary mapping model names to model instances\n        input_shape: Input tensor shape",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "print_model_comparison",
+        "kind": 2,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "def print_model_comparison(results: Dict):\n    \"\"\"\n    Print formatted model comparison table.\n    Args:\n        results: Dictionary from compare_models()\n    \"\"\"\n    logger.info(\"\\n\" + \"=\" * 100)\n    logger.info(\"MODEL COMPARISON\")\n    logger.info(\"=\" * 100)\n    logger.info(",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "profile_training_step",
+        "kind": 2,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "def profile_training_step(\n    model: nn.Module,\n    dataloader,\n    criterion: nn.Module,\n    optimizer,\n    device: str = 'cuda',\n    num_batches: int = 10\n):\n    \"\"\"\n    Profile a complete training step including forward, backward, and optimizer step.",
+        "detail": "utils.profiler",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils.profiler",
+        "description": "utils.profiler",
+        "peekOfCode": "logger = get_logger(__name__)\nclass Profiler:\n    \"\"\"\n    Performance profiler for tracking execution time and resource usage.\n    Features:\n    - Context manager for timing code blocks\n    - Cumulative statistics across multiple runs\n    - Memory usage tracking (CPU and GPU)\n    - Pretty-printed summary reports\n    Example:",
+        "detail": "utils.profiler",
         "documentation": {}
     },
     {
@@ -1577,6 +2992,15 @@
         "documentation": {}
     },
     {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils.trainer",
+        "description": "utils.trainer",
+        "peekOfCode": "logger = get_logger(__name__)\nclass Trainer:\n    def __init__(self, model, train_loader, val_loader=None, test_loader=None,\n                 device=None, save_dir='./checkpoints'):\n        \"\"\"\n        Neural network trainer with comprehensive training utilities.\n        Args:\n            model (nn.Module): The neural network model to train\n            train_loader (DataLoader): Training data loader\n            val_loader (DataLoader, optional): Validation data loader",
+        "detail": "utils.trainer",
+        "documentation": {}
+    },
+    {
         "label": "Visualizer",
         "kind": 6,
         "importPath": "utils.visualization",
@@ -1608,7 +3032,7 @@
         "kind": 2,
         "importPath": "benchmark_all",
         "description": "benchmark_all",
-        "peekOfCode": "def benchmark_architectures(epochs=10, batch_size=128):\n    \"\"\"\n    Compare different model architectures.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    print(f\"\\n{'#'*70}\")",
+        "peekOfCode": "def benchmark_architectures(epochs=10, batch_size=128):\n    \"\"\"\n    Compare different model architectures.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    logger.info(f\"\\n{'#'*70}\")",
         "detail": "benchmark_all",
         "documentation": {}
     },
@@ -1617,7 +3041,7 @@
         "kind": 2,
         "importPath": "benchmark_all",
         "description": "benchmark_all",
-        "peekOfCode": "def benchmark_training_techniques(epochs=10, batch_size=128):\n    \"\"\"\n    Compare modern vs standard training techniques.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    print(f\"\\n{'#'*70}\")",
+        "peekOfCode": "def benchmark_training_techniques(epochs=10, batch_size=128):\n    \"\"\"\n    Compare modern vs standard training techniques.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    logger.info(f\"\\n{'#'*70}\")",
         "detail": "benchmark_all",
         "documentation": {}
     },
@@ -1626,7 +3050,7 @@
         "kind": 2,
         "importPath": "benchmark_all",
         "description": "benchmark_all",
-        "peekOfCode": "def benchmark_activations(epochs=10, batch_size=128):\n    \"\"\"\n    Compare different activation functions.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    print(f\"\\n{'#'*70}\")",
+        "peekOfCode": "def benchmark_activations(epochs=10, batch_size=128):\n    \"\"\"\n    Compare different activation functions.\n    Args:\n        epochs: Number of epochs\n        batch_size: Batch size\n    Returns:\n        List of results\n    \"\"\"\n    logger.info(f\"\\n{'#'*70}\")",
         "detail": "benchmark_all",
         "documentation": {}
     },
@@ -1649,11 +3073,83 @@
         "documentation": {}
     },
     {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "benchmark_all",
+        "description": "benchmark_all",
+        "peekOfCode": "logger = get_logger(__name__)\ndef run_experiment(experiment_name, model, train_loader, val_loader, test_loader,\n                   use_modern=True, epochs=10, lr=0.001):\n    \"\"\"\n    Run a single experiment.\n    Args:\n        experiment_name: Name of experiment\n        model: PyTorch model\n        train_loader: Training data loader\n        val_loader: Validation data loader",
+        "detail": "benchmark_all",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "generate_comparison_dashboard",
+        "description": "generate_comparison_dashboard",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        description='Generate comprehensive comparison dashboard for activation functions',\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        epilog=\"\"\"\nExamples:\n  # Generate comparison dashboard from default checkpoints directory\n  python generate_comparison_dashboard.py\n  # Specify custom checkpoints directory\n  python generate_comparison_dashboard.py --checkpoints-dir ./my_checkpoints",
+        "detail": "generate_comparison_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "generate_comparison_dashboard",
+        "description": "generate_comparison_dashboard",
+        "peekOfCode": "logger = get_logger(__name__)\ndef main():\n    parser = argparse.ArgumentParser(\n        description='Generate comprehensive comparison dashboard for activation functions',\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        epilog=\"\"\"\nExamples:\n  # Generate comparison dashboard from default checkpoints directory\n  python generate_comparison_dashboard.py\n  # Specify custom checkpoints directory",
+        "detail": "generate_comparison_dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "launch_interactive_propagation",
+        "kind": 2,
+        "importPath": "main 2",
+        "description": "main 2",
+        "peekOfCode": "def launch_interactive_propagation(activation='relu'):\n    \"\"\"\n    Launch interactive propagation panel showing forward and backward passes.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print(\"    INTERACTIVE PROPAGATION PANEL\")\n    print(\"    Forward & Backward Pass with Synapses\")\n    print(\"🧠\" + \"=\"*60 + \"🧠\")",
+        "detail": "main 2",
+        "documentation": {}
+    },
+    {
+        "label": "visualize_network",
+        "kind": 2,
+        "importPath": "main 2",
+        "description": "main 2",
+        "peekOfCode": "def visualize_network(activation='relu'):\n    \"\"\"\n    Visualize neural network structure in real-time.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print(\"    LIVE NEURAL NETWORK VISUALIZATION\")\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print()",
+        "detail": "main 2",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "main 2",
+        "description": "main 2",
+        "peekOfCode": "def train_model(activation, epochs=10, batch_size=32, lr=0.001, enable_monitoring=False):\n    \"\"\"\n    Train a model with specified activation function.\n    Args:\n        activation (str): Activation function name\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n        enable_monitoring (bool): Enable live training monitoring\n    Returns:",
+        "detail": "main 2",
+        "documentation": {}
+    },
+    {
+        "label": "compare_activations",
+        "kind": 2,
+        "importPath": "main 2",
+        "description": "main 2",
+        "peekOfCode": "def compare_activations(activations, epochs=10, batch_size=32, lr=0.001, enable_monitoring=False):\n    \"\"\"\n    Compare different activation functions.\n    Args:\n        activations (list): List of activation function names\n        epochs (int): Number of training epochs\n        batch_size (int): Batch size\n        lr (float): Learning rate\n        enable_monitoring (bool): Enable live monitoring\n    \"\"\"",
+        "detail": "main 2",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main 2",
+        "description": "main 2",
+        "peekOfCode": "def main():\n    # Get available activations dynamically\n    available_activations = get_available_activations()\n    activation_choices = available_activations + ['all', 'modern', 'classic']\n    parser = argparse.ArgumentParser(description='Train neural networks with different activation functions')\n    parser.add_argument('--activation', type=str, default='relu',\n                       choices=activation_choices,\n                       help='Activation function to use (default: relu). Use \"all\" for all functions, \"modern\" for recent ones, \"classic\" for traditional ones.')\n    parser.add_argument('--epochs', type=int, default=10,\n                       help='Number of training epochs (default: 10)')",
+        "detail": "main 2",
+        "documentation": {}
+    },
+    {
         "label": "launch_interactive_propagation",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def launch_interactive_propagation(activation='relu'):\n    \"\"\"\n    Launch interactive propagation panel showing forward and backward passes.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print(\"    INTERACTIVE PROPAGATION PANEL\")\n    print(\"    Forward & Backward Pass with Synapses\")\n    print(\"🧠\" + \"=\"*60 + \"🧠\")",
+        "peekOfCode": "def launch_interactive_propagation(activation='relu'):\n    \"\"\"\n    Launch interactive propagation panel showing forward and backward passes.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    logger.info(\"🧠\" + \"=\"*60 + \"🧠\")\n    logger.info(\"    INTERACTIVE PROPAGATION PANEL\")\n    logger.info(\"    Forward & Backward Pass with Synapses\")\n    logger.info(\"🧠\" + \"=\"*60 + \"🧠\")",
         "detail": "main",
         "documentation": {}
     },
@@ -1662,7 +3158,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def visualize_network(activation='relu'):\n    \"\"\"\n    Visualize neural network structure in real-time.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print(\"    LIVE NEURAL NETWORK VISUALIZATION\")\n    print(\"🧠\" + \"=\"*60 + \"🧠\")\n    print()",
+        "peekOfCode": "def visualize_network(activation='relu'):\n    \"\"\"\n    Visualize neural network structure in real-time.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    logger.info(\"🧠\" + \"=\"*60 + \"🧠\")\n    logger.info(\"    LIVE NEURAL NETWORK VISUALIZATION\")\n    logger.info(\"🧠\" + \"=\"*60 + \"🧠\")\n    logger.info(\"\")",
         "detail": "main",
         "documentation": {}
     },
@@ -1690,6 +3186,15 @@
         "importPath": "main",
         "description": "main",
         "peekOfCode": "def main():\n    # Get available activations dynamically\n    available_activations = get_available_activations()\n    activation_choices = available_activations + ['all', 'modern', 'classic']\n    parser = argparse.ArgumentParser(description='Train neural networks with different activation functions')\n    parser.add_argument('--activation', type=str, default='relu',\n                       choices=activation_choices,\n                       help='Activation function to use (default: relu). Use \"all\" for all functions, \"modern\" for recent ones, \"classic\" for traditional ones.')\n    parser.add_argument('--epochs', type=int, default=10,\n                       help='Number of training epochs (default: 10)')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "logger = get_logger(__name__)\ndef launch_interactive_propagation(activation='relu'):\n    \"\"\"\n    Launch interactive propagation panel showing forward and backward passes.\n    Args:\n        activation (str): Activation function to use\n    \"\"\"\n    logger.info(\"🧠\" + \"=\"*60 + \"🧠\")\n    logger.info(\"    INTERACTIVE PROPAGATION PANEL\")\n    logger.info(\"    Forward & Backward Pass with Synapses\")",
         "detail": "main",
         "documentation": {}
     },
@@ -1736,6 +3241,69 @@
         "description": "main_modern",
         "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        description='Modern Deep Learning Training Script',\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        epilog=\"\"\"\nExamples:\n  # Train ResNet-18 with modern techniques\n  python main_modern.py --model resnet18 --modern-training\n  # Train EfficientNet with RandAugment\n  python main_modern.py --model efficientnet_b0 --augmentation randaugment",
         "detail": "main_modern",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "main_modern",
+        "description": "main_modern",
+        "peekOfCode": "logger = get_logger(__name__)\ndef get_model(model_name, activation='relu', num_classes=10):\n    \"\"\"\n    Get model by name.\n    Args:\n        model_name: Model architecture name\n        activation: Activation function\n        num_classes: Number of output classes\n    Returns:\n        PyTorch model",
+        "detail": "main_modern",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "kind": 2,
+        "importPath": "profile_models",
+        "description": "profile_models",
+        "peekOfCode": "def get_model(model_name: str, num_classes: int = 10):\n    \"\"\"Get model instance by name.\"\"\"\n    model_dict = {\n        'resnet18': ResNet18(num_classes=num_classes),\n        'resnet34': ResNet34(num_classes=num_classes),\n        'resnet50': ResNet50(num_classes=num_classes),\n        'efficientnet_b0': EfficientNet_B0(num_classes=num_classes),\n        'vit': VisionTransformer(\n            image_size=32,\n            patch_size=4,",
+        "detail": "profile_models",
+        "documentation": {}
+    },
+    {
+        "label": "profile_single_model",
+        "kind": 2,
+        "importPath": "profile_models",
+        "description": "profile_models",
+        "peekOfCode": "def profile_single_model(\n    model_name: str,\n    batch_size: int = 1,\n    detailed: bool = False\n):\n    \"\"\"Profile a single model.\"\"\"\n    logger.info(f\"\\n{'=' * 80}\")\n    logger.info(f\"PROFILING: {model_name.upper()}\")\n    logger.info(f\"{'=' * 80}\\n\")\n    model = get_model(model_name)",
+        "detail": "profile_models",
+        "documentation": {}
+    },
+    {
+        "label": "compare_multiple_models",
+        "kind": 2,
+        "importPath": "profile_models",
+        "description": "profile_models",
+        "peekOfCode": "def compare_multiple_models(\n    model_names: list,\n    batch_size: int = 1\n):\n    \"\"\"Compare multiple models.\"\"\"\n    logger.info(f\"\\n{'=' * 80}\")\n    logger.info(\"COMPARING MODELS\")\n    logger.info(f\"{'=' * 80}\\n\")\n    models = {name: get_model(name) for name in model_names}\n    results = compare_models(",
+        "detail": "profile_models",
+        "documentation": {}
+    },
+    {
+        "label": "profile_training",
+        "kind": 2,
+        "importPath": "profile_models",
+        "description": "profile_models",
+        "peekOfCode": "def profile_training(\n    model_name: str,\n    batch_size: int = 128,\n    num_batches: int = 10\n):\n    \"\"\"Profile training step breakdown.\"\"\"\n    logger.info(f\"\\n{'=' * 80}\")\n    logger.info(f\"TRAINING STEP PROFILING: {model_name.upper()}\")\n    logger.info(f\"{'=' * 80}\\n\")\n    # Create model and data",
+        "detail": "profile_models",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "profile_models",
+        "description": "profile_models",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(\n        description='Profile deep learning models'\n    )\n    parser.add_argument(\n        '--model',\n        type=str,\n        help='Single model to profile'\n    )\n    parser.add_argument(",
+        "detail": "profile_models",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "profile_models",
+        "description": "profile_models",
+        "peekOfCode": "logger = get_logger(__name__)\ndef get_model(model_name: str, num_classes: int = 10):\n    \"\"\"Get model instance by name.\"\"\"\n    model_dict = {\n        'resnet18': ResNet18(num_classes=num_classes),\n        'resnet34': ResNet34(num_classes=num_classes),\n        'resnet50': ResNet50(num_classes=num_classes),\n        'efficientnet_b0': EfficientNet_B0(num_classes=num_classes),\n        'vit': VisionTransformer(\n            image_size=32,",
+        "detail": "profile_models",
         "documentation": {}
     }
 ]

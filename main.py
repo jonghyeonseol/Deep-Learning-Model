@@ -259,8 +259,11 @@ def train_model(activation, epochs=10, batch_size=32, lr=0.001, enable_monitorin
     # Train model
     trainer.train(epochs=epochs, early_stopping_patience=5, save_best=True)
 
-    # Test model
-    test_loss, test_acc = trainer.test()
+    # Test model and generate comprehensive metrics dashboard
+    test_loss, test_acc, metrics = trainer.test(
+        generate_dashboard=True,
+        class_names=data_loader.classes
+    )
 
     # Create visualizations
     visualizer = Visualizer(class_names=data_loader.classes)
@@ -333,6 +336,15 @@ def compare_activations(activations, epochs=10, batch_size=32, lr=0.001, enable_
         best_result = max(results, key=lambda x: x['test_accuracy'])
         logger.info(f"\nBest performing activation: {best_result['activation'].upper()}")
         logger.info(f"Test accuracy: {best_result['test_accuracy']:.2f}%")
+
+        # Generate activation comparison dashboard
+        logger.info("\n" + "="*80)
+        logger.info("GENERATING ACTIVATION COMPARISON DASHBOARD")
+        logger.info("="*80)
+        from utils.dashboard import ActivationComparisonDashboard
+        comparison_dashboard = ActivationComparisonDashboard(save_dir='./checkpoints/comparison')
+        comparison_dashboard.create_full_comparison_report(checkpoints_dir='./checkpoints')
+        logger.info("✅ Comparison dashboard generated!")
 
 
 def main():

@@ -201,12 +201,40 @@ class Trainer:
 
         return val_loss, val_acc
 
-    def test(self):
-        """Test the model on test set."""
+    def test(self, generate_dashboard=True, class_names=None):
+        """
+        Test the model on test set and generate comprehensive metrics dashboard.
+        
+        Args:
+            generate_dashboard (bool): Whether to generate metrics dashboard
+            class_names (list): List of class names for visualization
+            
+        Returns:
+            tuple: (test_loss, test_acc, metrics_dict)
+        """
         if self.test_loader is None:
             print("No test loader provided")
-            return None, None
+            return None, None, None
 
+        # Import metrics modules
+        from .metrics import MetricsCalculator
+        from .dashboard import MetricsDashboard
+        
+        # Determine number of classes
+        if class_names is None:
+            # Try to get from data loader
+            if hasattr(self.test_loader.dataset, 'classes'):
+                class_names = self.test_loader.dataset.classes
+            else:
+                # Default CIFAR-10 classes
+                class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
+                             'dog', 'frog', 'horse', 'ship', 'truck']
+        
+        num_classes = len(class_names)
+        
+        # Initialize metrics calculator
+        metrics_calc = MetricsCalculator(num_classes=num_classes, class_names=class_names)
+        
         self.model.eval()
         test_loss = 0.0
         correct = 0
@@ -218,7 +246,13 @@ class Trainer:
                 output = self.model(data)
                 test_loss += self.criterion(output, target).item()
 
+                # Get predictions and probabilities
+                probabilities = torch.softmax(output, dim=1)
                 _, predicted = output.max(1)
+                
+                # Update metrics
+                metrics_calc.update(predicted, target, probabilities)
+                
                 total += target.size(0)
                 correct += predicted.eq(target).sum().item()
 
@@ -226,7 +260,21 @@ class Trainer:
         test_acc = 100. * correct / total
 
         print(f'Test Loss: {test_loss:.4f}, Test Acc: {test_acc:.2f}%')
-        return test_loss, test_acc
+        
+        # Compute all metrics
+        all_metrics = metrics_calc.compute_all_metrics()
+        
+        # Print summary
+        metrics_calc.print_summary()
+        
+        # Generate dashboard
+        if generate_dashboard:
+            # Extract model name from save_dir
+            model_name = os.path.basename(self.save_dir)
+            dashboard = MetricsDashboard(save_dir=self.save_dir, model_name=model_name)
+            dashboard.create_comprehensive_dashboard(all_metrics)
+        
+        return test_loss, test_acc, all_metrics
 
     def train(self, epochs, early_stopping_patience=None, save_best=True):
         """
