@@ -170,6 +170,62 @@ Deep-Learning-Model/
 └── checkpoints/             # Saved models and results
 ```
 
+## 🧪 Development & Testing
+
+### Running Tests
+
+```bash
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Run all tests with coverage
+pytest tests/ -v --cov=models --cov=utils --cov-report=term
+
+# Run specific test file
+pytest tests/test_models.py -v
+
+# Run tests with detailed output
+pytest tests/ -v --tb=long
+```
+
+### Code Quality Tools
+
+```bash
+# Format code with black
+black models/ utils/ tests/
+
+# Check code style
+pylint models/ utils/ --disable=C,R
+
+# Sort imports
+isort models/ utils/ tests/
+
+# Type checking
+mypy models/ utils/ --ignore-missing-imports
+```
+
+### Pre-commit Hooks
+
+Install pre-commit hooks for automatic code quality checks:
+
+```bash
+# Install pre-commit
+pip install pre-commit
+
+# Set up git hooks
+pre-commit install
+
+# Run manually on all files
+pre-commit run --all-files
+```
+
+### CI/CD
+
+GitHub Actions automatically run on every push:
+- **Tests**: Python 3.8-3.11 with 70% coverage requirement
+- **Lint**: Black, pylint, isort code quality checks
+- **Type Check**: mypy static type checking
+
 ## Modern Deep Learning Techniques (2024-2025)
 
 ### Implemented ✅

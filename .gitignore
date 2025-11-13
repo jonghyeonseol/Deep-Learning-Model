@@ -37,12 +37,14 @@ dmypy.json
 *.swp
 *.swo
 *~
+
 # Prevent duplicate files with '2' suffix
-*\ 2.py
-*\ 2.md
-*\ 2.txt
+* 2.py
+* 2.md
+* 2.txt
 *_2.py
 *_2.md
+*_2.txt
 
 # Logs and output
 logs/

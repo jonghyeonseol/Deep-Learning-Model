@@ -24,112 +24,112 @@ class GELU(nn.Module):
 
 
 class ReLU(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(ReLU, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return torch.maximum(torch.zeros_like(x), x)
 
 
 class Tanh(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(Tanh, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return torch.tanh(x)
 
 
 class Sigmoid(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(Sigmoid, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return torch.sigmoid(x)
 
 
 class Step(nn.Module):
-    def __init__(self, threshold=0.0):
+    def __init__(self, threshold: float = 0.0) -> None:
         super(Step, self).__init__()
         self.threshold = threshold
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return (x > self.threshold).float()
 
 
 class Softmax(nn.Module):
-    def __init__(self, dim=-1):
+    def __init__(self, dim: int = -1) -> None:
         super(Softmax, self).__init__()
         self.dim = dim
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return F.softmax(x, dim=self.dim)
 
 
 class Swish(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(Swish, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return x * torch.sigmoid(x)
 
 
 class Mish(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(Mish, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return x * torch.tanh(F.softplus(x))
 
 
 class LeakyReLU(nn.Module):
-    def __init__(self, negative_slope=0.01):
+    def __init__(self, negative_slope: float = 0.01) -> None:
         super(LeakyReLU, self).__init__()
         self.negative_slope = negative_slope
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return F.leaky_relu(x, negative_slope=self.negative_slope)
 
 
 class ELU(nn.Module):
-    def __init__(self, alpha=1.0):
+    def __init__(self, alpha: float = 1.0) -> None:
         super(ELU, self).__init__()
         self.alpha = alpha
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return F.elu(x, alpha=self.alpha)
 
 
 class PReLU(nn.Module):
-    def __init__(self, num_parameters=1, init=0.25):
+    def __init__(self, num_parameters: int = 1, init: float = 0.25) -> None:
         super(PReLU, self).__init__()
         self.num_parameters = num_parameters
         self.weight = nn.Parameter(torch.full((num_parameters,), init))
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return F.prelu(x, self.weight)
 
 
 class SELU(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(SELU, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return F.selu(x)
 
 
 class Hardswish(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(Hardswish, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return x * F.relu6(x + 3) / 6
 
 
 class SiLU(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(SiLU, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return F.silu(x)
 
 

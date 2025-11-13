@@ -31,7 +31,7 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest tests/ -v --cov=models --cov=utils --cov-report=xml --cov-report=term
+        pytest tests/ -v --cov=models --cov=utils --cov-report=xml --cov-report=term --cov-fail-under=70
 
     - name: Upload coverage to Codecov
       if: matrix.python-version == '3.10'
@@ -60,15 +60,18 @@ jobs:
 
     - name: Check code formatting with black
       run: |
-        black --check models/ utils/ tests/ *.py || true
+        black --check models/ utils/ tests/ *.py
+      continue-on-error: true
 
     - name: Lint with pylint
       run: |
-        pylint models/ utils/ --disable=C,R --fail-under=7.0 || true
+        pylint models/ utils/ --disable=C,R --fail-under=7.0
+      continue-on-error: true
 
     - name: Check imports with isort
       run: |
-        isort --check-only models/ utils/ tests/ || true
+        isort --check-only models/ utils/ tests/
+      continue-on-error: true
 
   type-check:
     name: Type Checking
@@ -91,4 +94,5 @@ jobs:
 
     - name: Type check with mypy
       run: |
-        mypy models/ utils/ --ignore-missing-imports || true
+        mypy models/ utils/ --ignore-missing-imports
+      continue-on-error: true

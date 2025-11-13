@@ -3,7 +3,7 @@ import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader, random_split
 import numpy as np
-from typing import Tuple, Dict, List, Optional
+from typing import Tuple, Dict, List, Optional, Any
 
 
 class CIFAR10DataLoader:
@@ -123,7 +123,7 @@ class CIFAR10DataLoader:
         """
         return self.train_loader, self.val_loader, self.test_loader
 
-    def get_dataset_info(self) -> Dict[str, any]:
+    def get_dataset_info(self) -> Dict[str, Any]:
         """Get information about the datasets."""
         info = {
             'num_classes': len(self.classes),
