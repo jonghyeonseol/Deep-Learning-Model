@@ -2,19 +2,24 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import math
-import sys
-import os
+from typing import List
 
-# Add parent directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.exceptions import InvalidActivationError
+# Use absolute import - utils package should be in PYTHONPATH
+try:
+    from utils.exceptions import InvalidActivationError
+except ImportError:
+    # Fallback for direct script execution
+    import sys
+    import os
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from utils.exceptions import InvalidActivationError
 
 
 class GELU(nn.Module):
-    def __init__(self):
+    def __init__(self) -> None:
         super(GELU, self).__init__()
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         return 0.5 * x * (1 + torch.tanh(math.sqrt(2 / math.pi) * (x + 0.044715 * torch.pow(x, 3))))
 
 
@@ -128,7 +133,7 @@ class SiLU(nn.Module):
         return F.silu(x)
 
 
-def get_activation(activation_name):
+def get_activation(activation_name: str) -> nn.Module:
     """
     Factory function to get activation function by name.
 
@@ -162,7 +167,7 @@ def get_activation(activation_name):
     return activation_map[activation_name.lower()]
 
 
-def get_available_activations():
+def get_available_activations() -> List[str]:
     """
     Get list of all available activation functions.
 

@@ -1,9 +1,12 @@
+import torch
 import torch.nn as nn
+from typing import List
 from .activations import get_activation
 
 
 class NeuralNetwork(nn.Module):
-    def __init__(self, input_size, hidden_sizes, output_size, activation='relu', dropout_rate=0.2):
+    def __init__(self, input_size: int, hidden_sizes: List[int], output_size: int,
+                 activation: str = 'relu', dropout_rate: float = 0.2) -> None:
         """
         A flexible neural network implementation.
 
@@ -49,7 +52,7 @@ class NeuralNetwork(nn.Module):
                 nn.init.xavier_uniform_(layer.weight)
                 nn.init.zeros_(layer.bias)
 
-    def forward(self, x):
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
         Forward pass through the network.
 
@@ -99,7 +102,8 @@ class NeuralNetwork(nn.Module):
 
 
 class ConvNeuralNetwork(nn.Module):
-    def __init__(self, input_channels=3, num_classes=10, activation='relu', dropout_rate=0.2):
+    def __init__(self, input_channels: int = 3, num_classes: int = 10,
+                 activation: str = 'relu', dropout_rate: float = 0.2) -> None:
         """
         Convolutional Neural Network for image classification (e.g., CIFAR-10).
 

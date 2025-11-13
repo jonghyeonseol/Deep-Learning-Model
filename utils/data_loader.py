@@ -3,11 +3,13 @@ import torchvision
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader, random_split
 import numpy as np
+from typing import Tuple, Dict, List, Optional
 
 
 class CIFAR10DataLoader:
-    def __init__(self, batch_size=32, validation_split=0.1, data_dir='./data',
-                 normalize=True, augment_train=True):
+    def __init__(self, batch_size: int = 32, validation_split: float = 0.1,
+                 data_dir: str = './data', normalize: bool = True,
+                 augment_train: bool = True) -> None:
         """
         CIFAR-10 data loader with train/validation/test splits.
 
@@ -112,7 +114,7 @@ class CIFAR10DataLoader:
             self.test_dataset, batch_size=self.batch_size, shuffle=False, num_workers=2
         )
 
-    def get_data_loaders(self):
+    def get_data_loaders(self) -> Tuple[DataLoader, Optional[DataLoader], DataLoader]:
         """
         Get all data loaders.
 
@@ -121,7 +123,7 @@ class CIFAR10DataLoader:
         """
         return self.train_loader, self.val_loader, self.test_loader
 
-    def get_dataset_info(self):
+    def get_dataset_info(self) -> Dict[str, any]:
         """Get information about the datasets."""
         info = {
             'num_classes': len(self.classes),
