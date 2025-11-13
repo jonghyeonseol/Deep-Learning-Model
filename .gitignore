@@ -24,12 +24,25 @@ __pycache__/
 dist/
 build/
 .pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
 # Backup files
 *.bak
 *.swp
 *.swo
 *~
+# Prevent duplicate files with '2' suffix
+*\ 2.py
+*\ 2.md
+*\ 2.txt
+*_2.py
+*_2.md
 
 # Logs and output
 logs/
